@@ -55,11 +55,11 @@ function postRegister(req, res, err) {
 
     // User.create({ email, fullname, password })
     User.create(req.body)
-        .then(() => {
+        .then((createdUser) => {
 
             // res.redirect('/user/login')
             res.status(200)
-                //   .send(createdUser);
+                .send(createdUser);
         })
         .catch(err)
         // .catch((err) => {
