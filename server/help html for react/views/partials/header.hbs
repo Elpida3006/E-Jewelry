@@ -1,0 +1,44 @@
+{{#if isLogged}}
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/products/create">Create new offer</a>
+                </li> 
+                <li>
+                    <a href="/products">
+                        <img src="/sneakers.png" alt="">
+                    </a>
+                </li> 
+                <li>Welcome, {{email}} | 
+                    <a  href="/user/logout">Logout</a>
+                       <a  href="/user/profile">My Profile Basket</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {{else}}
+        <header>
+        <nav>
+            <ul>
+                <li class="site-logo">Shoe</li>
+                <li>
+                    <a href="/products">
+                        <img src="/sneakers.png" alt="">
+                    </a>
+                
+                </li>
+                <li class="site-logo">Shelf</li>              
+ 
+                 <li>Welcome,  Guest |  
+                    <a  href="/user/login">Login    | </a>
+                     <a  href="/user/register">Register    | </a>
+               </li>
+
+             </ul>
+ 
+                   
+         
+        </nav>
+    </header>
+    {{/if}}

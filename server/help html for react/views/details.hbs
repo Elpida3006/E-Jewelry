@@ -1,0 +1,26 @@
+<main>
+    <div class="offer-details">
+        <h1>{{article.name}}</h1>
+        <div class="info">
+            <img src="{{article.imageUrl}}" alt="">
+            <div class="description">{{article.description}}
+                <br>
+                <br>
+                <p> <strong>Buyers:</strong> {{article.buyers.length}}</p>
+                <br>
+                <p class="price">${{article.price}}</p>
+            </div>
+        </div>
+        <div class="actions">
+         {{#if isCreator}} 
+        <a href="/products/edit/{{article._id}}">Edit</a>
+        <a href="/products/delete/{{article._id}}">Delete</a> 
+          {{/if}} 
+          {{#if isBuyer}}
+        <span>You bought it</span> 
+        {{else}}
+           <a href="/products/buy/{{article._id}}">Buy</a> 
+{{/if}}
+        </div>
+    </div>
+</main>
