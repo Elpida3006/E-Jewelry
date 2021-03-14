@@ -6,18 +6,20 @@ const isLogged = require('../middlewares/check-auth');
 
 const { repeatPasswordCheck, isFullPassword, strongPassword } = require('../validators/userValidators')
 
-router.get('/register', isLogged(false), userServise.getRegister)
+// router.get('/register', isLogged(false), userServise.getRegister)
 
-router.get('/login', isLogged(false), userServise.getLogin)
-
+// router.get('/login', isLogged(false), userServise.getLogin)
+router.get('/', userServise.getUser)
 router.get('/logout', isLogged(true), userServise.getLogout)
 router.get('/profile', isLogged(true), userServise.getProfile)
 
 
 
 
-router.post('/register', isLogged(false), repeatPasswordCheck, userServise.postRegister)
+// router.post('/register', isLogged(false), repeatPasswordCheck, userServise.postRegister)
     // repeatPasswordCheck, strongPassword, isFullPassword,
+router.post('/register', userServise.postRegister)
+
 router.post('/login', isLogged(false), userServise.postLogin)
 
 

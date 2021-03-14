@@ -6,13 +6,13 @@ const service = require('../services/productServise');
 router.get('/', (req, res) => {
     // const userId = req.user._id
     // console.log(userId);
-
+// console.log(`No articles yet`);
     service.getAllArticles()
         .then(articles => {
             // res.render('home', { articles })
             res.json(articles)
         })
-        .catch(err => console.error)
+        .catch(err => console.error(`No articles yet`))
         // res.render('home')
 
 });

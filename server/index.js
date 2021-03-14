@@ -8,9 +8,15 @@ const errorHandler = require('./middlewares/global-error-handler')
 require('./config/express')(app);
 const apiRouter = require('./routes');
 
-app.use(apiRouter);
+// app.use(apiRouter);
 app.use('/api', apiRouter);
 // app.use(errorHandler)
+const cors = require('cors');
+app.use(cors({
+      origin: config.origin,
+      credentials: true,
+    // exposedHeaders: ""
+}))
 const dbConnectionPromise = require('./config/dbConnection')(config.dbConnectionString);
 
 dbConnectionPromise.then(() => {

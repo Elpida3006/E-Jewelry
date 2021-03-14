@@ -13,6 +13,11 @@ const User = require('../models/User')
 // function getLogin(req, res) {
 //     res.render('login');
 // }
+function getUser(req, res, next) {
+    User.find()
+            .then((users) => res.send(users))
+            .catch(next)
+}
 
 function getLogout(req, res) {
 
@@ -110,6 +115,7 @@ function postLogin(req, res, next) {
         .catch(next);
 }
 module.exports = {
+    getUser,
     // getRegister,
     // getLogin,
     getLogout,
