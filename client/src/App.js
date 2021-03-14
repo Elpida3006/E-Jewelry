@@ -1,26 +1,26 @@
 import React from 'react';
 import logo from './logo1.png';
-import './App.css';
-
+import style from './App.module.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 function App() {
 
     return ( 
-        <div className = "App" >
-        <header className = "App-header" >
-        <img src = { logo }
-        className = "App-logo"
-        alt = "logo" />
-        <p>
-        Welcome in Our E - Jewelry Shop { /* <code>src/App.js</code> and save to reload. */ } 
-        </p>  
+        <div className={style.App} >
+   
+        <main className ={style['App-cover']}>
+        <Header/>
+  
+        <img src = { logo } className ={style['App-logo']} alt = "logo" />
+        <p>Welcome in Our E - Jewelry Shop { /* <code>src/App.js</code> and save to reload. */ }</p>  
         <p> Let 's Start</p>   
-        <a className = "App-link"
-        href = "/"
+        <a className ={style['App-link']}  href = "/"
         target = "_blank"
-        rel = "noopener noreferrer" >
-        Home 
-        </a>  
-        </header> 
+        rel = "noopener noreferrer" >Home</a>  
+        
+        </main> 
+        
+        <Footer/>
         </div>
     );
 }
