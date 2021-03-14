@@ -3,7 +3,9 @@ import style from './Menu.module.css';
 
 function Menu() {
     return (
-        <div></div>
+        <div>
+            
+        </div>
     );
 }
 
