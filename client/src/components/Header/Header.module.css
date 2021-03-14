@@ -8,7 +8,7 @@
 .Nav-Li {
     border: 2px solid rgb(20, 20, 20);
     border-radius: 50px;
- 
+    margin-left: 20px;
     display: inline-block;
     list-style: none;
 	padding: 20px 30px;
@@ -16,10 +16,20 @@
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
    
 }
+.Nav-Home{
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 50px;
+    margin-right: 1000px;
+    display: inline-block;
+    list-style: none;
+	padding: 20px 30px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+}
 .Ul-Tab {
 
     display: flex;
     margin-top: 20px;
     background-image: linear-gradient( rgb(20, 20, 20), rgba(170, 72, 7, 0.904), rgb(20, 20, 20));
-    padding-left: 1200px;
+    padding-left: 50px;
 }
