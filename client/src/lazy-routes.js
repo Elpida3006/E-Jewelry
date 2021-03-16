@@ -8,7 +8,7 @@ const Home = lazy(() => import('./containers/Home'));
 const Register = lazy(() => import('./page-components/Register/Register'));
 const Login = lazy(() => import('./page-components/Login/Login'));
 const About = lazy(() => import('./page-components/About/About'));
-
+const Create = lazy(() => import('./page-components/Create/Create'));
 function Routes () {
     return (
         <Router>
@@ -20,6 +20,10 @@ function Routes () {
             <Route path="/About"  component={About} />
             <Route path="/user/register"  component={Register} />
             <Route path="/user/login"  component={Login} />
+            <Route path="/Create/Silver"  component={Create} />
+            <Route path="/Create/Gold"  component={Create} />
+            <Route path="/Create/Leather-Accessory"  component={Create} />
+
             </Switch>
         </Suspense>
         </Router>
