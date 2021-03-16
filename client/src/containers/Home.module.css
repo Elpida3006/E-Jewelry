@@ -31,7 +31,7 @@ img {
 }
 .Home {
     width: 100%;
-    display: flex;
+    display: block;
     padding-left: 50px;;
 }
 .Image {
@@ -44,7 +44,16 @@ img {
     margin-left: 50px;
     margin-bottom: 50px;
 }
-
+.Static {
+    display: flex;
+    width: 100%;
+}
+.Admin {
+  
+    background-color: transparent;
+    display: block;
+    width: 100%;
+}
 .Menu {
     background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
     display: flex;
