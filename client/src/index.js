@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './tests/reportWebVitals';
-// import {BrowserRouter as Router} from 'react-router-dom';
+
 import Routes from './lazy-routes';
 //  Route, Link, Switch
 ReactDOM.render(
 
   <React.StrictMode>
-    <Routes> 
+     <Routes> 
        <App />
     </Routes>
   

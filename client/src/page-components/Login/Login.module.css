@@ -47,6 +47,7 @@ button  {
 }
  input,
 label {
+    font-size: 25px;
     margin: 0 auto;
     color: var(--main-blue);
     text-align: center;
