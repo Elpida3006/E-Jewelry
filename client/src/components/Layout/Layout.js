@@ -1,15 +1,15 @@
 import React from 'react';
 import style from './Layout.module.css';
-// import Header from '../Header/Header';
-// import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function Layout(props) {
     return (
-
+      
         <div className={style.Layout}>
-        {/* <Header/> */}
+        <Header/>
           {props.children}
-        {/* <Footer/> */}
+        <Footer/>
         </div>
 
     );

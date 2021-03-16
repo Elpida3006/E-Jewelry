@@ -14,8 +14,8 @@ return (
      
     <ul className={style['Ul-Tab']}>
   
-         <li className={style['Nav-Home']}>
-              <Link className={style['Li']} to="/">E-Jewerly</Link>  
+         <li className={style['Nav-Cover']}>
+              <Link className={style['Li']} to="/Cover">E-Jewerly</Link>  
          </li>
         
         <li className={style['Nav-Li']}>
