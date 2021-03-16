@@ -1,15 +1,17 @@
 import React from 'react';
 import style from './Layout.module.css';
-import Menu from '../Menu/Menu';
+// import Header from '../Header/Header';
+// import Footer from '../Footer/Footer';
 
-function Layout() {
+function Layout(props) {
     return (
+
         <div className={style.Layout}>
-            <Menu/>
-           <main>
-            {/* changed pages */}
-           </main>
+        {/* <Header/> */}
+          {props.children}
+        {/* <Footer/> */}
         </div>
+
     );
 }
 

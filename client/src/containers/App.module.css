@@ -49,3 +49,24 @@ p {
         transform: rotate(360deg);
     }
 }
+.Nav-Home{
+    margin-left: 1000px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 50px;
+    margin-right: 1000px;
+    display: inline-block;
+    list-style: none;
+	padding: 20px 30px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+}
+.Li {
+ 
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}

@@ -1,0 +1,84 @@
+
+h1 {
+    text-align: left;
+    padding-left: 50px;
+    color: var(--main-orange);
+}
+.InfoP {
+    color: rgb(6, 52, 92);
+    text-align: left;
+    margin-left: -150px;   
+}
+.Info {
+    color: white;
+    text-align: left;
+    /* margin-left: -50px;    */
+}
+
+.Register {
+   
+    display: block;
+    background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
+    padding-left: 350px;
+    /* padding-right: -350px; */
+    padding-bottom: 150px;
+    width: 35%;
+    margin-bottom: 50px;
+    margin-left: 450px; 
+ 
+    text-align: center;
+}
+button {
+    color: antiquewhite;
+    font-size: 18px;
+    margin-right: 55%;
+    margin-top: 5%;
+    text-align: center;
+    height: 30px;
+    width: 170px;
+    background-color: rgb(5, 43, 25);
+}
+.Button {
+    text-decoration: none;
+    color: antiquewhite;
+
+}
+input,
+label {
+    margin: 0 auto;
+    color: var(--main-blue);
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+} 
+
+div input {
+    height: 10px;
+    display:flex;
+    padding: 1%;
+    width: 350px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid brown;
+    border-left: 2px solid rgba(165, 42, 42, 0.068);
+
+    border-bottom: 1px solid var(--main-blue);
+}
+label {
+    display:flex; 
+}
+
+
+form textarea {
+    color: var(--main-blue);
+    width: 50px;
+    padding: 2%;
+    border: 1px solid var(--main-blue);
+    resize: none;
+    height: 15vh;
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center;
+}

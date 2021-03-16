@@ -21,3 +21,38 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+img {
+    padding: 50px;
+    orientation:inherit;
+    height: 600px;
+    width: 1200px;
+   
+    
+}
+.Home {
+    width: 100%;
+    display: flex;
+    padding-left: 50px;;
+}
+.Image {
+    border: 5px solidlinear-gradient(white, rgba(61, 22, 22, 0.226), black);
+    background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
+    margin:-5px;
+    display: flex;
+    position: relative;
+    width: 60%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.Menu {
+    background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
+    display: flex;
+
+    border: 5px solid linear-gradient(grey, rgba(61, 22, 22, 0.226), grey);;
+    display: flex;
+    width: 20%;
+    position: relative;
+    margin-bottom: 50px;
+}
+/* menu & layout: display:flex /20/70 */

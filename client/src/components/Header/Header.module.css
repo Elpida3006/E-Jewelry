@@ -1,11 +1,21 @@
 .Nav-Link {
+    
     margin-top: -10px;
     margin-bottom: 80px;
     display: block;  
     width: 100%;
     background-color: black;
 }
+.Li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
 .Nav-Li {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
     border: 2px solid rgb(20, 20, 20);
     border-radius: 50px;
     margin-left: 20px;
@@ -17,6 +27,12 @@
    
 }
 .Nav-Home{
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
     border: 2px solid rgb(20, 20, 20);
     border-radius: 50px;
     margin-right: 1000px;

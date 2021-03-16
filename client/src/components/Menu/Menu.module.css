@@ -1,0 +1,27 @@
+.Li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.Menu {
+    display: flex;
+    /* width: 30%; */
+    padding-bottom: 50px;
+    color: aliceblue;
+}
+.Nav-Li {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    list-style: none;
+	padding: 20px 30px;
+    text-align: left;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+   margin: 10px;
+   width: 200px;;
+}

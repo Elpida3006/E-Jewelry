@@ -3,23 +3,39 @@ import logo from '../static/logo1.png';
 import style from './App.module.css';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import Layout from '../components/Layout/Layout';
+import Login from '../page-components/Login/Login';
+
+// import {Link} from 'react-router-dom';
 function App() {
 
     return ( 
         <div className={style.App} >
    
-        <main className ={style['App-cover']}>
-        <Header/>
-  
+   <Header/>
+       
+   <Login/>
+
+     
+       
+         {/* <Layout> 
+          
+             <main className ={style['App-cover']}> 
         <img src = { logo } className ={style['App-logo']} alt = "logo" />
-        <p>Welcome in Our E - Jewelry Shop { /* <code>src/App.js</code> and save to reload. */ }</p>  
+         <p>Welcome in Our E - Jewelry Shop 
+             { /* <code>src/App.js</code> and save to reload. */ }
+          {/* </p>   
         <p> Let 's Start</p>   
-        <a className ={style['App-link']}  href = "/"
-        target = "_blank"
-        rel = "noopener noreferrer" >Home</a>  
+             <li className={style['Nav-Home']}>
+              <Link className={style['Li']} to="/">Home</Link>  
+         </li>
+          </main>  */}
+          
         
-        </main> 
-        
+         {/* </Layout>  */} 
+     
+     
+         
         <Footer/>
         </div>
     );
