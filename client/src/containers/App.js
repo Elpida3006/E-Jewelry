@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {Component} from 'react';
 
 import style from './App.module.css';
 // import Footer from '../components/Footer/Footer';
@@ -7,8 +7,25 @@ import style from './App.module.css';
 import Cover from './Cover';
 
 // import {Link} from 'react-router-dom';
-function App() {
+// function App() {
 
+//     return ( 
+//         <div className={style.App} >
+   
+//              {/* <Header/> */}
+//              {/* <Register/> */}
+//             <Cover/>
+//             {/* <Footer/> */}
+
+//         </div>
+//     );
+// }
+
+class App extends Component {
+    constructor(props) {
+      super(props);
+}
+render() {
     return ( 
         <div className={style.App} >
    
@@ -19,6 +36,8 @@ function App() {
 
         </div>
     );
+}
+   
 }
 
 export default App;
