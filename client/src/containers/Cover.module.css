@@ -79,3 +79,14 @@ p {
     list-style: none;
     color: white;
 }
+button  {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18px;
+    /* margin-right: 55%;
+    margin-top: 5%; */
+    text-align: center;
+    height: 30px;
+    width: 170px;
+    background-color: rgb(5, 43, 25);
+}
