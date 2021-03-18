@@ -1,4 +1,5 @@
 import React from 'react';
+//for class components
 import style from './Admin.module.css';
 import {Link} from 'react-router-dom';
 
