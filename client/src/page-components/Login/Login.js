@@ -16,14 +16,14 @@ return (
        <p className={style.InfoP}>Don't have account?
           <Link className={style.Info} to="/user/register">Register now</Link> and fix that!
       </p>
-      <label htmlFor="email">Email</label>
+      <label className={style['Label']} htmlFor="email">Email</label>
     <input type="email" name="email" placeholder="Email..."/>
  
-    <label htmlFor="password">Password</label>
+    <label className={style['Label']} htmlFor="password">Password</label>
     <input type="password" name="password" placeholder="Password"/>   
    
    
-    <button>
+    <button className={style["LoginBtn"]}>
     <Link className={style.Button} to="/user/login">Login</Link>
         </button>
     

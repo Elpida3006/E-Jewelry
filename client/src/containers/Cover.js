@@ -10,13 +10,23 @@ class Cover extends Component {
         constructor(props) {
           super(props);
             this.state = {
-             Like: 0
+             Like: 0, 
+             isLogged: false
              };
-            this.CounterLike = this.CounterLike.bind(this);
+            // this.CounterLike = this.CounterLike.bind(this);
+            // this.CounterUnLike = this.CounterUnLike.bind(this);
+            // + 2 fn without arrow, ()=> in render / in onClick
     }
     
     CounterLike = () => {
+        // const Like = this.state;
         this.setState( {Like: this.state.Like + 1});
+    }
+    CounterUnLike = () => {
+        // const Like = this.state;
+
+        this.setState( {Like: this.state.Like - 1}  < 0 ?
+        {Like:  0} :  {Like: this.state.Like - 1}) ;
     }
     
     render() {
@@ -32,7 +42,9 @@ class Cover extends Component {
         <p> Let 's Start</p>   
         <div>
               
-              <h4>  Like: {this.state.Like}      <button onClick={this.CounterLike}> Like Page </button></h4>
+              <h4>  Like: {this.state.Like}      <button className={style.CoverBtn}  onClick={this.CounterLike}>Like Page</button>
+              <button className={style.CoverBtn} onClick={this.CounterUnLike}>Unlike Page</button>
+              </h4>
               
         </div>
              <li className={style['Nav-Home']}>

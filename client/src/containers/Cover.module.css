@@ -15,7 +15,7 @@ html {
     height: 300px;
     width: 300px;
     pointer-events: none;
-    margin-top: -5%;
+    margin-top: -1%;
     margin-bottom: 3%;
 }
 
@@ -79,7 +79,7 @@ p {
     list-style: none;
     color: white;
 }
-button  {
+.CoverBtn  {
     text-decoration: none;
     color: antiquewhite;
     font-size: 18px;
@@ -88,5 +88,7 @@ button  {
     text-align: center;
     height: 30px;
     width: 170px;
-    background-color: rgb(5, 43, 25);
+    background-color: rgb(43, 27, 5);
+    display: flex;
+   
 }

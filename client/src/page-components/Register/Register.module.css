@@ -26,9 +26,9 @@ h1 {
     margin-bottom: 50px;
     margin-left: 450px; 
  
-    text-align: center;
+    text-align: left;
 }
-button {
+.RegisterBtn {
     color: antiquewhite;
     font-size: 18px;
     margin-right: 55%;
@@ -42,36 +42,38 @@ button {
     text-decoration: none;
     color: antiquewhite;
 
+
 }
-input,
-label {
+/* input, */
+.Label {
     margin: 0 auto;
     color: var(--main-blue);
-    text-align: center;
+  text-align: left;
+ 
 }
 
-label {
+/* label {
     font-weight: bold;
-} 
+}  */
 
 div input {
     height: 10px;
     display:flex;
     padding: 1%;
     width: 350px;
-    text-align: center;
+   
     font-size: 18px;
     border: 2px solid brown;
     border-left: 2px solid rgba(165, 42, 42, 0.068);
 
     border-bottom: 1px solid var(--main-blue);
 }
-label {
+/* label {
     display:flex; 
-}
+} */
 
 
-form textarea {
+ /* textarea {
     color: var(--main-blue);
     width: 50px;
     padding: 2%;
@@ -81,4 +83,4 @@ form textarea {
     overflow: hidden;
     border-radius: 15px;
     text-align: center;
-}
+} */

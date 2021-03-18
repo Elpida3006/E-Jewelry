@@ -27,9 +27,9 @@ h1 {
     margin-bottom: 50px;
     margin-left: 450px; 
  
-    text-align: center;
+    text-align: left;
 }
-button  {
+.LoginBtn  {
     text-decoration: none;
     color: antiquewhite;
     font-size: 18px;
@@ -45,17 +45,17 @@ button  {
     color: antiquewhite;
 
 }
- input,
-label {
-    font-size: 25px;
+
+.Label {
     margin: 0 auto;
     color: var(--main-blue);
-    text-align: center;
+  text-align: left;
+ 
 }
 
-label {
+/* label {
     font-weight: bold;
-} 
+}  */
 
 div input {
     height: 10px;
@@ -69,11 +69,11 @@ div input {
 
     border-bottom: 1px solid var(--main-blue);
 }
-label {
+/* label {
     display:flex; 
-}
+} */
 
-form textarea {
+/* form textarea {
     color: var(--main-blue);
     width: 50px;
     padding: 2%;
@@ -83,4 +83,4 @@ form textarea {
     overflow: hidden;
     border-radius: 15px;
     text-align: center;
-}
+} */

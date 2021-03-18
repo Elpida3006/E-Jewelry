@@ -27,13 +27,7 @@ html {
     list-style: none;
     color: white;
 }
-.Button {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-left: 70px;
-   
-}
+
 .Create{
     margin-left: 30%;
     margin-right: 30%;
@@ -54,19 +48,17 @@ html {
     text-align: center;
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
 }
-input,
-label {
+.inCreate
+ {
     font-size: 40px;
     margin: 0 auto;
     color: var(--main-blue);
     text-align: center;
 }
 
-label {
-    font-weight: bold;
-} 
 
-div input {
+
+div .inCreate {
     margin-top: 2%;
     height: 20px;
     display:flex;
@@ -79,9 +71,9 @@ div input {
 
     border-bottom: 1px solid var(--main-blue);
 }
-label {
+/* label {
     display:flex; 
-}
+} */
 
 
  textarea {
@@ -101,7 +93,7 @@ label {
 
 .Nav-Create{
     font-size: 20px;
-    margin-left: 200px;
+    margin-left: 175px;
     text-decoration: none;
     letter-spacing: 2px;
     color: white;
@@ -115,6 +107,14 @@ label {
     text-align: center;
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
 }
-h1 {
+.Button {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 0px;
+   
+}
+ .createh1 {
     color: wheat;
+    margin-left: 15%
 }
