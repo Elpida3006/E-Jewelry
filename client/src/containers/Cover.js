@@ -32,6 +32,11 @@ class Cover extends Component {
     render() {
         return ( 
 
+
+<body className={style.Background}>
+    
+
+
     <Layout> 
           
              <main className ={style['App-cover']}> 
@@ -55,7 +60,7 @@ class Cover extends Component {
         
          </Layout>  
      
-
+         </body>
 );
 
 

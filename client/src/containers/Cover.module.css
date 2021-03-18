@@ -1,9 +1,12 @@
 
 html {
-    background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg);
 
     box-sizing: border-box;
     /* height: 100%; */
+}
+.Background {
+    background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg);
+
 }
 .App {
 
