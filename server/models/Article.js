@@ -38,9 +38,14 @@ const articleSchema = new mongoose.Schema({
         required: true,
     },
 likes: {
-    type: String,
-    required: true,
+    type: mongoose.Types.ObjectId,
+    ref: 'User'
 },
+buyers: [{
+    type: mongoose.Types.ObjectId,
+    ref: 'User'
+}],
+
     createdAt: {
         type: Date,
         required: true
@@ -52,10 +57,7 @@ likes: {
 
 
     },
-    buyers: [{
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
-    }]
+  
 });
 
 
