@@ -5,6 +5,7 @@ import Menu from '../components/Menu/Menu';
 import Layout from '../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import Admin from '../components/Admin-Panel/Admin';
+import Products from './Products';
 
 const isLogin= (props)=>{
 
@@ -32,7 +33,7 @@ return (
    {isAdmin ? <Admin/> : null}
     </div>
   
-{/* <Products/> */}
+<Products/>
             {/* changed pages */}
     
 

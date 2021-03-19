@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const articleSchema = new mongoose.Schema({
     id: mongoose.Types.ObjectId,
-    name: {
+    nameProduct: {
         type: String,
         required: true,
         // unique: true,
@@ -33,6 +33,14 @@ const articleSchema = new mongoose.Schema({
         // unique: false,
 
     },
+    category: {
+        type: String,
+        required: true,
+    },
+likes: {
+    type: String,
+    required: true,
+},
     createdAt: {
         type: Date,
         required: true

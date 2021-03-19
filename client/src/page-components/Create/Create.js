@@ -29,7 +29,9 @@ function Create() {
     <div>
         <input className={style["inCreate"]} type="text" name="brand" placeholder="Brand..."/>
     </div>
-    
+    <div>
+        <input className={style["inCreate"]} type="text" name="category" placeholder="Category..."/>
+    </div>
       
     <div className={style['Button']}>
     <button className={style['Nav-Create']}>Create</button>
