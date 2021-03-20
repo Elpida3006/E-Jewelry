@@ -4,7 +4,7 @@ import logo from '../static/logo1.png';
 import Layout from '../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import {Link} from 'react-router-dom';
-
+//Class Components/State/Props/Handling Events
 
 class Cover extends Component {
         constructor(props) {

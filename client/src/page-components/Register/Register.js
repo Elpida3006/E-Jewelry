@@ -8,7 +8,7 @@ const changeValue = (e) => {
     // const value = e.target.value;
     // console.log(value);
 };
-
+//Forms
 function Register() {
 
   

@@ -5,7 +5,7 @@ import style from './Product.module.css';
 import {Link} from 'react-router-dom';
 
 
-
+//functional components
   
 const Product = ({
     _id: id,
@@ -23,30 +23,31 @@ buyers
             
         <div className={style.Product}>
 
-                <h3 className={style["Product"]}  name="nameProduct">{nameProduct}</h3>
+                <h3 className={style["Product-Card"]}  name="nameProduct">Name: {nameProduct}</h3>
             
-                <h2 className={style["Product"]} type="text" name="price" placeholder="Price...">{price}</h2>
+                <h4 className={style["Product-Card"]} type="text" name="price" placeholder="Price...">Price: {price}</h4>
         
-                <img src={imageUrl} className={style["inCreate"]} type="text" name="imageUrl" placeholder="Image url..."/>
+                <img src={imageUrl} className={style["Product-Img"]} type="text" name="imageUrl" placeholder="Image url..."/>
         
-                <h2 name="description" placeholder="Give us some description about this offer...">{description}</h2>
+                <h4 className={style["Product-Card"]} name="description" >Description: {description}</h4>
         
-                <h2 className={style["Product"]} type="text" name="brand" >{brand}</h2>
+                <h4 className={style["Product-Card"]} type="text" name="brand" >Brand: {brand}</h4>
             
-                <h2 className={style["Product"]} type="text" name="category" >{category}</h2>
-                <h2 className={style["Product"]} type="text" name="likes" >{likes}</h2>
-                <h2 className={style["Product"]} type="text" name="buyers" >{buyers.length}</h2>
+                <h4 className={style["Product-Card"]} type="text" name="category" >Category: {category}</h4>
+                <h4 className={style["Product-Card"]} type="text" name="likes" >Likes: {likes}</h4>
+                <h4 className={style["Product-Card"]} type="text" name="buyers" >Buyers: {buyers}</h4>
 
           
-                <div className={style['Button']}>
-                <button className={style['Nav-Product']}>Details</button>
+                <section className={style['Button']}>
+               
         
-                <li>
-                    <Link className={style['Nav-Product']} to={`/Products/Details/${id}`}>Home</Link>  
-                </li>
-        
-    
-              </div>  
+
+               
+                    <Link className={style['Nav-Product']} to={`/Products/Details/${id}`}> 
+                    <button className={style['Nav-Product']}>Details</button>
+                    </Link>  
+
+                </section>  
         </div>   
     
          
