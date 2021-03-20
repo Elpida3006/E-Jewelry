@@ -3,6 +3,8 @@ import style from './Layout.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
+//HOC
+
 function Layout(props) {
     return (
       

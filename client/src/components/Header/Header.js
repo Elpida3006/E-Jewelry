@@ -19,9 +19,14 @@ return (
          </li>
         
         <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/About">About Us</Link>
+            <Link className={style['Li']} to="/About">About </Link>
         </li>
       
+         
+        <li className={style['Nav-Li']}>
+            <Link className={style['Li']} to="/Contact">Contact Us</Link>
+        </li>
+
         <li className={style['Nav-Li']}>
             <Link className={style['Li']} to="/user/login">Login</Link>
         </li>

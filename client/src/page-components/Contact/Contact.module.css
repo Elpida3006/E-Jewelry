@@ -1,0 +1,12 @@
+.Contact {
+    margin-left: 650px;
+    margin-bottom: 150px;
+    padding: 50px;
+    height: 400px;
+    width: 600px;
+    border: 2px solid white;
+    border-radius: 5%;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Courier New', Courier, monospace;
+}

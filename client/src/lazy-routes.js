@@ -9,12 +9,14 @@ const Home = lazy(() => import('./containers/Home'));
 const Register = lazy(() => import('./page-components/Register/Register'));
 const Login = lazy(() => import('./page-components/Login/Login'));
 const About = lazy(() => import('./page-components/About/About'));
+const Contact = lazy(() => import('./page-components/Contact/Contact'));
 const Create = lazy(() => import('./page-components/Create/Create'));
 
-const Products = lazy(() => import('./components/Products/Products'));
+const Products = lazy(() => import('./containers/Products'));
 // const Gold = lazy(() => import('./components/Products/Gold/Gold'));
 // const Leather = lazy(() => import('./components/Products/Leather/Leather'));
 
+//Lazy-Loading
 
 
 function Routes () {
@@ -26,6 +28,7 @@ function Routes () {
             <Route path="/Cover"   component={Cover} />
             <Route path="/Home"  component={Home} />
             <Route path="/About"  component={About} />
+            <Route path="/Contact"  component={Contact} />
             <Route path="/user/register"  component={Register} />
             <Route path="/user/login"  component={Login} />
             <Route path="/Create/Silver"  component={Create} />
