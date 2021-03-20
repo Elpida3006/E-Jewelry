@@ -27,8 +27,8 @@ code {
 img {
     padding: 50px;
     orientation:inherit;
-    height: 600px;
-    width: 1200px;
+    height: 400px;
+    width: 1000px;
    
     
 }
@@ -44,7 +44,7 @@ img {
     display: flex;
     position: relative;
     width: 60%;
-    margin-left: 50px;
+    margin-left: 150px;
     margin-bottom: 50px;
 }
 .Static {

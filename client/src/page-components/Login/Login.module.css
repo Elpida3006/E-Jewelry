@@ -24,7 +24,7 @@ h1 {
   
     padding-bottom: 150px;
     width: 35%;
-    margin-bottom: 50px;
+    margin-bottom: 11%;
     margin-left: 450px; 
  
     text-align: left;
@@ -39,6 +39,7 @@ h1 {
     height: 30px;
     width: 170px;
     background-color: rgb(5, 43, 25);
+    
 }
 .Button {
     text-decoration: none;

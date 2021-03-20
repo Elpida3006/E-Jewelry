@@ -16,14 +16,14 @@ h1 {
 }
 
 .Register {
-   
+    margin-bottom:5%;
     display: block;
     background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
     padding-left: 350px;
     /* padding-right: -350px; */
     padding-bottom: 150px;
     width: 35%;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     margin-left: 450px; 
  
     text-align: left;

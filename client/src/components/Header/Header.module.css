@@ -35,7 +35,7 @@
     cursor: pointer;
     border: 2px solid rgb(20, 20, 20);
     border-radius: 50px;
-    margin-right: 1000px;
+    margin-right: 800px;
     display: inline-block;
     list-style: none;
 	padding: 20px 30px;
@@ -45,7 +45,7 @@
 .Ul-Tab {
 
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     background-image: linear-gradient( rgb(20, 20, 20), rgba(170, 72, 7, 0.904), rgb(20, 20, 20));
     padding-left: 50px;
 }
