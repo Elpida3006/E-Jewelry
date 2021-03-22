@@ -7,56 +7,61 @@ import React, {Component} from 'react';
 // import Layout from '../components/Layout/Layout';
 import Product from '../components/Product/Product';
 import style from './Products.module.css';
-import * as fetchData from '../services/fetch-data';
+import {getProducts} from '../services/fetch-data';
 
 class Products extends Component {
 
     constructor(props){
         super(props);
-
+console.log(props);
         this.state = {
             products: [],
-            currentCategory: 'all',
+            currentCategory: '',
         };
     }
 
     componentDidMount(){
 
-        fetchData.getProducts()
+      getProducts()
         .then(res => this.setState({ products: res }))
         .catch(error => console.log(error));
+
     }
 
-    componentDidUpdate(prevProps) {
-        const category = this.props.match.params.category;
+    // componentDidUpdate(prevProps) {
+    //     const category = this.prevProps.match.params.category;
 
-        if (prevProps.match.params.category === category) {
-            return;
-        }
+    //     if (prevProps.match.params.category === category) {
+    //         return;
+    //     }
 
-        fetchData.getProducts(category)
-            .then(res => {
+    //    getProducts(category)
+    //         .then(res => {
 
-                this.setState({ products: res, currentCategory: category });
-            })
-            .catch(error => console.log(error));
-    }
+    //             this.setState({ products: res, currentCategory: category });
+    //         })
+    //         .catch(error => console.log(error));
+    // }
 
     render(){
-        const { products } = this.state;
+        const { products, currentCategory } = this.state;
+        console.log(currentCategory);
+        console.log(this.state.products);
+
         return (
        
-     // <Layout>
+    //  <Layout>
         <div className={style.Products}>
+              <p>{this.state.currentCategory} Category Page</p> 
               {(products)?   
               products.map(x => 
                 <Product key={x.id} {...x} />
             ) : 
-         <p>No Offers!</p> 
+         <p>No New Jewelry!</p> 
         }
            
         </div>
-    // </Layout>
+    //  {/* </Layout> */}
         );
     }
 }

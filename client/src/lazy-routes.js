@@ -34,9 +34,9 @@ function Routes () {
             <Route path="/Create/Silver"  component={Create} />
             <Route path="/Create/Gold"  component={Create} />
             <Route path="/Create/Leather-Accessory"  component={Create} />
-            <Route path="/Products/Silver"  component={Products} />
-            <Route path="/Products/Gold"  component={Products} />
-            <Route path="/Products/Leather-Accessory"  component={Products} />
+            <Route path="/products/silver"  component={Home} />
+            <Route path="/products/gold"  component={Home} />
+            <Route path="/products/leather-Accessory"  component={Home} />
 
             </Switch>
         </Suspense>

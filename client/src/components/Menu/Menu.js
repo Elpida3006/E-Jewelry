@@ -7,15 +7,15 @@ function Menu() {
         <div className={style.Menu}>
             <ul>
             <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/Products/Silver">Silver</Link>
+            <Link className={style['Li']} to="/products/silver">Silver</Link>
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/Products/Gold">Gold</Link>
+                <Link className={style['Li']} to="/products/gold">Gold</Link>
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/Products/Leather Accessory">Leather Accessory</Link>
+                <Link className={style['Li']} to="/products/leather-accessory">Leather Accessory</Link>
 
                 </li>
             </ul>

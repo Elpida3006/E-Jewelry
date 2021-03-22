@@ -7,9 +7,9 @@ import Layout from '../components/Layout/Layout';
 import Admin from '../components/Admin-Panel/Admin';
 import Products from './Products';
 
-const isLogin= (props)=>{
+// const isLogin= (props)=>{
 
-};
+// };
 const isAdmin= (props)=>{
     // isAdmin: true;
     //conditional rendering with state/props?

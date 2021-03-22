@@ -23,7 +23,7 @@ return (
     <input type="password" name="password" placeholder="Password"/>   
    
    
-    <button className={style["LoginBtn"]}>
+    <button className={style['LoginBtn']}>
     <Link className={style.Button} to="/user/login">Login</Link>
         </button>
     
