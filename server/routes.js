@@ -9,7 +9,7 @@ const router = Router();
 router.use('/', homeController);
 router.use('/products', productController);
 
-router.use('/user', userController);
+router.use('/users', userController);
 
 // router.get('*', (req, res) => {
 //     res.render('404');

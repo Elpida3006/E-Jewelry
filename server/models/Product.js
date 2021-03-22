@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const articleSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
     id: mongoose.Types.ObjectId,
     nameProduct: {
         type: String,
@@ -37,14 +37,14 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-likes: {
-    type: mongoose.Types.ObjectId,
-    ref: 'User'
-},
-buyers: [{
-    type: mongoose.Types.ObjectId,
-    ref: 'User'
-}],
+    likes: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    },
+    buyers: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    }],
 
     createdAt: {
         type: Date,
@@ -61,4 +61,4 @@ buyers: [{
 });
 
 
-module.exports = mongoose.model('Article', articleSchema)
+module.exports = mongoose.model('Product', productSchema)

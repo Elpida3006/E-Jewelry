@@ -5,14 +5,6 @@ const { jwtSecret, authCookieName } = require('../config/config')
     // const Article = require('../models/Article')
 const User = require('../models/User')
 
-
-// function getRegister(req, res) {
-//     res.render('register');
-// }
-
-// function getLogin(req, res) {
-//     res.render('login');
-// }
 function getUser(req, res, next) {
     User.find()
             .then((users) => res.send(users))
@@ -53,10 +45,10 @@ function getProfile(req, res, next) {
 
 function postRegister(req, res, err) {
     const { email, fullname, password, rePassword } = req.body;
-    console.log(req.body);
-    console.log(fullname);
-    console.log(password);
-    console.log(rePassword);
+    // console.log(req.body);
+    // console.log(fullname);
+    // console.log(password);
+    // console.log(rePassword);
 
     // User.create({ email, fullname, password })
     User.create(req.body)
