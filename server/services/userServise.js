@@ -103,6 +103,7 @@ function postLogin(req, res, next) {
                 .cookie(authCookieName, token, { httpOnly: true }, { maxAge: 360000000 })
                 // .redirect('/products')
                 .send(user)
+                //    .send(user, token);
         })
         .catch(next);
 }
