@@ -37,9 +37,8 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    likes: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
+    like: {
+        type: Number
     },
     buyers: [{
         type: mongoose.Types.ObjectId,

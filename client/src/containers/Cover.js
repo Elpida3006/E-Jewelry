@@ -11,7 +11,8 @@ class Cover extends Component {
           super(props);
             this.state = {
              Like: 0, 
-             isLogged: false
+             isLogged: false,
+         
              };
             // this.CounterLike = this.CounterLike.bind(this);
             // this.CounterUnLike = this.CounterUnLike.bind(this);

@@ -15,7 +15,7 @@ const Product = ({
 description,
 brand,
 category,
-likes,
+like,
 buyers
 }) => {
 
@@ -34,7 +34,7 @@ buyers
                 <h4 className={style["Product-Card"]} type="text" name="brand" >Brand: {brand}</h4>
             
                 <h4 className={style["Product-Card"]} type="text" name="category" >Category: {category}</h4>
-                <h4 className={style["Product-Card"]} type="text" name="likes" >Likes: {likes}</h4>
+                <h4 className={style["Product-Card"]} type="text" name="likes" >Likes: {like}</h4>
                 <h4 className={style["Product-Card"]} type="text" name="buyers" >Buyers: {buyers}</h4>
 
           

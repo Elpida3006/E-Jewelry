@@ -1,21 +1,25 @@
 import React from 'react';
 import style from './Menu.module.css';
-import {Link} from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 function Menu() {
     return (
         <div className={style.Menu}>
             <ul>
             <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/products/silver">Silver</Link>
+            <NavLink  className={style['Li']} to="/products/all">All Products</NavLink >
+
+                </li>
+            <li className={style['Nav-Li']}>
+            <NavLink  className={style['Li']} to="/products/Silver">Silver</NavLink >
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/products/gold">Gold</Link>
+                <NavLink  className={style['Li']} to="/products/Gold">Gold</NavLink >
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/products/leather-accessory">Leather Accessory</Link>
+                <NavLink  className={style['Li']} to="/products/leather-accessory">Leather Accessory</NavLink >
 
                 </li>
             </ul>

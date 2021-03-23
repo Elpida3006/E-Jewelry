@@ -68,3 +68,10 @@ img {
     margin-bottom: 50px;
 }
 /* menu & layout: display:flex /20/70 */
+.Products {
+    border: 2px solid white;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+    padding: 20px 30px;
+    margin: 5px 200px;
+    color:white;
+}

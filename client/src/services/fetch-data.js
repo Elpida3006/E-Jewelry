@@ -1,7 +1,8 @@
 const homeurl = 'http://localhost:3002/api/products/';
 
 export const getProducts = (category = '') => {
-    let productsCategory = homeurl + ((category && category !== '') ? `?category=${category}` : '');
+    let productsCategory = homeurl + ((category && category !== 'all') ? `${category}` : '');
+    console.log(category);
 console.log(productsCategory);
   return fetch(productsCategory)
     .then(res => res.json())

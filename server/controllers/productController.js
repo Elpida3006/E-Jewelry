@@ -9,13 +9,24 @@ router.get('/', (req, res, err) => {
 // console.log(`No articles yet`);
     service.getAll()
         .then(products => {
-      
+        
+       
             res.send(products)
         })
         .catch(err => console.error(`No articles yet`))
     
         
 });
+router.get('/:category', (req, res, err) => {
+    const curr = req.params.category
+service.getCategory(curr)
+.then(products => {
+        
+       
+    res.send(products)
+})
+.catch(err => console.error(`No articles yet`))
+})
 
 router.post('/create', (req, res, error) => {
     // console.log(req.body);

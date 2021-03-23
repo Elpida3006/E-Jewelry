@@ -24,6 +24,9 @@ function getAll() {
     //    .catch(err => { console.log(`unlisted`) })
 return Product.find().populate('createdBy')
 }
+function getCategory(currcategory) {
+    return Product.find({category: currcategory})
+}
 
 
 function getId(id) {
@@ -52,6 +55,7 @@ function buy(itemId, userId) {
 
 
 module.exports = {
+    getCategory,
     createProduct,
     getAll,
     getId,
