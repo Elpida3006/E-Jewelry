@@ -25,7 +25,7 @@ class Cover extends Component {
     }
     CounterUnLike = () => {
         // const Like = this.state;
-
+// + post to server match.params.id -> likes += 1;
         this.setState( {Like: this.state.Like - 1}  < 0 ?
         {Like:  0} :  {Like: this.state.Like - 1}) ;
     }
