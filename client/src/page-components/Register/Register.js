@@ -31,15 +31,17 @@ class  Register extends Component {
         password,
         rePassword
     } = this.state;
-    
+
     return (
 
         <Layout>
-        <div className={style.Register}>
+          
+            <div className={style.Register}>
                 <h1>Register</h1>
                 {/* {{#if errorMesage}}
           <p class="message">{{errorMesage}}</p>
           {{/if}} */}
+            <form >
               <p className={style.InfoP}>Already registered?
                   <Link className={style.Info} to="/user/login">Login now</Link> and have some fun!
               </p>
@@ -59,8 +61,10 @@ class  Register extends Component {
               <Link className={style.Button} to="/user/register">Register</Link>
               </button>
             
-           
+              </form>
             </div> 
+          
+       
             </Layout>
            
         );

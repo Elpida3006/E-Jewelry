@@ -8,12 +8,14 @@ function Login() {
 return (
 
 <Layout>
+
 <div className={style.Login}>
         <h1>Login</h1>
         {/* {{#if errorMesage}}
   <p class="message">{{errorMesage}}</p>
   {{/if}} */}
-       <p className={style.InfoP}>Don't have account?
+  <form >
+  <p className={style.InfoP}>Don't have account?
           <Link className={style.Info} to="/user/register">Register now</Link> and fix that!
       </p>
       <label className={style['Label']} htmlFor="email">Email</label>
@@ -26,6 +28,8 @@ return (
     <button className={style['LoginBtn']}>
     <Link className={style.Button} to="/user/login">Login</Link>
         </button>
+  </form>
+      
     
    
     </div> 
