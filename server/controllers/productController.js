@@ -44,7 +44,7 @@ router.post('/create', (req, res, error) => {
         .catch(err => console.error)
         // .catch(error => { res.render('create', { error }); })
 });
-router.post('/edit/:id', (req, res) => {
+router.put('/edit/:id', (req, res) => {
     let articleId = req.params.id
     console.log(articleId);
     let myID = req.user._id
@@ -61,7 +61,7 @@ router.post('/edit/:id', (req, res) => {
 
 
 })
-router.get('/delete/:id', (req, res, next) => {
+router.delete('/delete/:id', (req, res, next) => {
     let articleId = req.params.id
 
     service.deleteArticle(articleId)

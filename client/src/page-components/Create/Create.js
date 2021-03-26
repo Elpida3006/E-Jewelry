@@ -16,7 +16,7 @@ function Create() {
 // e.target.brand.value
 // e.target.category.value
 //uncontrolled Form
-
+//nameProduct, price, imageUrl, description, brand, category
 
     };
 
@@ -46,6 +46,9 @@ function Create() {
     </div>
     <div>
         <input className={style['inCreate']} type="text" name="category" placeholder="Category..."/>
+    </div>
+    <div>
+        <input className={style['inCreate']} type="Number" name="like" placeholder="like..."/>
     </div>
       
     <div className={style['Button']}>

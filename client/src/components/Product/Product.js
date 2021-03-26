@@ -23,19 +23,19 @@ buyers
             
         <div className={style.Product}>
 
-                <h3 className={style["Product-Card"]}  name="nameProduct">Name: {nameProduct}</h3>
+                <h3 className={style['Product-Card']}  name="nameProduct">Name: {nameProduct}</h3>
             
-                <h4 className={style["Product-Card"]} type="text" name="price" placeholder="Price...">Price: {price}</h4>
+                <h4 className={style['Product-Card']} type="text" name="price" placeholder="Price...">Price: {price}</h4>
         
-                <img src={imageUrl} className={style["Product-Img"]} type="text" name="imageUrl" placeholder="Image url..."/>
+                <img src={imageUrl} className={style['Product-Img']} type="text" name="imageUrl" alt='img' placeholder="Image url..."/>
         
-                <h4 className={style["Product-Card"]} name="description" >Description: {description}</h4>
+                <h4 className={style['Product-Card']} name="description" >Description: {description}</h4>
         
-                <h4 className={style["Product-Card"]} type="text" name="brand" >Brand: {brand}</h4>
+                <h4 className={style['Product-Card']} type="text" name="brand" >Brand: {brand}</h4>
             
-                <h4 className={style["Product-Card"]} type="text" name="category" >Category: {category}</h4>
-                <h4 className={style["Product-Card"]} type="text" name="likes" >Likes: {like}</h4>
-                <h4 className={style["Product-Card"]} type="text" name="buyers" >Buyers: {buyers}</h4>
+                <h4 className={style['Product-Card']} type="text" name="category" >Category: {category}</h4>
+                <h4 className={style['Product-Card']} type="text" name="like" >Likes: {like}</h4>
+                <h4 className={style['Product-Card']} type="text" name="buyers" >Buyers: {buyers}</h4>
 
           
                 <section className={style['Button']}>
