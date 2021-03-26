@@ -7,7 +7,7 @@ import Layout from '../components/Layout/Layout';
 import Admin from '../components/Admin-Panel/Admin';
 // import Products from './Products';
 import Product from '../components/Product/Product';
-import {getProducts} from '../services/fetch-data';
+import {getProducts} from '../services/productService';
 // const isLogin= (props)=>{
 
 // };
