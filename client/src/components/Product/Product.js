@@ -27,7 +27,7 @@ buyers
             
                 <h4 className={style['Product-Card']} type="text" name="price" placeholder="Price...">Price: {price}</h4>
         
-                <img src={imageUrl} className={style['Product-Img']} type="text" name="imageUrl" alt='img' placeholder="Image url..."/>
+                <img src={imageUrl} className={style['Product-Img']} type="text" name="imageUrl" alt="" placeholder="Image url..."/>
         
                 <h4 className={style['Product-Card']} name="description" >Description: {description}</h4>
         

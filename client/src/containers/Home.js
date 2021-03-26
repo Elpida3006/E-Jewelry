@@ -5,6 +5,7 @@ import Menu from '../components/Menu/Menu';
 import Layout from '../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import Admin from '../components/Admin-Panel/Admin';
+import UserSearch from '../components/UserPanel/UserSearch';
 // import Products from './Products';
 import Product from '../components/Product/Product';
 import {getProducts} from '../services/productService';
@@ -73,13 +74,17 @@ return (
     <div className={style.Admin}>
    {isAdmin ? <Admin/> : null}
     </div>
-
+<UserSearch/>
     <div className={style.Products}>
               <p>{currentCategory} Category Page</p> 
               {(products.length > 0)?   
            this.state.products.map(c => 
-               
-                  <Product key={c.id} {...c} />
+       
+                <Product key={c.id} {...c} />
+         
+           
+              
+                 
                
               
                

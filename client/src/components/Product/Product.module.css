@@ -1,18 +1,20 @@
 .Product {
     border: 2px solid white;
-    width: 400px;
+    width: 450px;
     height: 750px;
     background-color: white;
     display: block;
     margin-left: 5% ;
 }
 .Product-Img {
-    width: 300px;
-    height: 300px;  
+    width: 280px;
+    height: 280px;  
     margin: 0 10%;
+    /* margin-right: 10%; */
     padding: 2%;
 }
 .Product-Card {
+  
     margin: 2%;
     padding: 2%;
     color: rgb(15, 15, 48);

@@ -27,6 +27,16 @@ service.getCategory(curr)
 })
 .catch(err => console.error(`No articles yet`))
 })
+router.get('/:name', (req, res, err) => {
+    const curr = req.params.name
+service.getName(curr)
+.then(products => {
+        
+       
+    res.send(products)
+})
+.catch(err => console.error(`No articles yet`))
+})
 
 router.post('/create', (req, res, error) => {
 //   const {nameProduct, price, imageUrl, description, brand, category, like} = {...req.body}

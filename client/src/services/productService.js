@@ -9,6 +9,15 @@ console.log(productsCategory);
     .catch(err => console.log(err));
 
 };
+export const getName = (nameProduct = '') => {
+    let productsName = homeurl + '/' + ((nameProduct && nameProduct !== 'All') ? `${nameProduct}` : '');
+    console.log(nameProduct);
+console.log(productsName);
+  return fetch(productsName)
+    .then(res => res.json())
+    .catch(err => console.log(err));
+
+};
 
 export const getOne = (productId) => {
     return fetch(`${homeurl}/${productId}`)

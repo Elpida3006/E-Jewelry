@@ -35,6 +35,7 @@ function Routes () {
             <Route path="/Create/Gold"  component={Create} />
             <Route path="/Create/Leather-Accessory"  component={Create} />
             <Route path="/products/:category"  component={Home} />
+            <Route path="/products/:nameProduct"  component={Home} />
             {/* <Route path="/products/gold"  component={Home} />
             <Route path="/products/leather-accessory"  component={Home} /> */}
 

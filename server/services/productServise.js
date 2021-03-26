@@ -32,7 +32,9 @@ return Product.find().populate('createdBy')
 function getCategory(currcategory) {
     return Product.find({category: currcategory})
 }
-
+function getName(curry) {
+    return Product.find({nameProduct: curry})
+}
 
 function getId(id) {
     return Product.findById(id).lean();
@@ -61,6 +63,7 @@ function buy(itemId, userId) {
 
 module.exports = {
     getCategory,
+    getName,
     createProduct,
     getAll,
     getId,
