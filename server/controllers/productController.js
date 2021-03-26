@@ -29,19 +29,22 @@ service.getCategory(curr)
 })
 
 router.post('/create', (req, res, error) => {
-    // console.log(req.body);
+//   const {nameProduct, price, imageUrl, description, brand, category, like} = {...req.body}
+// console.log(object);
     // console.log(req.user._id);
     // service.createProduct(req.body)
-    service.createProduct(req.body, req.user._id)
+    // service.createProduct(req.body, req.user._id)
+
+    service.createProduct(req.body)
         // .then(() => {
         //     console.log(`Article is created`)
         //     res.redirect('/products')
         // })
         .then(article => {
-            // console.log(item);
+            // console.log(article);
             res.status(200).send(article)
         })
-        .catch(err => console.error)
+        .catch(err => console.log('error again'));
         // .catch(error => { res.render('create', { error }); })
 });
 router.put('/edit/:id', (req, res) => {

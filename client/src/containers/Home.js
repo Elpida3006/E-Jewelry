@@ -21,7 +21,7 @@ class Home extends Component {
         // console.log(props);
         this.state = {
             products: [],
-            currentCategory: 'all',
+            currentCategory: 'All',
             
         };
        

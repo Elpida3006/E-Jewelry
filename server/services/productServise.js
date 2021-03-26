@@ -2,13 +2,18 @@ const Product = require('../models/Product')
     // const {  } = require('../validators/productValidator')
 const User = require('../models/User')
 
-function createProduct(data, _id) {
+// function createProduct(data, _id) {
+    function createProduct(data) {
+        // console.log({...data});
+// const {nameProduct, price, imageUrl, description, brand, category, like } = {...data}
     //validation
-    // const { title, description } = {...data }
     // console.log({...data, createdBy: _id });
-    //  _id = 000;
+     _id = 000;
     const createdAt = new Date();
+    // console.log({...data, createdAt});
     return Product.create({...data, createdAt, createdBy: _id })
+    // return Product.create({...data, createdAt})
+
 }
 
 function getAll() {

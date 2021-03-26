@@ -74,4 +74,9 @@ img {
     padding: 20px 30px;
     margin: 5px 200px;
     color:white;
+    display: flex;
+
 }
+/* p {
+    display: block;
+} */

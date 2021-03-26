@@ -7,7 +7,7 @@ function Menu() {
         <div className={style.Menu}>
             <ul>
             <li className={style['Nav-Li']}>
-            <NavLink  className={style['Li']} to="/products/all">All Products</NavLink >
+            <NavLink  className={style['Li']} to="/products/All">All Products</NavLink >
 
                 </li>
             <li className={style['Nav-Li']}>

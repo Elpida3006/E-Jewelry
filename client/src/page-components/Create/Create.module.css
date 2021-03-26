@@ -31,7 +31,7 @@ html {
 .Create{
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 0%;
+    margin-top: -2%;
     margin-bottom: 2%;
     /* margin-left: 650px;
     margin-right: 500px; */
@@ -41,10 +41,11 @@ html {
     cursor: pointer;
     border: 2px solid rgb(20, 20, 20);
     border-radius: 50px;
- width: 800px;
+    width: 700px;
+  
     display: block;
     list-style: none;
-	padding: 10px 30px;
+	padding: 0px 10px;
     text-align: center;
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
 }
@@ -74,6 +75,22 @@ div .inCreate {
 /* label {
     display:flex; 
 } */
+ .select {
+
+    text-indent: 43%;
+  
+    width: 47vh;
+    margin-top: 2%;
+    height: 4vh;
+
+    border-image: initial;
+ 
+    font-size: 20px;
+    border: 2px solid rgba(236, 86, 16, 0.911);
+    border-left: 2px solid rgba(165, 42, 42, 0.068);
+
+    border-bottom: 1px solid var(--main-blue);
+}
 
 
  textarea {
@@ -111,10 +128,10 @@ div .inCreate {
     display: flex;
     padding-top: 20px;
     padding-bottom: 10px;
-    margin-left: 0px;
+    margin-left: -50px;
    
 }
  .createh1 {
     color: wheat;
-    margin-left: 15%
+    margin-left: 4%
 }
