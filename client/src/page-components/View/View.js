@@ -5,7 +5,7 @@ import Layout from '../../components/Layout/Layout';
 import Admin from '../../components/Admin-Panel/Admin';
 // import Products from './Products';
 import Product from '../../components/Product/Product';
-import {getProducts} from '../../services/productService';
+import {getAll} from '../../services/productService';
 // const isLogin= (props)=>{
 
 // };
@@ -18,8 +18,9 @@ class View extends Component {
         super(props);
         // console.log(props);
         this.state = {
+             isAdmin: true,
             products: [],
-            currentCategory: 'All',
+
             
         };
        
@@ -28,27 +29,27 @@ class View extends Component {
 
     componentDidMount(){
 
-      getProducts()
+        getAll()
         .then(res => this.setState({ products: res }))
         .catch(error => console.log(error));
 
     }
 
-    componentDidUpdate(prevProps) {
+    // componentDidUpdate(prevProps) {
         
-        const category = this.props.match.params.category;
+    //     const category = this.props.match.params.category;
 
-        if (prevProps.match.params.category === category) {
-            return;
-        }
+    //     if (prevProps.match.params.category === category) {
+    //         return;
+    //     }
 
-       getProducts(this.props.match.params.category)
-            .then(res => {
+    //    getProducts(this.props.match.params.category)
+    //         .then(res => {
 
-                this.setState({ products: res, currentCategory: category });
-            })
-            .catch(error => console.log(error));
-    }
+    //             this.setState({ products: res, currentCategory: category });
+    //         })
+    //         .catch(error => console.log(error));
+    // }
     render(){
      
 
@@ -57,11 +58,11 @@ const products = this.state.products;
 return (
 
 <Layout>
-<div className={style.Home} >
+    <div className={style.Home} >
 
-        <Admin/> 
- 
-</div>
+            <Admin/> 
+    
+    </div>
 
  
 
@@ -71,13 +72,7 @@ return (
            this.state.products.map(c => 
        
                 <Product key={c.id} {...c} />
-         
-           
-              
-                 
-               
-              
-               
+  
             ) : 
          <p>No New Jewelry!</p> 
         }
@@ -86,7 +81,7 @@ return (
          
     
 
-</div>
+    </div>
 </Layout>
 
 );

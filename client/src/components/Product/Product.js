@@ -39,10 +39,16 @@ buyers
 
           
                 <section className={style['Button']}>
-               
-        
+                (isAdmin)? 
+                <Link className={style['Nav-Product']} to={`/products/edit/${id}`}> 
+                    <button className={style['Nav-Product']}>Edit</button>
+                    </Link>  
+                    <Link className={style['Nav-Product']} to={`/products/delete/${id}`}> 
+                    <button className={style['Nav-Product']}>Delete</button>
+                    </Link>  
 
-               
+                :
+
                     <Link className={style['Nav-Product']} to={`/Products/Details/${id}`}> 
                     <button className={style['Nav-Product']}>Details</button>
                     </Link>  

@@ -12,6 +12,7 @@ const Login = lazy(() => import('./page-components/Login/Login'));
 const About = lazy(() => import('./page-components/About/About'));
 const Contact = lazy(() => import('./page-components/Contact/Contact'));
 const Create = lazy(() => import('./page-components/Create/Create'));
+const Edit = lazy(() => import('./page-components/Edit/Edit'));
 const View = lazy(() => import('./page-components/View/View'));
 
 // const Products = lazy(() => import('./containers/Products'));
@@ -35,11 +36,11 @@ function Routes () {
             
             <Route path="/user/register"  component={Register} />
             <Route path="/user/login"  component={Login} />
-
+            <Route path="/products/edit"  component={Edit}/>
             <Route path="/products/create"  component={Create}/>
             {/* <Route path="/products"  component={Home} />  */}
             <Route path="/admin/money"  component={Admin} />
-            <Route path="/admin/view"  component={View} />
+            <Route path="/products"  component={View} />
             <Route path="/products/:category"  component={Home} />
             <Route path="/products/:nameProduct"  component={Home} />
             {/* <Route path="/products/gold"  component={Home} />
