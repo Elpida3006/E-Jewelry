@@ -5,10 +5,10 @@
     box-sizing: border-box;
     /* height: 100%; */
 }
-body {
-    background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg);
+/* body {
+    /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
 
-}
+/* }  */
 .App {
     text-align: center;
     display: block;

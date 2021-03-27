@@ -1,7 +1,7 @@
 import React from 'react';
 //for class components
 import style from './Admin.module.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 function Admin() {
     return (
@@ -16,15 +16,15 @@ function Admin() {
          Admin Panel
          </li>
          <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/Create/Silver">Create Silver</Link>
+            <Link className={style['Li']} to="/products/create">Create</Link>
+
+        </li>
+                <li className={style['Nav-Li']}>
+                <Link className={style['Li']} to="/admin/view">View Products</Link>
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/Create/Gold">Create Gold</Link>
-
-                </li>
-                <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/Create/Leather-Accessory">Create Leather Accessory</Link>
+                <Link className={style['Li']} to="/admin/money">Money</Link>
 
                 </li>
          </li>

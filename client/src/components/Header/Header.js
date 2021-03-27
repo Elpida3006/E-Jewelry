@@ -18,6 +18,9 @@ return (
               <Link className={style['Li']} to="/Cover">E-Jewerly</Link>  
          </li>
         
+         <li className={style['Nav-Li']}>
+            <Link className={style['Li']} to="/Admin">Admin </Link>
+        </li>
         <li className={style['Nav-Li']}>
             <Link className={style['Li']} to="/About">About </Link>
         </li>

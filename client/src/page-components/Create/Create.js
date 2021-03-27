@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout';
 import style from './Create.module.css';
 import {Link, Redirect} from 'react-router-dom';
 import * as service from '../../services/productService';
+import Admin from '../../components/Admin-Panel/Admin';
 
 //Forms
 function Create({history}) {
@@ -13,18 +14,20 @@ function Create({history}) {
 
 //uncontrolled Form
     const {nameProduct, price, imageUrl, description, brand, category, like} = e.target;
-    console.log(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value);
+    // console.log(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value);
     service.createProduct(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value)
-    .then(r =>   history.push('/Home'))
-        .catch(e => Redirect('/'));
+    .then(() =>   history.push('/Home'))
+    .catch(() => Redirect('/'));
         };
       
 
     return (
         <Layout>
-          
+           <Admin/> 
+           <br></br>
+           <br></br>
             <form onSubmit={onSubmitHandler}>
-                <fieldset>
+          
                 <div className={style.Create}>
 
                     <h1 className={style['createh1']}>Create New Offer</h1>
@@ -68,7 +71,7 @@ function Create({history}) {
                     </div>
 
                 </div>   
-                </fieldset>
+           
             </form>
 
         </Layout>
