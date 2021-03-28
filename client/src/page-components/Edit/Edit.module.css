@@ -1,0 +1,137 @@
+html {
+    background-image: url(../../static/static1.squarespace.1486151234.png);
+    /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
+
+    box-sizing: border-box;
+    /* height: 100%; */
+}
+
+.Nav-Home{
+    margin-left: 00px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(223, 212, 212);
+    border-radius: 50px;
+    margin-right: 1000px;
+    display: inline-block;
+    list-style: none;
+	padding: 10px 30px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+}
+ .Li {
+ 
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.Edit{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: -2%;
+    margin-bottom: 2%;
+    /* margin-left: 650px;
+    margin-right: 500px; */
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: rgb(16, 16, 17);
+    cursor: pointer;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 50px;
+    width: 700px;
+  
+    display: block;
+    list-style: none;
+	padding: 0px 10px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+}
+.inEdit
+ {
+    font-size: 40px;
+    margin: 0 auto;
+    color: var(--main-blue);
+    text-align: center;
+}
+
+
+
+div .inEdit {
+    margin-top: 2%;
+    height: 20px;
+    display:flex;
+    padding: 1%;
+    width: 45vh;
+    text-align: center;
+    font-size: 22px;
+    border: 2px solid rgba(236, 86, 16, 0.911);
+    border-left: 2px solid rgba(165, 42, 42, 0.068);
+
+    border-bottom: 1px solid var(--main-blue);
+}
+/* label {
+    display:flex; 
+} */
+ .select {
+
+    text-indent: 43%;
+  
+    width: 47vh;
+    margin-top: 2%;
+    height: 4vh;
+
+    border-image: initial;
+ 
+    font-size: 20px;
+    border: 2px solid rgba(236, 86, 16, 0.911);
+    border-left: 2px solid rgba(165, 42, 42, 0.068);
+
+    border-bottom: 1px solid var(--main-blue);
+}
+
+
+ textarea {
+    font-size: 24px;
+     margin: 5%;
+    color: var(--main-blue);
+    width: 50px;
+    padding: 2%;
+    border: 1px solid var(--main-blue);
+    resize: none;
+    height: 15vh;
+    width: 45vh;
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.Nav-inEdit{
+    font-size: 20px;
+    margin-left: 175px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(194, 181, 181);
+    border-radius: 50px;
+    margin-right: 10px;
+    display: flex;
+    list-style: none;
+	padding: 20px 30px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+}
+.Button {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: -50px;
+   
+}
+ .inEdith1 {
+    color: wheat;
+    margin-left: 4%
+}

@@ -5,15 +5,18 @@
     background-size: cover;
 }
 html {
-    /* background-image: url(../static/static1.squarespace.1486151234.png); */
+    background-image: url(../static/static1.squarespace.1486151234.png);
     /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
 
     box-sizing: border-box;
-    /* height: 100%; */
+    height: 100%;
+    background-repeat: repeat-y;
 }
 
 body {
-    background-image: url(../static/static1.squarespace.1486151234.png);
+    /* background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black); */
+
+    /* background-image: url(../static/static1.squarespace.1486151234.png); */
 
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -72,11 +75,24 @@ img {
     border: 2px solid white;
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
     padding: 20px 30px;
-    margin: 5px 200px;
+    margin: 5px 500px;
     color:white;
     display: flex;
-    width: 1500px;
+    flex-wrap: wrap;
+    width: 1200px;
 
+}
+.PCategory {
+    border: 2px solid white;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+    padding: 20px 30px;
+    /* margin: 5px 200px; */
+    color:white;
+    display: block;
+    flex-wrap: wrap;
+    width: 1500px;  
+    padding-bottom: 50px; 
+    text-align: center;
 }
 /* p {
     display: block;

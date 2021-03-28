@@ -76,7 +76,7 @@ return (
     </div> */}
 <UserSearch/>
     <div className={style.Products}>
-              <p>{currentCategory} Category Page</p> 
+              <p className={style.PCategory}>{currentCategory} Category Page</p> 
               {(products.length > 0)?   
            this.state.products.map(c => 
        

@@ -54,7 +54,7 @@ console.log(product);
 export const editProduct = (nameProduct, price, imageUrl, description, brand, category, like) => {
     let product = {nameProduct, price, imageUrl, description, brand, category, like};
 
-    return fetch(`${homeurl}/edit`, {
+    return fetch(`${homeurl}/edit/:id`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

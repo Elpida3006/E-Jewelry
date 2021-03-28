@@ -66,7 +66,7 @@ return (
 
  
 
-    <div className={style.Products}>
+    <div className={style.View}>
           
               {(products.length > 0)?   
            this.state.products.map(c => 

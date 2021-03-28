@@ -1,9 +1,11 @@
 .Product {
     border: 2px solid white;
     width: 450px;
-    height: 750px;
+    height: 850px;
     background-color: white;
-    display: block;
+    /* display: flex; */
+    justify-content: space-between;
+    margin-bottom: 10%;
     margin-left: 5% ;
 }
 .Product-Img {

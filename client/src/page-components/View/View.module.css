@@ -1,0 +1,11 @@
+.View {
+    border: 2px solid white;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+    padding: 20px 30px;
+    margin: 5px 50px;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1800px;
+margin-right: 10%;
+}

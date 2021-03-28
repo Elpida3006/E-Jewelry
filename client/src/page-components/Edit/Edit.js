@@ -1,71 +1,89 @@
+import Admin from '../../components/Admin-Panel/Admin';
+import React , {Component} from 'react';
+import Layout from '../../components/Layout/Layout';
+import style from './Edit.module.css';
+import {Link, Redirect} from 'react-router-dom';
+import * as service from '../../services/productService';
 
-// import React from 'react';
-// import Layout from '../../components/Layout/Layout';
-// import style from './Edit.module.css';
-// import {Link} from 'react-router-dom';
-
-// //Forms
-// function Edit() {
-//     const onSubmitHandler = (e) => {
-//         e.preventDefault();
-// // e.target.nameProduct.value
-// // e.target.price.value
-// // e.target.imageUrl.value
-
-// // e.target.description.value
-// // e.target.brand.value
-// // e.target.category.value
-// //uncontrolled Form
-// //nameProduct, price, imageUrl, description, brand, category
-
-//     };
-
-//     return (
-//         <Layout>
-          
-// <form onSubmit={onSubmitHandler}>
-// <div className={style.Create}>
-// <h1 className={style['createh1']}>Create New Offer</h1>
-// {/* {{#if errorMesage}}
-// <p class="message">{{errorMesage}}</p>
-// {{/if}} */}
-//     <div>
-//         <input className={style['inCreate']} type="text" name="nameProduct" placeholder="Name..."/>
-//     </div>
-//     <div>
-//         <input className={style['inCreate']} type="text" name="price" placeholder="Price..."/>
-//     </div>
-//     <div>
-//         <input className={style['inCreate']} type="text" name="imageUrl" placeholder="Image url..."/>
-//     </div>
-//     <div>
-//         <textarea name="description" placeholder="Give us some description about this offer..."></textarea>
-//     </div>
-//     <div>
-//         <input className={style['inCreate']} type="text" name="brand" placeholder="Brand..."/>
-//     </div>
-//     <div>
-//         <input className={style['inCreate']} type="text" name="category" placeholder="Category..."/>
-//     </div>
-//     <div>
-//         <input className={style['inCreate']} type="Number" name="like" placeholder="like..."/>
-//     </div>
+//Forms
+class Edit extends Component {
+    constructor(props){
+        super(props);
+        console.log(props);
+        this.state = {
+            nameProduct: '',
+            price:'',
+            imageUrl:'',
+            description:'',
+            brand:'',
+            category:'',
+            like:'',
+        };
+    }
+    componentDidMount(){
       
-//     <div className={style['Button']}>
-//     <button type="submit" className={style['Nav-Create']}>Create</button>
+        // const {nameProduct, price, imageUrl, description, brand, category, like} = e.target.value;
+    }
+    //  onSubmitHandler = (e) => {
+    //     e.preventDefault();
+    //     const {nameProduct, price, imageUrl, description, brand, category, like} = e.target;
+    //     service.editProduct(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value)
+    //     .then(() =>   history.push('/Home'))
+    //     .catch(() => Redirect('/'));
+
+    // };
+render(){
+    const {nameProduct, price, imageUrl, description, brand, category, like} = this.state;
+
+    return (
+        <Layout>
+          <Admin/>   
+          <br></br>
+           <br></br>
+<form >
+<div className={style.Edit}>
+<h1 className={style['inEdith1']}>Edit Article</h1>
+{/* {{#if errorMesage}}
+<p class="message">{{errorMesage}}</p>
+{{/if}} */}
+    <div>
+        <input className={style['inEdit']} type="text" name="nameProduct" value={nameProduct}/>
+    </div>
+    <div>
+        <input className={style['inEdit']} type="text" name="price" value={price}/>
+    </div>
+    <div>
+        <input className={style['inEdit']} type="text" name="imageUrl" value={imageUrl}/>
+    </div>
+    <div>
+        <textarea name="description" >{description}</textarea>
+    </div>
+    <div>
+        <input className={style['inEdit']} type="text" name="brand" value={brand}/>
+    </div>
+    <div>
+        <input className={style['inEdit']} type="text" name="category" value={category}/>
+    </div>
+    <div>
+        <input className={style['inEdit']} type="Number" name="like"  value={like}/>
+    </div>
+      
+    <div className={style['Button']}>
+    <button type="submit" className={style['Nav-inEdit']}>Save</button>
    
-//     <li>
-//               <Link className={style['Nav-Create']} to="/Home">Home</Link>  
-//          </li>
-//     </div>
+    <li>
+              <Link className={style['Nav-inEdit']} to="/Home">Home</Link>  
+         </li>
+    </div>
 
-//     </div>   
-// </form>
+    </div>   
+</form>
 
-//         </Layout>
+        </Layout>
      
-//     );
-// }
+    );
+}
+}
 
 
-// export default Edit;
+export default Edit;

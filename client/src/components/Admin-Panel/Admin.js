@@ -20,7 +20,7 @@ function Admin() {
 
         </li>
                 <li className={style['Nav-Li']}>
-                <Link className={style['Li']} to="/products">View Products</Link>
+                <Link className={style['Li']} to="/view">View Products</Link>
 
                 </li>
                 <li className={style['Nav-Li']}>

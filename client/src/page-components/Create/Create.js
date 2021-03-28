@@ -7,7 +7,7 @@ import * as service from '../../services/productService';
 import Admin from '../../components/Admin-Panel/Admin';
 
 //Forms
-function Create({history}) {
+function Create({history, match, location}) {
     
     const onSubmitHandler = (e) => {
         e.preventDefault();
