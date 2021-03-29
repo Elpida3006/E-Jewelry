@@ -23,7 +23,7 @@ useEffect(() => {
         const {nameProduct, price, imageUrl, description, brand, category, like, buyers} = e.target;
         console.log(id, nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value, buyers.value);
         service.editProduct(id, nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value, buyers.value)
-        .then(() =>   history.push('/Home'))
+        .then(() =>   history.push('/view'))
         .catch(() => Redirect('/view'));
 
     };
@@ -31,6 +31,7 @@ useEffect(() => {
     // const {nameProduct, price, imageUrl, description, brand, category, like} = this.state;
 console.log(product);
     return (
+        <body className={style.BackgroundAdmin}>
         <Layout>
           <Admin/>   
           <br></br>
@@ -77,6 +78,7 @@ console.log(product);
 </form>
 
         </Layout>
+        </body>
      
     );
 };

@@ -6,6 +6,10 @@
     color:white;
     display: flex;
     flex-wrap: wrap;
-    width: 1800px;
+    width: 1600px;
 margin-right: 10%;
+}
+.BackgroundAdmin {
+    background-image: url(https://image.freepik.com/free-vector/abstract-metallic-blue-background-texture_52683-20746.jpg);
+
 }

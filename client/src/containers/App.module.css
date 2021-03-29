@@ -1,14 +1,13 @@
 .html {
-    /* background-image: url(../static/static1.squarespace.1486151234.png); */
     /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
 
     box-sizing: border-box;
     /* height: 100%; */
 }
-/* body {
-    /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
-
-/* }  */
+.BackgroundCover {
+     background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); 
+     min-height: 80vh;
+ }  
 .App {
     text-align: center;
     display: block;

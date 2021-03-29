@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import style from './Cover.module.css';
-import logo from '../static/logo1.png';
+import logo from '../static/logo2.jpg';
 import Layout from '../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import {Link} from 'react-router-dom';
@@ -46,14 +46,14 @@ class Cover extends Component {
          {/* <code>src/App.js</code> and save to reload. */ }
           </p>   
         <p> Let 's Start</p>   
-        <div>
+        <div className={style.like}>
               
               <h4>  Like: {this.state.Like}      <button className={style.CoverBtn}  onClick={this.CounterLike}>Like Page</button>
               <button className={style.CoverBtn} onClick={this.CounterUnLike}>Unlike Page</button>
               </h4>
               
         </div>
-             <li className={style['Nav-Home']}>
+             <li className={style['Btn-Home']}>
               <Link className={style['Li']} to="/Home">Home</Link>  
          </li>
           </main>  

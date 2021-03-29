@@ -58,7 +58,7 @@ const currentCategory = this.state.currentCategory;
 const products = this.state.products;
 
 return (
-
+<body className={style.BackgroundHome}>
 <Layout>
 <div className={style.Home} >
 <div className={style.Static}>
@@ -80,13 +80,7 @@ return (
               {(products.length > 0)?   
            this.state.products.map(c => 
        
-                <Product key={c.id} {...c} />
-         
-           
-              
-                 
-               
-              
+                <Product key={c.id} {...c} />   
                
             ) : 
          <p>No New Jewelry!</p> 
@@ -97,7 +91,9 @@ return (
     
 
 </div>
-</Layout>
+</Layout> 
+</body>
+
 
 );
 }

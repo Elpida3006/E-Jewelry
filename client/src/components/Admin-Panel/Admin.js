@@ -27,6 +27,10 @@ function Admin() {
                 <Link className={style['Li']} to="/admin/money">Money</Link>
 
                 </li>
+                <li className={style['Nav-Li']}>
+                <Link className={style['Li']} to="/Home">Home</Link>
+
+                </li>
          </li>
       
         </div>

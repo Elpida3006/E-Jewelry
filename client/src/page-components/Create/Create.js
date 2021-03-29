@@ -22,6 +22,7 @@ function Create({history, match, location}) {
       
 
     return (
+        <body className={style.BackgroundAdmin}>
         <Layout>
            <Admin/> 
            <br></br>
@@ -75,7 +76,7 @@ function Create({history, match, location}) {
             </form>
 
         </Layout>
-     
+     </body>
     );
 }
 

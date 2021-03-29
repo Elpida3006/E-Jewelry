@@ -57,7 +57,7 @@ class AdminPage extends Component {
         // const products = this.state.products;
 
 return (
-
+<body className={style.BackgroundAdmin}>
 <Layout>
  <div className={style["Body"]} >
  
@@ -69,7 +69,7 @@ return (
     
 </div>
  </Layout> 
-
+</body>
 );
 }
 

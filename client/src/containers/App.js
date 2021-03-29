@@ -10,14 +10,19 @@ import Cover from './Cover';
 function App() {
 
     return ( 
-        <div className={style.App} >
-{/*    
-             <Header/> */}
-             {/* <Register/> */}
-            <Cover/>
-            {/* <Footer/> */}
+        <body className={style.Background}>  
+          <div className={style.App} >
+          <Cover/>
+              </div> 
+              </body>
+      
+// {/*    
+//              <Header/> */}
+//              {/* <Register/> */}
+         
+//             {/* <Footer/> */}
 
-        </div>
+        // </div>
     );
 }
 

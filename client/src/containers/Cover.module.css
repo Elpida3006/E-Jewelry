@@ -3,10 +3,11 @@ html {
 
     box-sizing: border-box;
     /* height: 100%; */
+ 
 }
 .Background {
     background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg);
-
+height: 400px;
 }
 .App {
 
@@ -18,8 +19,11 @@ html {
     height: 300px;
     width: 300px;
     pointer-events: none;
-    margin-top: -1%;
-    margin-bottom: 3%;
+    margin-top: -10%;
+    margin-bottom: 2%;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,7 +35,7 @@ html {
 
 .App-cover {
     background-color: transparent;
-    min-height: 70vh;
+    min-height: 66vh;
     display: flex;
     flex-direction: column;
      align-items: center;
@@ -61,7 +65,8 @@ p {
         transform: rotate(360deg);
     }
 }
-.Nav-Home{
+.Btn-Home{
+    margin-bottom: -150px;
     margin-left: 1000px;
     text-decoration: none;
     letter-spacing: 2px;
@@ -94,4 +99,8 @@ p {
     background-color: rgb(43, 27, 5);
     display: flex;
    
+}
+
+.like {
+    margin-top: -50px;
 }

@@ -23,7 +23,7 @@ h1 {
     /* padding-right: -350px; */
     padding-bottom: 150px;
     width: 35%;
-    /* margin-bottom: 50px; */
+    margin-bottom: 3%;
     margin-left: 450px; 
  
     text-align: left;
@@ -73,14 +73,3 @@ div input {
 } */
 
 
- /* textarea {
-    color: var(--main-blue);
-    width: 50px;
-    padding: 2%;
-    border: 1px solid var(--main-blue);
-    resize: none;
-    height: 15vh;
-    overflow: hidden;
-    border-radius: 15px;
-    text-align: center;
-} */

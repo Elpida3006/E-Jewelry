@@ -1,11 +1,14 @@
 html {
-    background-image: url(../../static/static1.squarespace.1486151234.png);
+    /* background-image: url(../../static/static1.squarespace.1486151234.png); */
     /* background-image: url(../static/Best-Gold-Jewelry-Under-50.jpg); */
 
     box-sizing: border-box;
     /* height: 100%; */
 }
+.BackgroundAdmin {
+    background-image: url(https://image.freepik.com/free-vector/abstract-metallic-blue-background-texture_52683-20746.jpg);
 
+}
 .Nav-Home{
     margin-left: 00px;
     text-decoration: none;
