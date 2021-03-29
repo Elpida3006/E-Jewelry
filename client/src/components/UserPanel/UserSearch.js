@@ -15,8 +15,8 @@ function UserSearch() {
 
                 <li className={style['Nav-Li']}> 
                                      
-                        <Link className={style['Nav-Product']} to={`/Products/${'nameProduct'}`}> 
-                            {/* <button className={style['Nav-Product']}>Details</button> */}
+                        <Link className={style['Nav-Product']} to={`/products/${'nameProduct'}`}> 
+                          
                             
                             <select className={style['select']} type="text" name="nameProduct">
                                                         <option value="{nameProduct}">{'nameProduct'}</option>
@@ -27,12 +27,9 @@ function UserSearch() {
                 </li>
 
                 <li className={style['Nav-Li2']}> 
-
-                        <Link className={style['Nav-Product']} to={`/Products/${'nameProduct'}`}> 
-                    {/* <button className={style['Nav-Product']}>Details</button> */}
-                    
+                        <Link className={style['Nav-Product']} to={`/products/${'nameProduct'}`}> 
                         <input className={style['select']} type="text" name="searchProduct" placeholder="search..."/>
-                        <button type="submit" className={style['Nav-Create']}>Go</button>
+                        <button type="submit" className={style['Nav-Search']}>Go</button>
                      </Link>
                 </li>
             </li>
