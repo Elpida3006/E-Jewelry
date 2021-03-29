@@ -1,12 +1,21 @@
-.Product {
+.DetailsBackground {
+  min-height: 600px;
+    background-image: url(../../static/jewelry-brands-1610734440.jpg);
+}
+
+.Details {
     border: 2px solid white;
-    width: 450px;
-    height: 850px;
-    background-color: white;
-    /* display: flex; */
+    width: 60%;
+    height: 700px;
+    background-image: linear-gradient(black, hsla(331, 45%, 9%, 0.836), black);
+    /* background-image: linear-gradient(rgba(235, 170, 221, 0.824), #bb1a8b07, #302525d3); */
+        /* display: flex; */
     justify-content: space-between;
-    margin-bottom: 10%;
-    margin-left: 5% ;
+    margin-bottom: 1%;
+    margin-top: -3%;
+    margin-left: 25% ;
+    padding-top:2%;
+  /* display: flex; */
 }
 .Product-Img {
     width: 280px;
@@ -15,15 +24,37 @@
     /* margin-right: 10%; */
     padding: 2%;
 }
-.Product-Card {
-  
-    margin: 2%;
+.Details-Card {
+    background-image: linear-gradient(rgba(235, 170, 221, 0.824), #bb1a8b07, #302525d3);
+
+    /* background-image: linear-gradient(black, hsla(331, 45%, 9%, 0.836), black); */
+  margin: 1% 10%;
+    /* margin: 2%; */
     padding: 2%;
-    color: rgb(15, 15, 48);
+    color: rgb(240, 240, 252);
     font-size: 18px;
     display: block;
 }
-.Button {
-    margin: 0 40%;
+.ButtonDetails {
+    margin: 0 30%;
     padding: 2%;
+    display: flex;
+
+}
+.Btn-Details {
+    position: float;
+    justify-content: space-between;
+    width: 70px;
+    margin-right: 15%;
+}
+.Containers {
+    width: 700px;
+    background-image: white;
+    display: flex;
+}
+.Translations {
+    color:black;
+    display: flex;
+    position: float;
+    width: 30%;
 }

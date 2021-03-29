@@ -16,7 +16,7 @@ function Create({history, match, location}) {
     const {nameProduct, price, imageUrl, description, brand, category, like} = e.target;
     // console.log(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value);
     service.createProduct(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value)
-    .then(() =>   history.push('/Home'))
+    .then(() =>   history.push('/view'))
     .catch(() => Redirect('/'));
         };
       

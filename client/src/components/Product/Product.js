@@ -1,10 +1,10 @@
 
-import React, { Component } from 'react';
+import React ,{useState, useEffect, } from 'react';
 
 import style from './Product.module.css';
-import {Link} from 'react-router-dom';
+import {Link, Redirect, useHistory} from 'react-router-dom';
 import { deleteProduct } from '../../services/productService';
-
+ 
 
 //functional components
   
@@ -17,9 +17,35 @@ description,
 brand,
 category,
 like,
-buyers
+buyers,
 }) => {
+//    const [product, setProduct] = useState({
+//     _id: id,
+//     nameProduct,
+//     price,
+//     imageUrl,
+// description,
+// brand,
+// category,
+// like,
+// buyers,
+// })
+    // componentDidMount(){
+// useEffect(() => {
+//     deleteProduct(id)
+//     .then((res) =>  Redirect('/Home'));
+// }, [product]);
 
+const history = useHistory();
+
+const delProduct = (e) => {
+
+    e.preventDefault();
+    deleteProduct(id)
+    .then((res) =>   history.push('/Admin'));
+  
+    
+};
         return (
             
         <div className={style.Product}>
@@ -45,8 +71,8 @@ buyers
                     <button className={style['Nav-Product']}>Edit</button>
                     </Link>  
                     <Link className={style['Nav-Product']} to={`/products/delete/${id}`}> 
-                    <button   className={style['Nav-Product']}>Delete</button>
-                    {/* onClick={deleteProduct(id)} */}
+                    <button  onClick={delProduct} className={style['Nav-Product']}>Delete</button>
+                    {/* onClick={delProduct} */}
                     </Link>  
 
 

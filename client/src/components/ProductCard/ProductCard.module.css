@@ -1,29 +1,29 @@
 .Product {
-    border: 2px solid white;
+    border: 6px solid #e7bc44;
     width: 450px;
-    height: 850px;
+    height: 550px;
     background-color: white;
     /* display: flex; */
     justify-content: space-between;
     margin-bottom: 10%;
-    margin-left: 5% ;
+    margin-left: 8% ;
 }
 .Product-Img {
     width: 280px;
     height: 280px;  
     margin: 0 10%;
-    /* margin-right: 10%; */
+    margin-top: 5%;
     padding: 2%;
 }
 .Product-Card {
-  
-    margin: 2%;
+    margin-left: 10%;
+    margin-bottom: -5%;
     padding: 2%;
     color: rgb(15, 15, 48);
     font-size: 18px;
     display: block;
 }
 .Button {
-    margin: 0 40%;
+    margin: -5% 40%;
     padding: 2%;
 }
