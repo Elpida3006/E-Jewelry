@@ -1,14 +1,13 @@
 
-import React, { Component } from 'react';
-
-import style from './Product.module.css';
+import React from 'react';
+import style from './ProductCard.module.css';
 import {Link} from 'react-router-dom';
-import { deleteProduct } from '../../services/productService';
+
 
 
 //functional components
   
-const Product = ({
+const ProductCard = ({
     _id: id,
     nameProduct,
     price,
@@ -30,25 +29,19 @@ buyers
         
                 <img src={imageUrl} className={style['Product-Img']} type="text" name="imageUrl" alt="" placeholder="Image url..."/>
         
-                <h4 className={style['Product-Card']} name="description" >Description: {description}</h4>
-        
-                <h4 className={style['Product-Card']} type="text" name="brand" >Brand: {brand}</h4>
             
-                <h4 className={style['Product-Card']} type="text" name="category" >Category: {category}</h4>
                 <h4 className={style['Product-Card']} type="text" name="like" >Likes: {like}</h4>
                 <h4 className={style['Product-Card']} type="text" name="buyers" >Buyers: {buyers}</h4>
 
           
                 <section className={style['Button']}>
               
-                <Link className={style['Nav-Product']} to={`/products/edit/${id}`}> 
-                    <button className={style['Nav-Product']}>Edit</button>
-                    </Link>  
-                    <Link className={style['Nav-Product']} to={`/products/delete/${id}`}> 
-                    <button   className={style['Nav-Product']}>Delete</button>
-                    {/* onClick={deleteProduct(id)} */}
-                    </Link>  
+                        
 
+                    <Link className={style['Nav-Product']} to={`/products/details/${id}`}> 
+                    <button className={style['Nav-Product']}>Details</button>
+                    </Link>  
+                 
 
                 </section>  
         </div>   
@@ -60,4 +53,4 @@ buyers
 
 
 
-export default Product;
+export default ProductCard;

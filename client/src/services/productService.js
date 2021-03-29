@@ -31,7 +31,12 @@ export const getOne = (productId) => {
         .then(res => res.json())
         .catch(error => console.log(error));
 };
-
+export const getDetails = (productId) => {
+    // console.log(`${homeurl}/edit/${productId}`);
+    return fetch(`${homeurl}/details/${productId}`)
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
 
 
 export const createProduct = (nameProduct, price, imageUrl, description, brand, category, like) => {

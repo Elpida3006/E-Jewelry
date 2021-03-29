@@ -112,51 +112,54 @@ router.get('/edit/:id', (req, res) => {
         });
 
 })
-// router.get('/details/:id', (req, res, next) => {
-//     let articleId = req.params.id
+router.get('/details/:id', (req, res, next) => {
+    let articleId = req.params.id
 
 
-//     // console.log(articleId);
-//     // console.log(myID);
-//     let isCreator = false;
-//     let myID;
-//     let isBuyer = false;
+    // console.log(articleId);
+    // console.log(myID);
+    // let isCreator = false;
+    // let myID;
+    // let isBuyer = false;
 
-//     service.getId(articleId)
-//         .then(article => {
-//             // console.log(item);
-//             res.status(200).send(article)
-//         })
-//         // .then(article => {
-//         //     let creatotId = article.createdBy.toString();
-//         //     if (req.user) {
-//         //         myID = req.user._id.toString()
-//         //     }
+    service.getId(articleId)
+        .then(article => {
+            // console.log(item);
+            res.status(200).send(article)
+        })
+        // .then(article => {
+        //     let creatotId = article.createdBy.toString();
+        //     if (req.user) {
+        //         myID = req.user._id.toString()
+        //     }
 
-//     //     // console.log(creatotId);
-//     //     if (myID) {
-//     //         if (creatotId == myID) {
-//     //             isCreator = true;
-//     //             console.log(`YOU ARE CREATOR`);
-//     //         } else {
-//     //             isCreator = false;
+    //     // console.log(creatotId);
+    //     if (myID) {
+    //         if (creatotId == myID) {
+    //             isCreator = true;
+    //             console.log(`YOU ARE CREATOR`);
+    //         } else {
+    //             isCreator = false;
 
-//     //         }
-//     //     } else {
-//     //         isCreator = false;
-//     //     }
-//     //     article.buyers = article.buyers.map(x =>
-//     //         x.toString());
+    //         }
+    //     } else {
+    //         isCreator = false;
+    //     }
+    //     article.buyers = article.buyers.map(x =>
+    //         x.toString());
 
-//     //     if (article.buyers.includes(myID)) {
-//     //         isBuyer = true;
-//     //         console.log(`YOU ARE BUYER THIS MODEL`);
-//     //     }
+    //     if (article.buyers.includes(myID)) {
+    //         isBuyer = true;
+    //         console.log(`YOU ARE BUYER THIS MODEL`);
+    //     }
 
-//     //     res.render('details', { article, isCreator, isBuyer })
-//     // })
-//     .catch(next)
-// });
+    //     res.render('details', { article, isCreator, isBuyer })
+    // })
+    .catch(error => {
+        console.error(`details page not found`)
+            // res.redirect('/products')
+    });
+});
 
 
 

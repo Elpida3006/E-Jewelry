@@ -14,7 +14,7 @@ const Contact = lazy(() => import('./page-components/Contact/Contact'));
 const Create = lazy(() => import('./page-components/Create/Create'));
 const Edit = lazy(() => import('./page-components/Edit/Edit'));
 const View = lazy(() => import('./page-components/View/View'));
-
+const Details = lazy(() => import('./page-components/Details/Details'));
 // const Products = lazy(() => import('./containers/Products'));
 // const Gold = lazy(() => import('./components/Products/Gold/Gold'));
 // const Leather = lazy(() => import('./components/Products/Leather/Leather'));
@@ -42,6 +42,7 @@ function Routes () {
             <Route path="/admin/money"  component={Admin} />
             <Route path="/view"  exact component={View} />
             <Route path="/products/:category" exact component={Home} />
+            <Route path="/products/details/:id"  component={Details} />
             <Route path="/products/:nameProduct"  component={Home} />
             {/* <Route path="/products/gold"  component={Home} />
             <Route path="/products/leather-accessory"  component={Home} /> */}

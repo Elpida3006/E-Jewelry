@@ -7,7 +7,7 @@ import Layout from '../components/Layout/Layout';
 
 import UserSearch from '../components/UserPanel/UserSearch';
 // import Products from './Products';
-import Product from '../components/Product/Product';
+import ProductCard from '../components/ProductCard/ProductCard';
 import {getProducts} from '../services/productService';
 // const isLogin= (props)=>{
 
@@ -80,7 +80,7 @@ return (
               {(products.length > 0)?   
            this.state.products.map(c => 
        
-                <Product key={c.id} {...c} />   
+                <ProductCard key={c.id} {...c} />   
                
             ) : 
          <p>No New Jewelry!</p> 
