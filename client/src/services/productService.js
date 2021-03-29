@@ -26,7 +26,8 @@ console.log(productsName);
 };
 
 export const getOne = (productId) => {
-    return fetch(`${homeurl}/${productId}`)
+    // console.log(`${homeurl}/edit/${productId}`);
+    return fetch(`${homeurl}/edit/${productId}`)
         .then(res => res.json())
         .catch(error => console.log(error));
 };
@@ -51,10 +52,11 @@ console.log(product);
         })
         .catch(error => console.log('error fetch'));
 };
-export const editProduct = (nameProduct, price, imageUrl, description, brand, category, like) => {
-    let product = {nameProduct, price, imageUrl, description, brand, category, like};
+export const editProduct = (id, nameProduct, price, imageUrl, description, brand, category, like, buyers) => {
+    let product = { nameProduct, price, imageUrl, description, brand, category, like, buyers};
+    
 
-    return fetch(`${homeurl}/edit/:id`, {
+    return fetch(`${homeurl}/edit/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -65,14 +67,18 @@ export const editProduct = (nameProduct, price, imageUrl, description, brand, ca
         .catch(error => console.log('error fetch'));
 };
 export const deleteProduct = (productId) => {
-    return fetch(`${homeurl}/delete/${productId}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(productId)
-    })
+    return fetch(`${homeurl}/delete/${productId}`)
         .then(product =>  console.log('Deleted'))
         .catch(error => console.log('error fetch'));
 };
-
+// export const deleteProduct = (productId) => {
+//     return fetch(`${homeurl}/delete/${productId}`, {
+//         method: 'DELETE',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(productId)
+//     })
+//         .then(product =>  console.log('Deleted'))
+//         .catch(error => console.log('error fetch'));
+//     };

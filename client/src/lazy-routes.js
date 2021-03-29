@@ -36,12 +36,12 @@ function Routes () {
             
             <Route path="/user/register"  component={Register} />
             <Route path="/user/login"  component={Login} />
-            <Route path="/products/edit"  component={Edit}/>
-            <Route path="/products/create"  component={Create}/>
+            <Route path="/products/edit/:id"  exact component={Edit}/>
+            <Route path="/products/create" exact  component={Create}/>
             {/* <Route path="/products"  component={Home} />  */}
             <Route path="/admin/money"  component={Admin} />
-            <Route path="/view"  component={View} />
-            <Route path="/products/:category"  component={Home} />
+            <Route path="/view"  exact component={View} />
+            <Route path="/products/:category" exact component={Home} />
             <Route path="/products/:nameProduct"  component={Home} />
             {/* <Route path="/products/gold"  component={Home} />
             <Route path="/products/leather-accessory"  component={Home} /> */}

@@ -37,7 +37,7 @@ function getName(curry) {
 }
 
 function getId(id) {
-    return Product.findById(id).lean();
+    return Product.findById({ _id: id });
 }
 
 function deleteProduct(id) {

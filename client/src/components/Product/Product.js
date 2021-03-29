@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Layout from '../Layout/Layout';
 import style from './Product.module.css';
 import {Link} from 'react-router-dom';
+import { deleteProduct } from '../../services/productService';
 
 
 //functional components
@@ -39,19 +40,26 @@ buyers
 
           
                 <section className={style['Button']}>
-                (isAdmin)? 
+              
                 <Link className={style['Nav-Product']} to={`/products/edit/${id}`}> 
                     <button className={style['Nav-Product']}>Edit</button>
                     </Link>  
                     <Link className={style['Nav-Product']} to={`/products/delete/${id}`}> 
-                    <button className={style['Nav-Product']}>Delete</button>
+                    <button   className={style['Nav-Product']}>Delete</button>
+                    {/* onClick={deleteProduct(id)} */}
                     </Link>  
 
-                :
+             
 
-                    <Link className={style['Nav-Product']} to={`/Products/Details/${id}`}> 
+                    <Link className={style['Nav-Product']} to={`/products/details/${id}`}> 
                     <button className={style['Nav-Product']}>Details</button>
                     </Link>  
+                    <Link className={style['Nav-Product']} to={`/products/buy/${id}`}> 
+                    <button className={style['Nav-Product']}>Buy</button>
+                    </Link>  
+                    <Link className={style['Nav-Product']} to={`/products/like/${id}`}> 
+                    <button className={style['Nav-Product']}>Like</button>
+                    </Link> 
 
                 </section>  
         </div>   

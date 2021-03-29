@@ -60,10 +60,10 @@ router.post('/create', (req, res, error) => {
 router.put('/edit/:id', (req, res) => {
     let articleId = req.params.id
     console.log(articleId);
-    let myID = req.user._id
+    // let myID = req.user._id
 
 
-    service.postEditArticle(articleId, req.body)
+    service.postEditProduct(articleId, req.body)
         // .then(() => {
         .then(updatedItem => {
             res.status(200).send(updatedItem);
@@ -74,10 +74,10 @@ router.put('/edit/:id', (req, res) => {
 
 
 })
-router.delete('/delete/:id', (req, res, next) => {
+router.get('/delete/:id', (req, res, next) => {
     let articleId = req.params.id
 
-    service.deleteArticle(articleId)
+    service.deleteProduct(articleId)
         .then((article) => {
             // res.redirect('/products')
             res.status(200).send(article)
@@ -86,7 +86,32 @@ router.delete('/delete/:id', (req, res, next) => {
 
 
 });
+router.get('/:id', (req, res, next) => {
+    console.log(req.params.id);
+service.getId(req.params.id)
+.then((article) => {
+    console.log(req.params.id);
+    console.log(article);
+    // res.redirect('/products')
+    res.status(200).send(article)
+})
+.catch(err => console.log('error again'));
+});
 
+router.get('/edit/:id', (req, res) => {
+    let articleId = req.params.id
+
+    service.getId(articleId)
+        .then(article => {
+            res.status(200).send(article)
+                // res.render('edit', { article })
+        })
+        .catch(error => {
+            console.error(`Edit page not found`)
+                // res.redirect('/products')
+        });
+
+})
 // router.get('/details/:id', (req, res, next) => {
 //     let articleId = req.params.id
 
@@ -134,20 +159,6 @@ router.delete('/delete/:id', (req, res, next) => {
 // });
 
 
-// router.get('/edit/:id', (req, res) => {
-//     let articleId = req.params.id
-
-//     service.getId(articleId)
-//         .then(article => {
-//             res.status(200).send(article)
-//                 // res.render('edit', { article })
-//         })
-//         .catch(error => {
-//             console.error(`Edit page not found`)
-//                 // res.redirect('/products')
-//         });
-
-// })
 
 // router.get('/buy/:id', (req, res, error) => {
 //     let itemId = req.params.id;

@@ -40,10 +40,11 @@ const productSchema = new mongoose.Schema({
     like: {
         type: Number
     },
-    // buyers: [{
-    //     type: mongoose.Types.ObjectId,
-    //     ref: 'User'
-    // }],
+    buyers: [{
+        type: Number,
+        // mongoose.Types.ObjectId,
+        // ref: 'User'
+    }],
 
     createdAt: {
         type: Date,
