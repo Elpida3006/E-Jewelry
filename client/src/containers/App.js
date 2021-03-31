@@ -10,7 +10,7 @@ import Cover from './Cover';
 function App() {
 
     return ( 
-        <body className={style.Background}>  
+        <body className={style.BackgroundCover}>  
           <div className={style.App} >
           <Cover/>
               </div> 

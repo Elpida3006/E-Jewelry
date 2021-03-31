@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 //for class components
 import style from './UserSearch.module.css';
 import {Link} from 'react-router-dom';
