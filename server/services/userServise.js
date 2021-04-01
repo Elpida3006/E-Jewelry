@@ -45,7 +45,7 @@ function getProfile(req, res, next) {
 
 function postRegister(req, res, err) {
     const { email, fullname, password, rePassword } = req.body;
-    console.log(`it is a body: ${{...req.body}}`);
+    // console.log(`it is a body: ${req.body}`);
     // console.log(fullname);
     // console.log(password);
     // console.log(rePassword);
@@ -54,7 +54,7 @@ function postRegister(req, res, err) {
     User.create({...req.body})
         .then((createdUser) => {
         console.log(createdUser);
-            // res.redirect('/user/login')
+        
             res.status(200)
                 .send(createdUser);
         })
@@ -81,7 +81,7 @@ function postLogin(req, res, next) {
     // console.log(password);
     User.findOne({ email })
         .then(user => {
-
+console.log(`user is find as ${user}`);
             return Promise.all([
                 user,
                 user ? user.comparePasswords(password, next) : false
@@ -105,7 +105,7 @@ function postLogin(req, res, next) {
                 .send(user)
                 //    .send(user, token);
         })
-        .catch(next);
+        .catch(err => console.log(`user is not server logged`))
 }
 module.exports = {
     getUser,

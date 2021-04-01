@@ -22,8 +22,8 @@ export const postRegister = (email, fullname, password, rePassword) => {
         })
         .catch(error => console.log(error));
 };
-export const postLogin = (...data) => {
-    let user = {...data};
+export const postLogin = ( email, password) => {
+    let user = {email, password};
     console.log(`its a fetch data ${user}`);
     return fetch('http://localhost:3002/api/users/login', {
         method: 'POST',

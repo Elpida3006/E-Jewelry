@@ -20,6 +20,7 @@ class  Register extends Component {
         service.postRegister(email, fullname, password, rePassword)
         .then(userCredential => {
             console.log('Client Register');
+            this.props.history.push('/user/login');
         })
         .catch(err =>  {
             console.log('Client Not Register');
