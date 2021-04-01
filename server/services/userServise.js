@@ -45,20 +45,20 @@ function getProfile(req, res, next) {
 
 function postRegister(req, res, err) {
     const { email, fullname, password, rePassword } = req.body;
-    // console.log(req.body);
+    console.log(`it is a body: ${{...req.body}}`);
     // console.log(fullname);
     // console.log(password);
     // console.log(rePassword);
 
     // User.create({ email, fullname, password })
-    User.create(req.body)
+    User.create({...req.body})
         .then((createdUser) => {
-
+        console.log(createdUser);
             // res.redirect('/user/login')
             res.status(200)
                 .send(createdUser);
         })
-        .catch(err)
+        .catch(err => console.log(`data is not send`))
         // .catch((err) => {
         //     // let errors = validationResult(req)
         //     if (err.errors) {

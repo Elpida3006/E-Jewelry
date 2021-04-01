@@ -18,7 +18,7 @@ router.get('/profile', isLogged(true), userServise.getProfile)
 
 // router.post('/register', isLogged(false), repeatPasswordCheck, userServise.postRegister)
     // repeatPasswordCheck, strongPassword, isFullPassword,
-router.post('/register', userServise.postRegister)
+router.post('/register',  userServise.postRegister)
 
 router.post('/login', isLogged(false), userServise.postLogin)
 

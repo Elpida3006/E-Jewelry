@@ -2,6 +2,8 @@ import React , {Component} from 'react';
 import Layout from '../../components/Layout/Layout';
 import style from './Register.module.css';
 import {Link} from 'react-router-dom';
+import * as service from '../../services/userService';
+
 class  Register extends Component {
     constructor(props){
         super(props);
@@ -12,14 +14,27 @@ class  Register extends Component {
             rePassword: '',
         };
     }
+    onSubmitHandler = (e) => {
+        e.preventDefault();
+        const {email, fullname, password, rePassword} = this.state;
+        service.postRegister(email, fullname, password, rePassword)
+        .then(userCredential => {
+            console.log('Client Register');
+        })
+        .catch(err =>  {
+            console.log('Client Not Register');
+        });
+    
+      }
 
  changeValue = (e, type) => {
+       // e.preventDeafault();
+    //    console.log(e);
     const newState = {};
     newState[type] = e.target.value;
     this.setState(newState);
-    // e.preventDeafault();
-    // const value = e.target.value;
-    // console.log(value);
+    console.log(newState);
+ 
 };
 //Forms
 
@@ -41,7 +56,7 @@ class  Register extends Component {
                 {/* {{#if errorMesage}}
           <p class="message">{{errorMesage}}</p>
           {{/if}} */}
-            <form >
+            <form onSubmit={this.onSubmitHandler}>
               <p className={style.InfoP}>Already registered?
                   <Link className={style.Info} to="/user/login">Login now</Link> and have some fun!
               </p>
@@ -57,8 +72,8 @@ class  Register extends Component {
               <label className={style['Label']} htmlFor="rePassword">Re-Password</label>
               <input value={rePassword} onChange = {e =>  this.changeValue(e, 'rePassword')} type="password" name="rePassword" placeholder="Re-password"/>
            
-              <button className={style['RegisterBtn']}>
-              <Link className={style.Button} to="/user/register">Register</Link>
+              <button type="submit" className={style['RegisterBtn']}>
+             Register
               </button>
             
               </form>

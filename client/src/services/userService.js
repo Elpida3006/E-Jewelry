@@ -1,5 +1,5 @@
 
-const userUrl = 'http://localhost:3002/api/users/';
+const userUrl = 'http://localhost:3002/api/users';
 
 
 export const getUser = () => {
@@ -7,23 +7,32 @@ export const getUser = () => {
         .then(user => user.json())
         .catch(error => console.log(error));
 };
-export const postRegister = (...data) => {
-    let user = {...data};
-    return fetch(`${userUrl}/register`, {
+export const postRegister = (email, fullname, password, rePassword) => {
+    // let {email, username, password, rePassword} = data;
+    let sendData =  {email, fullname, password, rePassword};
+    console.log(`its a fetch data ${sendData}`);
+    return fetch('http://localhost:3002/api/users/register', {
         method: 'POST',
-        headers: {'content-type': 'application/json'},
-        body: JSON.stringify(user)
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        body: JSON.stringify( sendData)
     })
-        .then(user => user.json())
+        .then(user => {
+            console.log('you are created');    
+        })
         .catch(error => console.log(error));
 };
 export const postLogin = (...data) => {
     let user = {...data};
-    return fetch(`${userUrl}/login`, {
+    console.log(`its a fetch data ${user}`);
+    return fetch('http://localhost:3002/api/users/login', {
         method: 'POST',
-        headers: {'content-type': 'application/json'},
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
         body: JSON.stringify(user)
     })
-        .then(user => user.json())
+      .then(user => {
+    console.log('you are logged'); 
+    })
         .catch(error => console.log(error));
 };
