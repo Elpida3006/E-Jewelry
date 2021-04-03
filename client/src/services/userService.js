@@ -32,7 +32,22 @@ export const postLogin = ( email, password) => {
         body: JSON.stringify(user)
     })
       .then(user => {
+          console.log(user);
+        //   authCookieName: 'auth_cookie',
+        //   authHeaderName: 'auth',
+        const token =  user.headers.get('authCookieHeader');
+        //get token from api
+    document.cookie = `auth_cookie=${token}`;
+    //save token in cookie in browser
     console.log('you are logged'); 
+     return user.json();
+    })
+       .then(user => {
+          console.log(user.email);
+          console.log(user.fullname);
+     
+    console.log('your data is json'); 
+    return user;
     })
         .catch(error => console.log(error));
 };

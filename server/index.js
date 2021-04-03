@@ -15,7 +15,7 @@ const cors = require('cors');
 app.use(cors({
       origin: config.origin,
       credentials: true,
-    exposedHeaders: ""
+    exposedHeaders: "authCookieHeader"
 }));
 app.use('/api', apiRouter);
 const dbConnectionPromise = require('./config/dbConnection')(config.dbConnectionString);

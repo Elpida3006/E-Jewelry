@@ -100,8 +100,9 @@ console.log(`user is find as ${user}`);
 
             res
                 .status(200)
-                .cookie(authCookieName, token, { httpOnly: true }, { maxAge: 360000000 })
+                // .cookie(authCookieName, token, { httpOnly: true }, { maxAge: 360000000 })
                 // .redirect('/products')
+                .header('authCookieHeader', token)
                 .send(user)
                 //    .send(user, token);
         })

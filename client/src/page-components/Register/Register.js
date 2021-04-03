@@ -17,6 +17,7 @@ class  Register extends Component {
     onSubmitHandler = (e) => {
         e.preventDefault();
         const {email, fullname, password, rePassword} = this.state;
+        //validation
         service.postRegister(email, fullname, password, rePassword)
         .then(userCredential => {
             console.log('Client Register');

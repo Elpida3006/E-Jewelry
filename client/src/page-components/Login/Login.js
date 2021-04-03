@@ -10,14 +10,20 @@ class  Login extends Component {
        this.state = {
           email: '',
           password: '',
+          isLogged: Boolean,
          
       };
   }
 onSubmitHandler = (e) => {
     e.preventDefault();
     const {email, password} = this.state;
+    //validation if-else
     service.postLogin(email, password)
     .then(userCredential => {
+      console.log(userCredential.email);
+      console.log(userCredential.fullname);
+      //authCookieHeader from BE - res.header - token
+      // this.setState[isLogged]= true;
       console.log('Client isLogin');
       this.props.history.push('/Home');
   })

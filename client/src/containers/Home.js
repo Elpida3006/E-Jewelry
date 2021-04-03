@@ -71,9 +71,7 @@ return (
     </div>
 </div>
 
-    {/* <div className={style.Admin}>
-   {isAdmin ? <Admin/> : null}
-    </div> */}
+ 
 <UserSearch/>
     <div className={style.Products}>
               <p className={style.PCategory}>{currentCategory} Category Page</p> 
