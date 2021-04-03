@@ -3,19 +3,12 @@ import style from './Home.module.css';
 import logo from '../static/logo-home.jpg';
 import Menu from '../components/Menu/Menu';
 import Layout from '../components/Layout/Layout';
-// let  server = 'http://localhost:3002/api/';
-
 import UserSearch from '../components/UserPanel/UserSearch';
-// import Products from './Products';
 import ProductCard from '../components/ProductCard/ProductCard';
 import {getProducts} from '../services/productService';
-// const isLogin= (props)=>{
+import {UserContext} from '../global-context/UserContexts';
 
-// };
-const isAdmin= (props)=>{
-    // isAdmin: true;
-    //conditional rendering with state/props?
-};
+
 class Home extends Component {
     constructor(props){
         super(props);
@@ -27,7 +20,7 @@ class Home extends Component {
         };
        
   };
-  
+ static contextType = UserContext; 
 
     componentDidMount(){
 
@@ -56,7 +49,7 @@ class Home extends Component {
      
 const currentCategory = this.state.currentCategory;
 const products = this.state.products;
-
+console.log(this.context);
 return (
 <body className={style.BackgroundHome}>
 <Layout>

@@ -27,7 +27,7 @@ function Routes () {
         <Router>
         <Suspense fallback={<h2>Please wait.....</h2>}>
           <Switch>
-            <Route path="/" exact component={App} />
+            <Route path="/" exact component={Cover} />
             <Route path="/Cover"   component={Cover} />
             <Route path="/Admin"   component={Admin} />
             <Route path="/Home"  component={Home} />

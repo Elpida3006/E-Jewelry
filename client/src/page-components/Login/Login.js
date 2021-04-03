@@ -3,6 +3,8 @@ import Layout from '../../components/Layout/Layout';
 import style from './Login.module.css';
 import {Link} from 'react-router-dom';
 import * as service from '../../services/userService';
+import {UserContext} from '../../global-context/UserContexts';
+
 //Forms
 class  Login extends Component {
   constructor(props){
@@ -10,21 +12,31 @@ class  Login extends Component {
        this.state = {
           email: '',
           password: '',
-          isLogged: Boolean,
+          // isLogged: false,
+          // isAdmin: false,
+          // user: null
          
       };
   }
+  static contextType = UserContext;
+  //declararative method for context consumer
 onSubmitHandler = (e) => {
     e.preventDefault();
     const {email, password} = this.state;
     //validation if-else
+    console.log(this.context);
     service.postLogin(email, password)
     .then(userCredential => {
-      console.log(userCredential.email);
-      console.log(userCredential.fullname);
+      // console.log(userCredential.email);
+      // console.log(userCredential.fullname);
+      // console.log(userCredential._id);
       //authCookieHeader from BE - res.header - token
-      // this.setState[isLogged]= true;
+      // logIn(userCredential);
+     this.context.logIn(userCredential);
+
       console.log('Client isLogin');
+      console.log(  this.context);
+      //to fix: not chane context
       this.props.history.push('/Home');
   })
   .catch(err =>  {
