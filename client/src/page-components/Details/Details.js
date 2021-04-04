@@ -63,9 +63,11 @@ useEffect(() => {
                   <br/>
                  <p>for your favourite product!</p>   
                   <br/>
-                  <p>Info history: </p>
+                  <p className={style['Detailslogo']}>Info history: </p>
                   <br/>
-                  <p>... </p>
+                  <p className={style['Detailslogo']}>This jewelry is specially selected and made to order by our chief designer Luka Schriodrich, and our range is available in the sizes shown for the item.
+Each touch has been carefully discussed and evaluated by the EU.
+Our items are delivered with a quality guarantee </p>
                   </p>
                
                   </div>

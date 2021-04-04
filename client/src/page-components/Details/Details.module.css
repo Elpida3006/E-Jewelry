@@ -67,4 +67,12 @@
     width: 600px;
     display: flex;
     padding-top:2%;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 5%;
+   
+}
+.Detailslogo {
+    font-size: 20px;
+    color: black;
+
 }
