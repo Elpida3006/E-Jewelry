@@ -6,13 +6,8 @@ import Admin from '../../components/Admin-Panel/Admin';
 // import Products from './Products';
 import Product from '../../components/Product/Product';
 import {getAll} from '../../services/productService';
-// const isLogin= (props)=>{
 
-// };
-const isAdmin= (props)=>{
-    // isAdmin: true;
-    //conditional rendering with state/props?
-};
+
 class View extends Component {
     constructor(props){
         super(props);

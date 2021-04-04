@@ -24,7 +24,8 @@ useEffect(() => {
             <body className={style.DetailsBackground}>
               <Layout>
             <div className={style['Containers']}>
-                  <div className={style['Details']}>
+
+                <div className={style['Details']}>
 
 <h3 className={style['Details-Card']}  name="nameProduct">Name: {product.nameProduct}</h3>
 
@@ -57,13 +58,23 @@ useEffect(() => {
 
 </section>  
 </div>      
+                <div className={style['Translations']}>
+                  <p >It is a details page
+                  <br/>
+                 <p>for your favourite product!</p>   
+                  <br/>
+                  <p>Info history: </p>
+                  <br/>
+                  <p>... </p>
+                  </p>
+               
                   </div>
+                                  
 
-                  <div className={style['Translations']}>
-                  <p className={style['Translations']}>It is a details page for your favourite product!</p>
-                  </div>
-          
 
+            </div>
+
+                
             </Layout>     
             </body>
           
