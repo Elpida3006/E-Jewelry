@@ -30,7 +30,14 @@ console.log(token);
         this.logOut();
         return;
     }
-    checkToken(token);
+    checkToken(token)
+    .then(res => 
+        {
+            this.logIn({
+                email: res.user.email,
+            id: res.user._id  
+            });
+        });
 }
   render() {
     const { isLogged, isAdmin, user} = this.state;
