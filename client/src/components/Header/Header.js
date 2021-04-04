@@ -1,52 +1,80 @@
 
-import React from 'react';
+import React , {Component} from 'react';
 import style from './Header.module.css';
-import {Route, Switch, Link} from 'react-router-dom';
-// import About from '../../page-components/About/About';
+import {Link} from 'react-router-dom';
+import {UserContext} from '../../global-context/UserContexts';
 
 
-function Header() {
-return (
+class Header extends Component {
+        static contextType = UserContext;
 
-    <navigation className={style['Nav-Link']}>
-       
-  
-     
-    <ul className={style['Ul-Tab']}>
-  
-         <li className={style['Nav-Cover']}>
-              <Link className={style['Li']} to="/Cover">E-Jewerly</Link>  
-         </li>
-        
-         <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/Admin">Admin </Link>
-        </li>
-        <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/About">About </Link>
-        </li>
-      
-         
-        <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/Contact">Contact Us</Link>
-        </li>
+        logOut = () => {this.context.logOut();};
 
-        <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/user/login">Login</Link>
-        </li>
+        render(){
+        const {
+            isLogged,  isAdmin
+        } = this.context;
 
+            return (
 
-        <li className={style['Nav-Li']}>
-           <Link className={style['Li']} to="/user/register"> Register</Link>
-        </li> 
-        {/* <li className={style['Nav-Li']}>Logout</li>  */}
-        {/* <li className={style['Nav-Li']}>Profile</li>  */}
-  
-    </ul>
-    
-       
+        <navigation className={style['Nav-Link']}>
+                
+            
+                
+                <ul className={style['Ul-Tab']}>
+            
+                    <li className={style['Nav-Cover']}>
+                        <Link className={style['Li']} to="/Cover">E-Jewerly</Link>  
+                    </li>
 
-</navigation>
-);
+                     {isLogged ? 
+                     <>
+                        { isAdmin ? 
+                               <> <li className={style['Nav-Li']}>
+                                <Link className={style['Li']} to="/Admin">Admin </Link>
+                                </li> </>
+                            :  <> <li className={style['Nav-Li']}>
+                                <Link className={style['Li']} to="/user/logout" onClick={this.logOut}> Logout</Link>
+                                </li>  
+                                <li className={style['Nav-Li']}>
+                                <Link className={style['Li']} to="/user/profile/:id"> Profile</Link>
+                                </li>  
+                                </>
+                            }
+                    </>
+                     : <>
+                     <li className={style['Nav-Li']}>
+                        <Link className={style['Li']} to="/user/login">Login</Link>
+                    </li>
+            
+                    <li className={style['Nav-Li']}>
+                    <Link className={style['Li']} to="/user/register"> Register</Link>
+                    </li>  
+                    </>
+                    }
+                   
+                    
+
+                    <li className={style['Nav-Li']}>
+                        <Link className={style['Li']} to="/About">About </Link>
+                    </li>
+                
+                    
+                    <li className={style['Nav-Li']}>
+                        <Link className={style['Li']} to="/Contact">Contact Us</Link>
+                    </li>
+            {/* isGuest */}
+                   
+            
+                  
+                </ul>
+                
+                
+            
+            </navigation>
+            );
+        }
+
 }
 export default Header;
 
