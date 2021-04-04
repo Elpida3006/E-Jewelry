@@ -1,8 +1,8 @@
 
-import React ,{useState, useEffect, } from 'react';
+import React  from 'react';
 
 import style from './Product.module.css';
-import {Link, Redirect, useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import { deleteProduct } from '../../services/productService';
  
 
@@ -72,7 +72,7 @@ const delProduct = (e) => {
                     </Link>  
                     <Link className={style['Nav-Product']} to={`/products/delete/${id}`}> 
                     <button  onClick={delProduct} className={style['Nav-Product']}>Delete</button>
-                    {/* onClick={delProduct} */}
+              
                     </Link>  
 
 

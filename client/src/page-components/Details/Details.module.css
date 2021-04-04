@@ -8,7 +8,7 @@
 .Details {
     border: 2px solid white;
     width: 500px;
-    height: 700px;
+    height: 900px;
     background-color:  white;
     /* background-image: linear-gradient(black, hsla(331, 45%, 9%, 0.836), black); */
     /* background-image: linear-gradient(rgba(235, 170, 221, 0.824), #bb1a8b07, #302525d3); */
@@ -54,7 +54,7 @@
 }
 .Containers {
     width: 1700px;
-    height: 800px;
+    height: 1000px;
     background-image: linear-gradient(#221d21d2, hsla(318, 29%, 93%, 0.918), #302525d3);
     display: flex;
     margin-left: 5%;

@@ -1,7 +1,7 @@
 import React from 'react';
 //for class components
 import style from './Admin.module.css';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Admin() {
     return (

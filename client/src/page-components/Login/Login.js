@@ -12,9 +12,9 @@ class  Login extends Component {
        this.state = {
           email: '',
           password: '',
-          // isLogged: false,
-          // isAdmin: false,
-          // user: null
+          isLogged: false,
+          isAdmin: false,
+          user: null
          
       };
   }
@@ -32,11 +32,14 @@ onSubmitHandler = (e) => {
       // console.log(userCredential._id);
       //authCookieHeader from BE - res.header - token
       // logIn(userCredential);
-     this.context.logIn(userCredential);
+     this.context.logIn({email: userCredential.email,
+    id: userCredential._id
+    });
+
 
       console.log('Client isLogin');
       console.log(  this.context);
-      //to fix: not chane context
+      //to fix: not change context
       this.props.history.push('/Home');
   })
   .catch(err =>  {

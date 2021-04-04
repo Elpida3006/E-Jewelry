@@ -37,7 +37,7 @@ buyers
                 <section className={style['Button']}>
               
                         
-
+{/* isLogged */}
                     <Link className={style['Nav-Product']} to={`/products/details/${id}`}> 
                     <button className={style['Nav-Product']}>Details</button>
                     </Link>  

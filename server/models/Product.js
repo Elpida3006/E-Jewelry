@@ -25,7 +25,8 @@ const productSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true
+        required: true,
+        maxlength: [354,'it is too long description']
     },
     brand: {
         type: String,

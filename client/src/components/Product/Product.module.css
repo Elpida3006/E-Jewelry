@@ -1,7 +1,7 @@
 .Product {
     border: 2px solid white;
     width: 450px;
-    height: 850px;
+    height: 950px;
     background-color: white;
     /* display: flex; */
     justify-content: space-between;

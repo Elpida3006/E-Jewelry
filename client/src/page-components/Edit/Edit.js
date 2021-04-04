@@ -1,5 +1,5 @@
 import Admin from '../../components/Admin-Panel/Admin';
-import React , {Component} from 'react';
+import React  from 'react';
 import Layout from '../../components/Layout/Layout';
 import style from './Edit.module.css';
 import {Link, Redirect} from 'react-router-dom';
@@ -16,7 +16,7 @@ useEffect(() => {
        .then(productsParams => {
         setproduct(productsParams);
        });
-    }, []);
+    },);
    const  onSubmitHandler = (e) => {
         e.preventDefault();
         const id = match.params.id;
