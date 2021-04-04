@@ -1,30 +1,37 @@
 import React , {Component} from 'react';
 import style from './App.module.css';
-// import Footer from '../components/Footer/Footer';
-// import Header from '../components/Header/Header';
-// import Layout from '../components/Layout/Layout';
 import {UserContext} from '../global-context/UserContexts';
+import {checkToken, getCookie} from '../services/userService';
 
-
-// import {Link} from 'react-router-dom';
 class App extends Component {
-constructor(props){
-    super(props);
-    this.state = {
-      isLogged: false,
-       isAdmin: false,
-        user: null
-    };
-  }
+    constructor(props){
+        super(props);
+        this.state = {
+        isLogged: null,
+        isAdmin: null,
+            user: null
+        };
+    }
     logIn = (user) => { 
                 console.log(`its a context email: ${user.email}`);    
                         (user.email === 'special@gmail.com') ?  (this.setState({isAdmin: true, isLogged: true, user})) : this.setState({isLogged: true, user});
                     }
     
     logOut = () => { 
+                        document.cookie = '';
                         this.setState({isLogged: false, user: null});
                     
                     }
+componentDidMount() {
+    const token = getCookie('auth_cookie');
+console.log(token);
+    if (!token) {
+        console.log('Your token is expired');
+        this.logOut();
+        return;
+    }
+    checkToken(token);
+}
   render() {
     const { isLogged, isAdmin, user} = this.state;
 

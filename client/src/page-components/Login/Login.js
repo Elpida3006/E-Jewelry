@@ -24,7 +24,7 @@ onSubmitHandler = (e) => {
     e.preventDefault();
     const {email, password} = this.state;
     //validation if-else
-    console.log(this.context);
+    // console.log(this.context);
     service.postLogin(email, password)
     .then(userCredential => {
       // console.log(userCredential.email);

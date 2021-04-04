@@ -9,9 +9,10 @@ const { repeatPasswordCheck, isFullPassword, strongPassword } = require('../vali
 // router.get('/register', isLogged(false), userServise.getRegister)
 
 // router.get('/login', isLogged(false), userServise.getLogin)
-router.get('/', userServise.getUser)
-router.get('/logout', isLogged(true), userServise.getLogout)
-router.get('/profile', isLogged(true), userServise.getProfile)
+router.get('/', userServise.getUser);
+router.get('/logout', isLogged(true), userServise.getLogout);
+// logout/delete
+router.get('/profile', isLogged(true), userServise.getProfile);
 
 
 
@@ -20,8 +21,8 @@ router.get('/profile', isLogged(true), userServise.getProfile)
     // repeatPasswordCheck, strongPassword, isFullPassword,
 router.post('/register',  userServise.postRegister)
 
-router.post('/login', isLogged(false), userServise.postLogin)
-
+router.post('/login', isLogged(false), userServise.postLogin);
+router.post('/checkToken', userServise.checkToken);
 
 
 

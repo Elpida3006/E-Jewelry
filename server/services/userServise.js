@@ -1,9 +1,11 @@
 const getJWT = require('../utils/getJWT');
 // const checkLogin = require('../middlewares/check-auth');
 const { validationResult } = require('express-validator')
-const { jwtSecret, authCookieName } = require('../config/config')
     // const Article = require('../models/Article')
 const User = require('../models/User')
+const { authCookieName, authHeaderName, jwtSecret } = require('../config/config');
+const { verifyToken } = require('../utils/getJWT');
+
 
 function getUser(req, res, next) {
     User.find()
@@ -108,14 +110,33 @@ console.log(`user is find as ${user}`);
         })
         .catch(err => console.log(`user is not server logged`))
 }
+function checkToken(req, res, next) {
+    const token = req.cookies[authCookieName] || req.headers[authHeaderName] || "";
+
+    if (!token) { next(); return; }
+
+    verifyToken(token)
+        .then(({ _id }) => User.findOne({ _id }))
+        .then(({ email, _id }) => {
+
+            req.user = { email, _id };
+            // console.log(req.user);
+            res.locals.isLogged = Boolean(req.user);
+            // res.locals.username = username;
+            res.locals.email = email;
+            //ako nqmame  res.locals.username = username;, trqbwa da pishem v hbs user.username
+            //тук сетваме какво да виждаме в Hbs
+            res.send(true)
+            // next();
+            //here send information to client is Logged/do you have a token  or not
+        })
+        .catch(e => res.send(false));
+}
 module.exports = {
     getUser,
-    // getRegister,
-    // getLogin,
     getLogout,
     getProfile,
-
     postRegister,
     postLogin,
-
+    checkToken
 }

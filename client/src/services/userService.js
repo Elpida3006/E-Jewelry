@@ -43,6 +43,7 @@ export const postLogin = ( email, password) => {
      return user.json();
     })
        .then(user => {
+
           console.log(user.email);
           console.log(user.fullname);
      
@@ -50,4 +51,22 @@ export const postLogin = ( email, password) => {
     return user;
     })
         .catch(error => console.log(error));
+};
+export const checkToken = (token) => {
+  
+    return fetch('http://localhost:3002/api/users/checkToken', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        body: JSON.stringify(token)
+    })
+    .then(token => {
+        return token.json(); 
+    })
+    .catch();
+};
+export const getCookie = (name)=> {
+
+    const cookieValue = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+         return cookieValue ? cookieValue[2] : null;
 };
