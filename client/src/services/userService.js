@@ -3,7 +3,7 @@ const userUrl = 'http://localhost:3002/api/users';
 
 
 export const getUser = () => {
-    return fetch(`${userUrl}/profile`)
+    return fetch(`${userUrl}/profile`, {credentials: 'include'})
         .then(user => user.json())
         .catch(error => console.log(error));
 };

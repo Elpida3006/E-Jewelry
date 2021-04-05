@@ -18,7 +18,7 @@ class Header extends Component {
 
         render(){
         const {
-            isLogged,  isAdmin
+            isLogged,  isAdmin, user
         } = this.context;
 
             return (
@@ -41,11 +41,14 @@ class Header extends Component {
                                 </li> 
                               </>
                             :  <> 
-                                <li className={style['Nav-Li']}>
+                                {/* <li className={style['Nav-Li']}>
                                 <Link className={style['Li']} to="/user/profile/:id"> Profile</Link>
-                                </li>  
+                                </li>   */}
                                 </>
                             }
+                              <li className={style['Nav-Li']}>
+                                <Link className={style['Li']} to={'/user/profile'}> Profile</Link>
+                                </li>  
                                <li className={style['Nav-Li']}>
                                 <Link className={style['Li']} to="/user/logout" onClick={this.logOut}> Logout</Link>
                                 </li>

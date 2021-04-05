@@ -26,16 +26,18 @@ function getLogout(req, res) {
 
 function getProfile(req, res, next) {
     const id = req.user._id
+    console.log(`id: ${id}`);
     let myOffers = 0
     let total = 0
     User
         .findOne({ _id: id })
-        .populate('offersBought')
-        .lean()
+        // .populate('offersBought')
         .then(user => {
             user.offersBought.forEach(offer => {
                     total += offer.price
+                    console.log('total');
                 })
+                console.log(`server user ${user}`);
                 // res.render('profile', { user, myOffers, total })
             res.send(user)
         })
