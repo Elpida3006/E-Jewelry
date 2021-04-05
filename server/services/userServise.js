@@ -126,7 +126,7 @@ function checkToken(req, res, next) {
             res.locals.email = email;
             //ako nqmame  res.locals.username = username;, trqbwa da pishem v hbs user.username
             //тук сетваме какво да виждаме в Hbs
-            res.send(true)
+            res.send(req.user)
             // next();
             //here send information to client is Logged/do you have a token  or not
         })

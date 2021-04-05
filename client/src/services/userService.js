@@ -50,15 +50,16 @@ export const postLogin = ( email, password) => {
     console.log('your data is json'); 
     return user;
     })
-        .catch(error => console.log(error));
+    .catch(error => console.log(error));
 };
 export const checkToken = (token) => {
   
     return fetch('http://localhost:3002/api/users/checkToken', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        method: 'GET',
+        headers: {'Content-Type': 'application/json',
+        'auth_cookie':token},
         credentials: 'include',
-        body: JSON.stringify(token)
+        
     })
     .then(token => {
         return token.json(); 
