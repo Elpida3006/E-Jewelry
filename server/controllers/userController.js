@@ -10,7 +10,7 @@ const { repeatPasswordCheck, isFullPassword, strongPassword } = require('../vali
 
 // router.get('/login', isLogged(false), userServise.getLogin)
 router.get('/', userServise.getUser);
-router.get('/logout', isLogged(true), userServise.getLogout);
+router.delete('/logout', userServise.getLogout);
 // logout/delete
 router.get('/profile', isLogged(true), userServise.getProfile);
 

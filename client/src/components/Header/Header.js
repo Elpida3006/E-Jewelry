@@ -3,12 +3,18 @@ import React , {Component} from 'react';
 import style from './Header.module.css';
 import {Link} from 'react-router-dom';
 import {UserContext} from '../../global-context/UserContexts';
-
+import {logoutUser} from '../../services/userService';
 
 class Header extends Component {
         static contextType = UserContext;
 
-        logOut = () => {this.context.logOut();};
+        logOut = () => {
+       
+             logoutUser();
+             return this.context.logOut({ });
+
+        
+    };
 
         render(){
         const {
@@ -32,15 +38,17 @@ class Header extends Component {
                         { isAdmin ? 
                                <> <li className={style['Nav-Li']}>
                                 <Link className={style['Li']} to="/Admin">Admin </Link>
-                                </li> </>
-                            :  <> <li className={style['Nav-Li']}>
-                                <Link className={style['Li']} to="/user/logout" onClick={this.logOut}> Logout</Link>
-                                </li>  
+                                </li> 
+                              </>
+                            :  <> 
                                 <li className={style['Nav-Li']}>
                                 <Link className={style['Li']} to="/user/profile/:id"> Profile</Link>
                                 </li>  
                                 </>
                             }
+                               <li className={style['Nav-Li']}>
+                                <Link className={style['Li']} to="/user/logout" onClick={this.logOut}> Logout</Link>
+                                </li>
                     </>
                      : <>
                      <li className={style['Nav-Li']}>

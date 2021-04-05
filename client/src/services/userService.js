@@ -71,3 +71,14 @@ export const getCookie = (name)=> {
     const cookieValue = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
          return cookieValue ? cookieValue[2] : null;
 };
+export const logoutUser = () => {
+    return fetch('http://localhost:3002/api/users/logout',   {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json',
+       },
+        credentials: 'include',
+    }  
+    )
+        .then(user => user.json())
+        .catch(error => console.log(`error fetch`));
+};

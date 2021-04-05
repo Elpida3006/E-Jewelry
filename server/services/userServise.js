@@ -14,13 +14,12 @@ function getUser(req, res, next) {
 }
 
 function getLogout(req, res) {
-
-    res.clearCookie(authCookieName)
+    console.log(`you are logged out`);
+  return  res.clearCookie(authCookieName)
         .status(200)
         .send({ message: 'You are Logged out!' })
-        // console.log(`you are logged out`);
         // res.redirect('/');
-        .catch(err => res.send(err));
+        // .catch(err =>   console.log(`you are NOT logged out`));
 
 }
 

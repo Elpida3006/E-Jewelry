@@ -46,7 +46,7 @@ class Layout extends Component {
     
     logOut = () => { 
                         document.cookie = 'auth-cookie= ; expires = Thu, 01 Jan 1970 00:00:00 HMT';
-                        return   this.setState({isLogged: false, user: null});
+                        return   this.setState({isLogged: false, isAdmin: false, user: null});
                     
                     }
     componentDidMount() {
