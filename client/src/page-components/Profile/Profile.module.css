@@ -2,21 +2,37 @@
 .user-info>div:nth-child(1) {
     text-align: center;
     margin: 2%;
+   
 }
-
-.user-info p a:hover {
-    text-decoration: underline;
+.user-info {
+    color: white;
+    border: 2px solid white;
+    width: 450px;
+    height: 650px;
+    margin-left: 33%;
+    padding: 3%;
+    background-color: #353131;
+}
+.user-info p {
+    text-decoration:dashed;
+    text-align: left;
+    font-size: 28px;
 }
 
 .user-info .total-profit {
     width: 100%;
     text-align: center;
     font-weight: bold;
+    /* font-size: 18px; */
+}
+p .user-general {
     font-size: 32px;
+    margin-left: 33%;
 }
 
 span {
     color: var(--main-orange);
+    font-size: 22px;
 }
 
 .user-info div:nth-child(1) p {
@@ -28,8 +44,10 @@ span {
 .user-info div:nth-child(1) p span {
     color: var(--main-orange);
 }
-.img {
-    background-image: image('https://covidinspection.com/wp-content/uploads/2020/03/868320_people_512x512.png');
-    width: 400px;
-    height: 400px;
+.imgProfile {
+    /* background-image: image('https://covidinspection.com/wp-content/uploads/2020/03/868320_people_512x512.png'); */
+    width: 250px;
+    height: 250px;
+    padding-left: 20%;
+    padding-bottom: 13%;
 }

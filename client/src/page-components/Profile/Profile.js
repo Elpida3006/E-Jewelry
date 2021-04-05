@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {useEffect, useState} from 'react';
 import * as service from '../../services/userService';
 import Layout from '../../components/Layout/Layout';
 import style from './Profile.module.css';
-// import ProductCard from '../../components/ProductCard/ProductCard';
+import background from '../../static/gold-jewelry-background-vector-2075787.jpg';
+import {UserContext} from '../../global-context/UserContexts';
 
 const  Profile = ({match, history} ) => {
     const  [user, setUser] =  useState({});
+    const {isAdmin, isLogged} = useContext(UserContext);
     useEffect(() => {
 
         service.getUser()
         .then(user => {
             console.log(`res user is ${user}`);
-            setUser(user.user);
+            setUser(user);
         });
-     }, [setUser]);
+     }, []);
 
 return(
-    <Layout>
-          <div class="user-info">
-          <p>Its a Profile Page</p>
-          <div className={style['img']}>
-              {/* //<img src= */}
-          </div>
-  <p>Email: <span>{user.email}</span></p> |
-  <p>Username: <span>{user.fullname}</span></p> |
-  <p>Your Register Code: <span>{user._id}</span></p> |
+   
+        <body style={{backgroundImage: `url(${background})` }} >
+             <Layout>
+        <div className={style['user-info']}>
+          <p ><span className={style['user-general']}> Profile Card</span> </p>
+       
+          <img className={style['imgProfile']} src={'https://covidinspection.com/wp-content/uploads/2020/03/868320_people_512x512.png'}  name="imageUrl" alt=""/>
+
+         
+  <p>Email: <span>{user.email}</span></p> 
+  <p>Username: <span>{user.fullname}</span></p> 
+  <p>Your Register Code: <span>{user._id}</span></p> 
+  {/* <p>Status: <span>{}</span></p> | */}
           </div>
  
   {/* <main>
@@ -48,8 +54,11 @@ return(
          
         {/* </div>
     </main> */}
+      </Layout>
+        </body>
+  
     
-    </Layout>
+          
   
 );
 };
