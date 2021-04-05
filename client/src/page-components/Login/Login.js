@@ -12,12 +12,22 @@ class  Login extends Component {
        this.state = {
           email: '',
           password: '',
-          isLogged: false,
-          isAdmin: false,
+          isLogged: null,
+          isAdmin: null,
           user: null
          
       };
   }
+      // logIn = (user) => { 
+      //           console.log(`its a context email: ${user.email}`);    
+      //                   (user.email === 'special@gmail.com') ?  (this.setState({isAdmin: true, isLogged: true, user})) : this.setState({isLogged: true, user});
+      //               }
+    
+      // logOut = () => { 
+      //                     document.cookie = 'auth-cookie= ; expires = Thu, 01 Jan 1970 00:00:00 HMT';
+      //                     this.setState({isLogged: false, user: null});
+      // }     
+      
   static contextType = UserContext;
   //declararative method for context consumer
 onSubmitHandler = (e) => {
@@ -26,25 +36,23 @@ onSubmitHandler = (e) => {
     //validation if-else
     // console.log(this.context);
     service.postLogin(email, password)
-    .then(userCredential => {
-      // console.log(userCredential.email);
-      // console.log(userCredential.fullname);
-      // console.log(userCredential._id);
-      //authCookieHeader from BE - res.header - token
-      // logIn(userCredential);
-     this.context.logIn({email: userCredential.email,
-    id: userCredential._id
-    });
+          .then(userCredential => {
+            console.log(userCredential);
+            // console.log(userCredential.fullname);
+            // console.log(userCredential._id);
+            //authCookieHeader from BE - res.header - token
+            // logIn(userCredential);
+        // this.context.logIn(userCredential);
 
 
-      console.log('Client isLogin');
-      console.log(  this.context);
-      //to fix: not change context
-      this.props.history.push('/Home');
-  })
-  .catch(err =>  {
-      console.log('Client isNot Login');
-  });
+            console.log('Client isLogin');
+            console.log(this.context);
+            //to fix: not change context
+            this.props.history.push('/Home');
+        })
+        .catch(err =>  {
+            console.log('Client isNot Login');
+        });
   }
 
 changeValue = (e, type) => {

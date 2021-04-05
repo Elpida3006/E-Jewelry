@@ -12,11 +12,12 @@ import {UserContext} from '../global-context/UserContexts';
 class Home extends Component {
     constructor(props){
         super(props);
-        // console.log(props);
+        console.log(props);
         this.state = {
             products: [],
             currentCategory: 'All',
-            
+            isLogged: '',
+            isAdmin: '',
         };
        
   };
@@ -49,7 +50,7 @@ class Home extends Component {
      
 const currentCategory = this.state.currentCategory;
 const products = this.state.products;
-console.log(this.context);
+console.log(this.state.isLogged);
 return (
 <body className={style.BackgroundHome}>
 <Layout>
