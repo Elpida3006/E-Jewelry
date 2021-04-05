@@ -3,15 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './tests/reportWebVitals';
-
+import {UserContext} from './global-context/UserContexts';
 import Routes from './lazy-routes';
 //  Route, Link, Switch
 ReactDOM.render(
 
   <React.StrictMode>
-     <Routes> 
+
+    <Routes> 
+    <UserContext>
        <App />
+    </UserContext>
     </Routes>
+ 
+    
   
   </React.StrictMode>,
   document.getElementById('root')
