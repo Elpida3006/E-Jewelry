@@ -19,22 +19,7 @@ category,
 like,
 buyers,
 }) => {
-//    const [product, setProduct] = useState({
-//     _id: id,
-//     nameProduct,
-//     price,
-//     imageUrl,
-// description,
-// brand,
-// category,
-// like,
-// buyers,
-// })
-    // componentDidMount(){
-// useEffect(() => {
-//     deleteProduct(id)
-//     .then((res) =>  Redirect('/Home'));
-// }, [product]);
+
 
 const history = useHistory();
 

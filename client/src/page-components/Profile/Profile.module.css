@@ -8,10 +8,12 @@
     color: white;
     border: 2px solid white;
     width: 450px;
-    height: 650px;
-    margin-left: 33%;
+    height: 600px;
+    margin-left: 36%;
     padding: 3%;
     background-color: #353131;
+    margin-bottom: -2%;
+    margin-top: -2%;
 }
 .user-info p {
     text-decoration:dashed;
@@ -33,6 +35,13 @@ p .user-general {
 span {
     color: var(--main-orange);
     font-size: 22px;
+   
+}
+.user-data {
+    font-size: 22px;
+    color: rgb(109, 183, 226);
+    margin-left: 5%;
+  
 }
 
 .user-info div:nth-child(1) p {

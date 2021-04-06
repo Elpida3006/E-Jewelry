@@ -5,7 +5,7 @@ import Layout from '../../components/Layout/Layout';
 import style from './Profile.module.css';
 import background from '../../static/gold-jewelry-background-vector-2075787.jpg';
 import {UserContext} from '../../global-context/UserContexts';
-
+import { FaMailBulk, FaUserAlt , FaBarcode} from 'react-icons/fa';
 const  Profile = ({match, history} ) => {
     const  [user, setUser] =  useState({});
     const {isAdmin, isLogged} = useContext(UserContext);
@@ -27,10 +27,10 @@ return(
        
           <img className={style['imgProfile']} src={'https://covidinspection.com/wp-content/uploads/2020/03/868320_people_512x512.png'}  name="imageUrl" alt=""/>
 
-         
-  <p>Email: <span>{user.email}</span></p> 
-  <p>Username: <span>{user.fullname}</span></p> 
-  <p>Your Register Code: <span>{user._id}</span></p> 
+          
+  <p> <FaMailBulk />   <span>   Email: <span className={style['user-data']}>{user.email}</span> </span></p> 
+  <p><FaUserAlt/>    <span>     Username:  <span className={style['user-data']}>{user.fullname}</span> </span></p> 
+  <p><FaBarcode/>   <span>   Your Register Code:   <span className={style['user-data']}>{user._id}</span></span></p> 
   {/* <p>Status: <span>{}</span></p> | */}
           </div>
  
