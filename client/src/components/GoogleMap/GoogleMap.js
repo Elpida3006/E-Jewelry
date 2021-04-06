@@ -28,4 +28,6 @@ const mapStyles = {
 
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyCor2Qm3vbFqbfcqCzl29fEy1TCFA-Dlqs'
+//  'AIzaSyCor2Qm3vbFqbfcqCzl29fEy1TCFA-Dlqs'
+//'AIzaSyAzYzR3kbMLdQBIc_pLz3npNvyPuRgfHmg'
 })(GoogleMap);
