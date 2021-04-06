@@ -57,7 +57,7 @@ const likeClick = () => {
 
 
     <Link className={style['Btn-Details']} to={`/products/buy/${match.params.id}`} onClick={buyClick}> 
-    <button className={style['Btn-Details']}>Buy</button>
+    <button className={style['Btn-Details']}>Shopping</button>
     </Link>  
     <Link className={style['Btn-Details']} to={`/products/like/${match.params.id}`} onClick={likeClick}> 
     <button className={style['Btn-Details']}>Like</button>
