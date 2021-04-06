@@ -113,7 +113,7 @@ console.log(`user is find as ${user}`);
 }
 function checkToken(req, res, next) {
     const token = req.cookies[authCookieName] || req.headers[authHeaderName] || "";
-
+    console.log(`Server send token: ${token}`);
     if (!token) { next(); return; }
 
     verifyToken(token)

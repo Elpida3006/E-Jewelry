@@ -27,27 +27,32 @@ import React , {Component} from 'react';
 import style from './Layout.module.css';
 import {UserContext} from '../../global-context/UserContexts';
 import {checkToken, getCookie} from '../../services/userService';
-
+import {AdminPass} from '../../credentials';
 class Layout extends Component {
     constructor(props){
         super(props);
 
         this.state = {
-        isLogged: null,
-        isAdmin: null,
+        isLogged: false,
+        isAdmin: false,
             user: null
         };
     }
+     static contextType = UserContext;
     logIn = (user) => { 
                 console.log(`its a context email: ${user.email}`);    
-                    (user.email === 'nadq123@abv.bg') ?  (this.setState({isAdmin: true, isLogged: true, user})) : this.setState({isLogged: true, user});
+                    (user.email === AdminPass.pass) ?  (this.setState({isAdmin: true, isLogged: true, user})) : this.setState({isLogged: true, user});
                     console.log(this.state.isLogged);
+                    console.log(this.state.isAdmin);
+                    this.context = this.state;
+                    console.log(this.context);
                     }
     
     logOut = () => { 
                         document.cookie = 'auth-cookie= ; expires = Thu, 01 Jan 1970 00:00:00 HMT';
-                        return   this.setState({isLogged: false, isAdmin: false, user: null});
-                    
+                           this.setState({isLogged: false, isAdmin: false, user: null});
+                           this.context = this.state;
+                           console.log(this.context);
                     }
     componentDidMount() {
         const token = getCookie('auth_cookie');
@@ -64,12 +69,14 @@ class Layout extends Component {
                 this.logIn(
                   user
                 );
+               
             })
             .catch(e => {
                 this.logOut();
             });
 
     }
+
     render() {
         const { isLogged, isAdmin, user} = this.state;
 
@@ -94,4 +101,5 @@ class Layout extends Component {
     }
 
     }
+// Layout.contextType = UserContext;
     export default Layout;

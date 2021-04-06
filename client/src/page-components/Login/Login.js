@@ -3,8 +3,8 @@ import Layout from '../../components/Layout/Layout';
 import style from './Login.module.css';
 import {Link} from 'react-router-dom';
 import * as service from '../../services/userService';
-import {UserContext} from '../../global-context/UserContexts';
-
+// import {UserContext} from '../../global-context/UserContexts';
+// import {AdminPass} from '../../credentials';
 //Forms
 class  Login extends Component {
   constructor(props){
@@ -12,15 +12,16 @@ class  Login extends Component {
        this.state = {
           email: '',
           password: '',
-          isLogged: null,
-          isAdmin: null,
-          user: null
+          // isLogged: null,
+          // isAdmin: null,
+          // user: null
          
       };
   }
       // logIn = (user) => { 
       //           console.log(`its a context email: ${user.email}`);    
       //                   (user.email === 'special@gmail.com') ?  (this.setState({isAdmin: true, isLogged: true, user})) : this.setState({isLogged: true, user});
+      //                   console.log(this.context);
       //               }
     
       // logOut = () => { 
@@ -28,13 +29,13 @@ class  Login extends Component {
       //                     this.setState({isLogged: false, user: null});
       // }     
       
-  static contextType = UserContext;
+  // static contextType = UserContext;
   //declararative method for context consumer
 onSubmitHandler = (e) => {
     e.preventDefault();
     const {email, password} = this.state;
     //validation if-else
-    // console.log(this.context);
+    console.log(`login context ${this.context}`);
     service.postLogin(email, password)
           .then(userCredential => {
             console.log(userCredential);
@@ -42,11 +43,13 @@ onSubmitHandler = (e) => {
             // console.log(userCredential._id);
             //authCookieHeader from BE - res.header - token
             // logIn(userCredential);
-        // this.context.logIn(userCredential);
+          // (userCredential.email === AdminPass.pass) ?  (this.setState({isAdmin: true, isLogged: true, userCredential})) : this.setState({isLogged: true, userCredential});
 
+          // console.log(this.state.isLogged);
+          // console.log(this.state.isAdmin);
 
             console.log('Client isLogin');
-            console.log(this.context);
+       
             //to fix: not change context
             this.props.history.push('/Home');
         })
@@ -71,7 +74,8 @@ render(){
       const  {
             email,
             password,
-          
+          // isAdmin,
+          // isLogged
         } = this.state;
 
   return (
@@ -107,5 +111,5 @@ render(){
 );
 }
 }
-
+// Login.contextType = UserContext;
 export default Login; 

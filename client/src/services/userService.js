@@ -53,7 +53,7 @@ export const postLogin = ( email, password) => {
     .catch(error => console.log(error));
 };
 export const checkToken = (token) => {
-  
+  console.log(`client token: ${token}`);
     return fetch('http://localhost:3002/api/users/checkToken', {
         method: 'GET',
         headers: {'Content-Type': 'application/json',

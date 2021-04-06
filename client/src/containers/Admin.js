@@ -15,31 +15,33 @@ static contextType = UserContext;
 
     render(){
      
-        const { isAdmin } = this.context;
+        // const { isAdmin } = this.context;
 
 return (
     <body className={style.BackgroundAdmin}>
-     {/* { isAdmin ?
-        <> */}
+    
        
         <Layout>
         <div className={style["Body"]} >
-        
+        {/* { isAdmin ? */}
+        <>
                     <div className={style.Ad}>
                     <Admin/> 
                 
                     <h2 className={style["AdminLogo"]}>Welcome to Admin page</h2>
                     </div>
-            
+                    </>
+           {/* :  */}
+           {/* <>
+           <p>Can not access to this page</p>
+           </> */}
+    {/* } */}
         </div>
         </Layout> 
       
-        {/* </> 
-        : <>  */}
+       
 
-        {/* <Layout><p>Can not access to this page</p></Layout>
-        </> 
-         }  */}
+       
   </body>
 
 );

@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './ProductCard.module.css';
 import {Link} from 'react-router-dom';
 
+import {UserContext} from '../../global-context/UserContexts';
 
 
 //functional components
@@ -18,7 +19,7 @@ category,
 like,
 buyers
 }) => {
-
+        const {isLogged} = useContext(UserContext);
         return (
             
         <div className={style.Product}>
@@ -37,11 +38,19 @@ buyers
                 <section className={style['Button']}>
               
                         
-{/* isLogged */}
+                {isLogged ? 
+                 <>
                     <Link className={style['Nav-Product']} to={`/products/details/${id}`}> 
                     <button className={style['Nav-Product']}>Details</button>
                     </Link>  
-                 
+                    </>
+                :  <> 
+ <Link className={style['Nav-Product']} to="/user/login"> 
+                    <button className={style['Nav-Product']}>Details</button>
+                    </Link> 
+                    </>
+                            }
+
 
                 </section>  
         </div>   
