@@ -64,7 +64,7 @@ return (
 
     <div className={style.View}>
           
-              {(products.length > 0)?   
+              {(products.length && products.length > 0)?   
            this.state.products.map(c => 
        
                 <Product key={c.id} {...c} />

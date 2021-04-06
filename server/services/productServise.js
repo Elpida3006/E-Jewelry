@@ -60,6 +60,11 @@ function buy(itemId, userId) {
     ])
 }
 
+function likeFn(itemId) {
+  
+     return Product.updateOne({ _id: itemId }, { $inc: { 'like': 1} });
+   
+}
 
 module.exports = {
     getCategory,
@@ -69,6 +74,7 @@ module.exports = {
     getId,
     deleteProduct,
     postEditProduct,
-    buy
+    buy,
+    likeFn
 
 }

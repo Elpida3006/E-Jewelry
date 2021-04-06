@@ -18,8 +18,8 @@ const productSchema = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: true,
-        // unique: false,
-        // validate: /^http|https/
+        unique: false,
+        validate: [/^http|https/, 'url have to start with http/https']
 
 
     },
@@ -40,24 +40,19 @@ const productSchema = new mongoose.Schema({
     },
     like: {
         type: Number
+      
     },
-    buyers: [{
+    buyers: {
         type: Number,
-        // mongoose.Types.ObjectId,
-        // ref: 'User'
-    }],
+        // type: mongoose.Types.ObjectId,
+        //     ref: "User",
+    },
 
     createdAt: {
         type: Date,
         required: true
     },
-    // createdBy: {
-    //     type: mongoose.Types.ObjectId,
-    //     ref: "User",
-    //     // required: true
-
-
-    // },
+  
   
 });
 

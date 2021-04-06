@@ -38,6 +38,19 @@ export const getDetails = (productId) => {
         .catch(error => console.log(error));
 };
 
+export const buyProduct = (productId) => {
+    // console.log(`${homeurl}/edit/${productId}`);
+    return fetch(`${homeurl}/buy/${productId}`)
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
+export const likeProduct = (productId) => {
+    console.log(productId);
+    // console.log(`${homeurl}/edit/${productId}`);
+    return fetch(`${homeurl}/like/${productId}`)
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
 
 export const createProduct = (nameProduct, price, imageUrl, description, brand, category, like) => {
 

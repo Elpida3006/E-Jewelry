@@ -31,8 +31,8 @@ buyers
                 <img src={imageUrl} className={style['Product-Img']} type="text" name="imageUrl" alt="" placeholder="Image url..."/>
         
             
-                <h4 className={style['Product-Card']} type="text" name="like" >Likes: {like}</h4>
-                <h4 className={style['Product-Card']} type="text" name="buyers" >Buyers: {buyers}</h4>
+                <h4 className={style['Product-Card']} type="text" name="like" >Likes: {like || 0}</h4>
+                <h4 className={style['Product-Card']} type="text" name="buyers" >Buyers: {buyers.lenght || 0}</h4>
 
           
                 <section className={style['Button']}>

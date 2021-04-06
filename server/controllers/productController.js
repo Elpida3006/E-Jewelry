@@ -60,6 +60,7 @@ router.post('/create', (req, res, error) => {
 router.put('/edit/:id', (req, res) => {
     let articleId = req.params.id
     console.log(articleId);
+     console.log(req.body);
     // let myID = req.user._id
 
 
@@ -163,24 +164,41 @@ router.get('/details/:id', (req, res, next) => {
 
 
 
-// router.get('/buy/:id', (req, res, error) => {
-//     let itemId = req.params.id;
-//     // console.log(itemId);
-//     // console.log(req.user._id.toString());
-//     let userId = req.user._id.toString();
+router.get('/buy/:id', (req, res, error) => {
+    let itemId = req.params.id;
+    // console.log(itemId);
+    // console.log(req.user._id.toString());
+    let userId = req.user._id.toString();
 
 
-//     service.buy(itemId, userId)
-//         // .then(() => {
-//         .then(updatedItem => {
-//             res.status(200).send(updatedItem);
+    service.buy(itemId, userId)
+        // .then(() => {
+        .then(updatedItem => {
+            res.status(200).send(updatedItem);
 
-//             console.log(`BUY Product`);
-//             // res.redirect('/products');
-//         })
-//         .catch(error => {
-//             console.error(`Do not buy a model`)
-//         })
-// })
+            console.log(`BUY Product`);
+            // res.redirect('/products');
+        })
+        .catch(error => {
+            console.error(`Do not buy a model`)
+        })
+})
 
+router.get('/like/:id', (req, res, error) => {
+    let itemId = req.params.id;
+    console.log(itemId);
+  
+    service.likeFn(itemId)
+      
+        .then(updatedItem => {
+           
+            res.status(200).send(updatedItem);
+
+            console.log(`LIKE Product`);
+            console.log(updatedItem);
+                   })
+        .catch(error => {
+            console.error(`Do not LIKE a model`)
+        })
+})
 module.exports = router;

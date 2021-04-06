@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema({
     },
     createdArticles: [{
         type: mongoose.Types.ObjectId,
-        ref: 'Article'
+        ref: 'Product'
     }],
     offersBought: [{
         type: mongoose.Types.ObjectId,
-        ref: "Article"
+        ref: "Product"
     }]
 
 });

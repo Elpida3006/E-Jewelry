@@ -20,6 +20,13 @@ useEffect(() => {
        });
     }, []);
 
+const buyClick = () => {
+    service.buyProduct(match.params.id);
+};
+const likeClick = () => {
+    service.likeProduct(match.params.id);
+};
+
         return (
             <body className={style.DetailsBackground}>
               <Layout>
@@ -41,7 +48,7 @@ useEffect(() => {
 
 
 {/* <h4 className={style['Details-Card']} type="text" name="like" >Likes: {product.like}</h4> */}
-<h4 className={style['Details-Card']} type="text" name="buyers" >Buyers: {product.buyers}</h4>
+{/* <h4 className={style['Details-Card']} type="number" name="buyers" >Buyers: {product.buyers.lenght || '0'}</h4> */}
 
 
 <section className={style['ButtonDetails']}>
@@ -49,11 +56,14 @@ useEffect(() => {
 
 
 
-    <Link className={style['Btn-Details']} to={`/products/buy/${product.id}`}> 
+    <Link className={style['Btn-Details']} to={`/products/buy/${match.params.id}`} onClick={buyClick}> 
     <button className={style['Btn-Details']}>Buy</button>
     </Link>  
-    <Link className={style['Btn-Details']} to={`/products/like/${product.id}`}> 
+    <Link className={style['Btn-Details']} to={`/products/like/${match.params.id}`} onClick={likeClick}> 
     <button className={style['Btn-Details']}>Like</button>
+    </Link> 
+    <Link className={style['Btn-Details']} to={'/Home'}> 
+    <button className={style['Btn-Details']}>Back</button>
     </Link> 
 
 </section>  
