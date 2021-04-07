@@ -7,7 +7,7 @@
   
   .Border-Card {
       border: 2px solid rgb(27, 27, 27);
-      width: 1900px;
+      width: 1600px;
       height: 200px;
       background-color:  white;
       /* background-image: linear-gradient(black, hsla(331, 45%, 9%, 0.836), black); */
@@ -50,15 +50,24 @@
       display: block;
   
   }
-  .Btn-Shop {
-      position: float;
-      justify-content: space-between;
-      width: 150px;
-
-      margin-right: 5%;
-      margin-bottom: 5%;
-      display: flex;
+  .Btn-ShopAll {
+      /* position: float; */
+      /* justify-content: space-between; */
+      width: 250px;
+      margin-left: 37%;
+      /* /* margin-right: 5%; 
+      margin-bottom: 5%; */
+      display: block;
   }
+  .Btn-Shop {
+    position: float;
+    justify-content: space-between;
+    width: 150px;
+
+    margin-right: 5%;
+    margin-bottom: 5%;
+    display: flex;
+}
   .Containers-Card {
       width: 100%;
       height: 100%;
@@ -74,7 +83,7 @@
 .wallet-sum {
  text-align: center;
  color: white;
- margin-bottom: 2%;
+ margin-bottom: 1%;
 }
   .Detailslogo {
       font-size: 20px;

@@ -1,5 +1,6 @@
 const homeurl = 'http://localhost:3002/api/products';
 
+
 export const getProducts = (category = '') => {
     let productsCategory = homeurl + '/' + ((category && category !== 'All') ? `${category}` : '');
     console.log(category);
@@ -101,8 +102,3 @@ export const deleteProduct = (productId) => {
         .then(product =>  console.log('Deleted'))
         .catch(error => console.log('error fetch'));
 };
-// export const delShopProduct = (productId) => {
-//         return fetch(`${homeurl}/delShopProduct/${productId}`)
-// .then(product =>  console.log('Deleted'))
-// .catch(error => console.log('error fetch'));
-// };
