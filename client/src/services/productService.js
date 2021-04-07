@@ -40,7 +40,14 @@ export const getDetails = (productId) => {
 
 export const buyProduct = (productId) => {
     // console.log(`${homeurl}/edit/${productId}`);
-    return fetch(`${homeurl}/buy/${productId}`)
+    // console.log(userId);
+
+    return fetch(`${homeurl}/buy/${productId}`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        // body: JSON.stringify({userId})
+    })
         .then(res => res.json())
         .catch(error => console.log(error));
 };
@@ -89,14 +96,8 @@ export const deleteProduct = (productId) => {
         .then(product =>  console.log('Deleted'))
         .catch(error => console.log('error fetch'));
 };
-// export const deleteProduct = (productId) => {
-//     return fetch(`${homeurl}/delete/${productId}`, {
-//         method: 'DELETE',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(productId)
-//     })
-//         .then(product =>  console.log('Deleted'))
-//         .catch(error => console.log('error fetch'));
-//     };
+// export const delShopProduct = (productId) => {
+//         return fetch(`${homeurl}/delShopProduct/${productId}`)
+// .then(product =>  console.log('Deleted'))
+// .catch(error => console.log('error fetch'));
+// };

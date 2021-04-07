@@ -48,7 +48,7 @@ router.post('/create', (req, res, error) => {
     service.createProduct(req.body)
         // .then(() => {
         //     console.log(`Article is created`)
-        //     res.redirect('/products')
+        // 
         // })
         .then(article => {
             // console.log(article);
@@ -168,9 +168,9 @@ router.get('/buy/:id', (req, res, error) => {
     let itemId = req.params.id;
     // console.log(itemId);
     // console.log(req.user._id.toString());
-    let userId = req.user._id.toString();
-
-
+    // let userId = req.user._id.toString();
+    let userId = (req.user._id);
+ console.log(`req.user._id. :${userId}`);
     service.buy(itemId, userId)
         // .then(() => {
         .then(updatedItem => {

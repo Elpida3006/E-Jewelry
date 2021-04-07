@@ -1,16 +1,17 @@
 
-import React from 'react';
+import React ,{ useContext } from 'react';
 import style from './Details.module.css';
 import {Link} from 'react-router-dom';
 import Layout from '../../components/Layout/Layout';
 import * as service from '../../services/productService';
 import {useEffect, useState} from 'react';
-
-
+import {UserContext} from '../../global-context/UserContexts';
+import * as UserService from '../../services/userService';
 //functional components
   
 const Details = ( {match, history} ) => {
     const  [product, setproduct] =  useState({});
+    const  [user, setUser] =  useState({});
     // componentDidMount(){
 useEffect(() => {
 
@@ -18,6 +19,14 @@ useEffect(() => {
        .then(productsParams => {
         setproduct(productsParams);
        });
+    }, []);
+useEffect(() => {
+
+    UserService.getUser()
+        .then(user => {
+            console.log(`res user is ${user}`);
+            setUser(user);
+        });
     }, []);
 
 const buyClick = () => {
@@ -27,7 +36,9 @@ const likeClick = () => {
     service.likeProduct(match.params.id);
 };
 
-        return (
+
+console.log(user._id); 
+return (
             <body className={style.DetailsBackground}>
               <Layout>
             <div className={style['Containers']}>

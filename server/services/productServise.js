@@ -52,10 +52,11 @@ function postEditProduct(id, data) {
 }
 
 function buy(itemId, userId) {
-    // console.log(itemId);
-    // console.log(userId);
+    console.log(itemId);
+    const {id} = userId
+    console.log(`its a fetch ${id}`);
     return Promise.all([
-        Product.updateOne({ _id: itemId }, { $push: { buyers: userId } }),
+        Product.updateOne({ _id: itemId }, { $inc: { 'buyers': 1 } }),
         User.updateOne({ _id: userId }, { $push: { offersBought: itemId } })
     ])
 }
