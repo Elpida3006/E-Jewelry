@@ -32,7 +32,7 @@ return(
   <p><FaUserAlt/>    <span>     Username:  <span className={style['user-data']}>{user.fullname}</span> </span></p> 
   <p><FaBarcode/>   <span>   Your Register Code:   <span className={style['user-data']}>{user._id}</span></span></p> 
   {/* <p>Status: <span>{}</span></p> | */}
-  <p><FaHospitalAlt/>   <span>   My offers: :   <span className={style['user-data']}>{user.offersBought.length}</span></span></p> 
+  <p><FaHospitalAlt/>   <span>   Bought Jewelry :   <span className={style['user-data']}>{user.offersBought ? user.offersBought.length : 0}</span></span></p> 
 
           </div>
  

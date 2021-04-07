@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom';
 import Layout from '../../components/Layout/Layout';
 import * as service from '../../services/productService';
 import {useEffect, useState} from 'react';
-import {UserContext} from '../../global-context/UserContexts';
-import * as UserService from '../../services/userService';
+// import {UserContext} from '../../global-context/UserContexts';
+// import * as UserService from '../../services/userService';
 //functional components
   
 const Details = ( {match, history} ) => {
     const  [product, setproduct] =  useState({});
-    const  [user, setUser] =  useState({});
+    // const  [user, setUser] =  useState({});
     // componentDidMount(){
 useEffect(() => {
 
@@ -20,14 +20,14 @@ useEffect(() => {
         setproduct(productsParams);
        });
     }, []);
-useEffect(() => {
+// useEffect(() => {
 
-    UserService.getUser()
-        .then(user => {
-            console.log(`res user is ${user}`);
-            setUser(user);
-        });
-    }, []);
+//     UserService.getUser()
+//         .then(user => {
+//             console.log(`res user is ${user}`);
+//             setUser(user);
+//         });
+//     }, []);
 
 const buyClick = () => {
     service.buyProduct(match.params.id);
@@ -37,7 +37,7 @@ const likeClick = () => {
 };
 
 
-console.log(user._id); 
+// console.log(user._id); 
 return (
             <body className={style.DetailsBackground}>
               <Layout>

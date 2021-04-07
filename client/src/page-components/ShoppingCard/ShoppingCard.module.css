@@ -1,7 +1,7 @@
 .DetailsBackground {
-    min-height: 600px;
+    min-height: 1000px;
     background-image: url(../../static/jewelry.jpg);
-  
+  /* height: 100%; */
       /* background-image: url(../../static/jewelry-brands-1610734440.jpg); */
   }
   
@@ -60,15 +60,22 @@
       display: flex;
   }
   .Containers-Card {
-      width: 1900px;
-      height: 800px;
+      width: 100%;
+      height: 100%;
       background-image: linear-gradient(#221d21d2, hsla(318, 29%, 93%, 0.918), #302525d3);
-      display: flex;
+      display: block;
       margin-left: 1%;
       /* margin-right: 15%; */
    
   }
-
+.wallet-line {
+  border: 2px solid white;
+}
+.wallet-sum {
+ text-align: center;
+ color: white;
+ margin-bottom: 2%;
+}
   .Detailslogo {
       font-size: 20px;
       color: black;

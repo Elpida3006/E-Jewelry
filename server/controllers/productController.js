@@ -105,11 +105,9 @@ router.get('/edit/:id', (req, res) => {
     service.getId(articleId)
         .then(article => {
             res.status(200).send(article)
-                // res.render('edit', { article })
         })
         .catch(error => {
             console.error(`Edit page not found`)
-                // res.redirect('/products')
         });
 
 })
@@ -117,48 +115,14 @@ router.get('/details/:id', (req, res, next) => {
     let articleId = req.params.id
 
 
-    // console.log(articleId);
-    // console.log(myID);
-    // let isCreator = false;
-    // let myID;
-    // let isBuyer = false;
-
     service.getId(articleId)
         .then(article => {
             // console.log(item);
             res.status(200).send(article)
         })
-        // .then(article => {
-        //     let creatotId = article.createdBy.toString();
-        //     if (req.user) {
-        //         myID = req.user._id.toString()
-        //     }
-
-    //     // console.log(creatotId);
-    //     if (myID) {
-    //         if (creatotId == myID) {
-    //             isCreator = true;
-    //             console.log(`YOU ARE CREATOR`);
-    //         } else {
-    //             isCreator = false;
-
-    //         }
-    //     } else {
-    //         isCreator = false;
-    //     }
-    //     article.buyers = article.buyers.map(x =>
-    //         x.toString());
-
-    //     if (article.buyers.includes(myID)) {
-    //         isBuyer = true;
-    //         console.log(`YOU ARE BUYER THIS MODEL`);
-    //     }
-
-    //     res.render('details', { article, isCreator, isBuyer })
-    // })
     .catch(error => {
         console.error(`details page not found`)
-            // res.redirect('/products')
+          
     });
 });
 
@@ -166,18 +130,15 @@ router.get('/details/:id', (req, res, next) => {
 
 router.get('/buy/:id', (req, res, error) => {
     let itemId = req.params.id;
-    // console.log(itemId);
-    // console.log(req.user._id.toString());
-    // let userId = req.user._id.toString();
+ 
     let userId = (req.user._id);
  console.log(`req.user._id. :${userId}`);
     service.buy(itemId, userId)
-        // .then(() => {
         .then(updatedItem => {
             res.status(200).send(updatedItem);
 
             console.log(`BUY Product`);
-            // res.redirect('/products');
+  
         })
         .catch(error => {
             console.error(`Do not buy a model`)
@@ -189,7 +150,6 @@ router.get('/like/:id', (req, res, error) => {
     console.log(itemId);
   
     service.likeFn(itemId)
-      
         .then(updatedItem => {
            
             res.status(200).send(updatedItem);
@@ -199,6 +159,22 @@ router.get('/like/:id', (req, res, error) => {
                    })
         .catch(error => {
             console.error(`Do not LIKE a model`)
+        });
+});
+
+router.get('/getOneProductById/:id', (req, res, error) => {
+    let itemId = req.params.id;
+  
+    
+    service.getId(itemId)
+        .then(article => {
+            res.status(200).send(article)
         })
-})
+        .catch(error => {
+            console.error(`ShoppingCard page not found`)
+        }); 
+});  
+
+
+
 module.exports = router;

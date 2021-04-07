@@ -5,15 +5,13 @@ import Layout from '../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import {Link} from 'react-router-dom';
 //Class Components/State/Props/Handling Events
-// import UserContext from '../global-context/UserContexts';
+
 class Cover extends Component {
         constructor(props) {
           super(props);
             this.state = {
              Like: 0, 
-             isLogged: null,
-             isAdmin: null,
-             user: null
+           
          
              };
             // this.CounterLike = this.CounterLike.bind(this);

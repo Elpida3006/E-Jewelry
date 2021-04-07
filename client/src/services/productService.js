@@ -14,6 +14,11 @@ export const getAll = () => {
         .then(res => res.json())
         .catch(err => console.log(err));
 };
+export const getOffers = (productId) => {
+    return fetch(`${homeurl}/getOneProductById/${productId}`)
+    .then(article => article.json())
+    .catch(error => console.log(error));
+};
 
 export const getName = (nameProduct = '') => {
     let productsName = homeurl + '/' + ((nameProduct && nameProduct !== 'All') ? `${nameProduct}` : '');
