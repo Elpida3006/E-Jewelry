@@ -53,7 +53,7 @@ function postEditProduct(id, data) {
 
 function buy(itemId, userId) {
     console.log(itemId);
-    const {id} = userId
+    const id = userId
     console.log(`its a fetch ${id}`);
     return Promise.all([
         Product.updateOne({ _id: itemId }, { $inc: { 'buyers': 1 } }),
@@ -66,6 +66,30 @@ function likeFn(itemId) {
      return Product.updateOne({ _id: itemId }, { $inc: { 'like': 1} });
    
 }
+function delShopCard(itemId, userId) {
+    console.log(itemId);
+    const id = userId
+    console.log(`its a fetch ${id}`);
+    return Promise.all([
+        Product.updateOne({ _id: itemId }, { $inc: { 'buyers': -1 } }),
+        User.updateOne({ _id: userId }, { $pull: { offersBought: itemId }} )
+    ])
+}
+
+function buyOne(itemId, userId) {
+    console.log(`itemid ${itemId}`);
+    const id = userId
+    // console.log(`its a fetch ${id}`);
+    return  User.updateOne({ _id: userId }, { $pull: { offersBought: itemId }} )
+       
+   
+}
+
+function buyAll(userId) {
+    return   User.findOneAndUpdate({ _id: userId }, { $set: { offersBought: [] }} )
+   
+    
+}
 
 module.exports = {
     getCategory,
@@ -76,6 +100,9 @@ module.exports = {
     deleteProduct,
     postEditProduct,
     buy,
-    likeFn
+    likeFn,
+    delShopCard,
+    buyAll,
+    buyOne
 
 }

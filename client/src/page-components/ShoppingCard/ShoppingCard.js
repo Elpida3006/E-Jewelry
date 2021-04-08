@@ -47,9 +47,11 @@ useEffect(() => {
 }, []);
 
 const finalizeCard = () => {
-    // service.delShopProduct(id)
-    //+ 
-    //message
+ 
+        productservice.buyAll()
+     .then(res => history.push('/'));
+     //+ /user finalizeCard  //message - static
+    
 };
 
 

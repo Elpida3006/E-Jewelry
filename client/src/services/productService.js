@@ -57,6 +57,44 @@ export const buyProduct = (productId) => {
         .then(res => res.json())
         .catch(error => console.log(error));
 };
+export const buyOne = (productId) => {
+  
+
+    return fetch(`${homeurl}/buyOne/${productId}`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        // body: JSON.stringify({userId})
+    })
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
+export const buyAll = () => {
+    // console.log(`${homeurl}/edit/${productId}`);
+   
+
+    return fetch(`${homeurl}/buyAll`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+    
+    })
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
+export const delShopProduct = (productId) => {
+    // console.log(`${homeurl}/edit/${productId}`);
+    // console.log(userId);
+
+    return fetch(`${homeurl}/delShopCard/${productId}`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        // body: JSON.stringify({userId})
+    })
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
 export const likeProduct = (productId) => {
     console.log(productId);
     // console.log(`${homeurl}/edit/${productId}`);

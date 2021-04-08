@@ -1,24 +1,31 @@
 import React  from 'react';
 import style from './ShoppingCard.module.css';
-import {Link} from 'react-router-dom';
-
-
+import {Link, useHistory} from 'react-router-dom';
+import * as service from '../../services/productService';
+ 
 
 //functional components
   
 const TemplateShopCard = ( {_id: id, imageUrl, nameProduct, price, brand, category} ) => {
- 
+ const history = useHistory();
 
 const finalizeCard = () => {
-    // service.delShopProduct(id)
-    //+ 
-    //message
+  
+ 
 };
-const delShopProduct = (e) => {
+const deleteShopProduct = (e) => {
 
-    // e.preventDefault();
-    // service.delShopProduct(id)
-    // .then((res) =>   history.push('/Home'));
+    e.preventDefault();
+    service.delShopProduct(id)
+    .then((res) =>   history.push('/Home'));
+  
+    
+};
+const buyOne = (e) => {
+
+    e.preventDefault();
+    service.buyOne(id)
+    .then((res) =>   history.push('/Home'));
   
     
 };
@@ -37,16 +44,15 @@ const delShopProduct = (e) => {
 
                                 <section className={style['ButtonShop']}>
 
-                                    <Link className={style['Btn-Shop']} to={'/products/finalizeCard'} onClick={finalizeCard}> 
-                                    <button onClick={finalizeCard} className={style['Btn-Shop']}>Buy</button>
-                                    </Link>  
+                                    <button onClick={buyOne} className={style['Btn-Shop']}>Buy</button>
+                                  
                                 
                                     <Link className={style['Btn-Shop']} to={'/Home'}> 
                                     <button className={style['Btn-Shop']}>Back</button>
                                     </Link> 
-                                    <Link className={style['Btn-Shop']} to={`/products/delete/${id}`}> 
-                                                    <button  onClick={delShopProduct} className={style['Btn-Shop']}>Remove Shop</button>        
-                                </Link>  
+                                   
+                                    <button className={style['Btn-Shop']} onClick={deleteShopProduct} className={style['Btn-Shop']}>Remove Shop</button>        
+                                
 
                                 </section>  
                     </div>      

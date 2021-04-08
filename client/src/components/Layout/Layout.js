@@ -28,6 +28,8 @@ import style from './Layout.module.css';
 import {UserContext} from '../../global-context/UserContexts';
 import {checkToken, getCookie} from '../../services/userService';
 import {AdminPass} from '../../credentials';
+import {logoutUser} from '../../services/userService';
+
 class Layout extends Component {
     constructor(props){
         super(props);
@@ -49,8 +51,10 @@ class Layout extends Component {
                     }
     
     logOut = () => { 
-                        document.cookie = 'auth-cookie= ; expires = Thu, 01 Jan 1970 00:00:00 HMT';
+                        // document.cookie = 'auth-cookie= ; expires = Thu, 01 Jan 1970 00:00:00 HMT';
+                            logoutUser();
                            this.setState({isLogged: false, isAdmin: false, user: null});
+
                            this.context = this.state;
                            console.log(this.context);
                     }

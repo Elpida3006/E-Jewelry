@@ -174,7 +174,37 @@ router.get('/getOneProductById/:id', (req, res, error) => {
             console.error(`ShoppingCard page not found`)
         }); 
 });  
+router.get('/delShopCard/:id',(req, res, next) =>{
+    let articleId = req.params.id
+    let userId = (req.user._id);
+    service.delShopCard(articleId, userId)
+        .then((article) => {
+            // res.redirect('/products')
+            res.status(200).send(article)
+        })
+        .catch(next)
+} );
+router.get('/buyOne/:id',(req, res, next) =>{
+    let articleId = req.params.id
+    let userId = (req.user._id);
 
+    service.buyOne(articleId, userId)
+        .then((article) => {
+            // res.redirect('/products')
+            res.status(200).send(article)
+        })
+        .catch(next)
+} );
+
+router.put('/buyAll',(req, res, next) =>{
+ 
+    service.buyAll(userId)
+        .then((article) => {
+            // res.redirect('/products')
+            res.status(200).send(article)
+        })
+        .catch(next)
+} )
 
 
 module.exports = router;
