@@ -1,14 +1,14 @@
 
 import React  from 'react';
 
-import style from './Product.module.css';
+import style from './AdminProductCard.module.css';
 import {Link, useHistory} from 'react-router-dom';
 import { deleteProduct } from '../../services/productService';
  
 
 //functional components
   
-const Product = ({
+const AdminProductCard = ({
     _id: id,
     nameProduct,
     price,
@@ -71,4 +71,4 @@ const delProduct = (e) => {
 
 
 
-export default Product;
+export default AdminProductCard;

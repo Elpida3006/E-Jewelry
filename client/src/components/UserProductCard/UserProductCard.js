@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import style from './ProductCard.module.css';
+import style from './UserProductCard.module.css';
 import {Link} from 'react-router-dom';
 
 import {UserContext} from '../../global-context/UserContexts';
@@ -8,7 +8,7 @@ import {UserContext} from '../../global-context/UserContexts';
 
 //functional components
   
-const ProductCard = ({
+const UserProductCard = ({
     _id: id,
     nameProduct,
     price,
@@ -62,4 +62,4 @@ buyers
 
 
 
-export default ProductCard;
+export default UserProductCard;

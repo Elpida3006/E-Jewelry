@@ -19,7 +19,7 @@ function Menu() {
 
                 </li>
                 <li className={style['Nav-Li']}>
-                <NavLink  className={style['Li']} to="/products/leather-accessory">Leather Accessory</NavLink >
+                <NavLink  className={style['Li']} to="/products/Leather-Accessory">Leather Accessory</NavLink >
 
                 </li>
             </ul>

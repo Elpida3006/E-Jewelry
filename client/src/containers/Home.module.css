@@ -35,39 +35,17 @@ img {
     display: block;
     padding-left: 50px;;
 }
-.Image {
-    border: 5px solidlinear-gradient(white, rgba(61, 22, 22, 0.226), black);
-    background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
-    margin:-5px;
-    display: flex;
-    position: relative;
-    width: 60%;
-    margin-left: 150px;
-    margin-bottom: 50px;
-}
-.Static {
-    display: flex;
-    width: 100%;
-}
+
 .Admin {
   
     background-color: transparent;
     display: block;
     width: 100%;
 }
-.Menu {
-    background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
-    display: flex;
 
-    border: 5px solid linear-gradient(grey, rgba(61, 22, 22, 0.226), grey);;
-    display: flex;
-    width: 20%;
-    position: relative;
-    margin-bottom: 50px;
-}
 /* menu & layout: display:flex /20/70 */
 .Products {
-    border: 2px solid white;
+    border: 2px solid  white;
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
     padding: 20px 30px;
     margin: 5px 500px;
@@ -78,15 +56,17 @@ img {
 
 }
 .PCategory {
-    border: 2px solid white;
+    border: 2px solid rgb(129, 118, 118);
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
-    padding: 20px 30px;
+    padding: 20px 10px;
+    margin-top: 0%;
     /* margin: 5px 200px; */
-    color:white;
+    color: rgb(156, 138, 138);
     display: block;
     flex-wrap: wrap;
     width: 1500px;  
-    padding-bottom: 50px; 
+    /* height: 50px; */
+    padding-bottom: 20px; 
     text-align: center;
 }
 /* p {
@@ -104,7 +84,7 @@ img {
     font-size: 18px;
 }
 .UserSearch {
-    padding-left: 450px;
+    padding-left: 30%;
     display: flex;
     /* width: 30%; */
     padding-bottom: 1px;

@@ -9,10 +9,7 @@ import * as service from '../../services/productService';
 const TemplateShopCard = ( {_id: id, imageUrl, nameProduct, price, brand, category} ) => {
  const history = useHistory();
 
-const finalizeCard = () => {
-  
- 
-};
+
 const deleteShopProduct = (e) => {
 
     e.preventDefault();
@@ -47,7 +44,7 @@ const buyOne = (e) => {
                                     <button onClick={buyOne} className={style['Btn-Shop']}>Buy</button>
                                   
                                 
-                                    <Link className={style['Btn-Shop']} to={'/Home'}> 
+                                    <Link  to={'/Home'}> 
                                     <button className={style['Btn-Shop']}>Back</button>
                                     </Link> 
                                    

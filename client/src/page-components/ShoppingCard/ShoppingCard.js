@@ -66,14 +66,17 @@ console.log(arrOffers);
                     ) :
                     <p>No Bought Jewelry!</p> 
                     }
-              <h4 className={style['wallet-line']}></h4>   
-              <h4 className={style['wallet-sum']}> Total Sum: {total} Euro</h4>   
-              <section className={style['ButtonShop']}>
-              <Link className={style['Btn-ShopAll']} to={'/products/finalizeCard'} onClick={finalizeCard}> 
-                                    <button onClick={finalizeCard} className={style['Btn-ShopAll']}>Buy All</button>
-                                    </Link>  
-                                    </section>  
-            <h4 className={style['wallet-line']}></h4>                                     
+                    <div className={style['Wallet']}>
+                            <h4 className={style['wallet-line']}></h4>   
+                            <h4 className={style['wallet-sum']}> Total Sum: {total} Euro</h4>   
+                            <section className={style['ButtonShop']}>
+                            <Link className={style['Btn-ShopAll']} to={'/products/finalizeCard'} onClick={finalizeCard}> 
+                                            <button onClick={finalizeCard} className={style['Btn-ShopAll']}>Buy All</button>
+                                            </Link>  
+                            </section>  
+                            <h4 className={style['wallet-line']}></h4>   
+                    </div>
+                                               
             </div>
 
                 

@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/Layout';
 // let  server = 'http://localhost:3002/api/';
 import Admin from '../../components/Admin-Panel/Admin';
 // import Products from './Products';
-import Product from '../../components/Product/Product';
+import AdminProductCard from '../../components/AdminProductCard/AdminProductCard';
 import {getAll} from '../../services/productService';
 
 
@@ -67,7 +67,7 @@ return (
               {(products.length && products.length > 0)?   
            this.state.products.map(c => 
        
-                <Product key={c.id} {...c} />
+                <AdminProductCard key={c.id} {...c} />
   
             ) : 
          <p>No New Jewelry!</p> 
