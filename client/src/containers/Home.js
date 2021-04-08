@@ -8,7 +8,6 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import {getProducts, sortingData} from '../services/productService';
 import {UserContext} from '../global-context/UserContexts';
 
-
 class Home extends Component {
     constructor(props){
         super(props);
@@ -20,7 +19,7 @@ class Home extends Component {
             isLogged: '',
             isAdmin: '',
         };
-       
+   
   };
  static contextType = UserContext; 
 
@@ -46,77 +45,74 @@ class Home extends Component {
             })
             .catch(error => console.log(error));
     }
-onSort = sortType => {
-    this.setState({sortType});}
-    
+        onSort = sortType => {
+            this.setState({sortType});}
+        filter = regex => {
+                this.setState({regex});}  
     render(){
         const sortType = this.state.sortType;
         const currentCategory = this.state.currentCategory;
         const products = this.state.products;
 
-return (
-        <body className={style.BackgroundHome}>
-        <Layout>
-        <div className={style.Home} >
-        <div className={style.Static}>
-            <div className={style.Menu}>
-            <Menu/>
-            </div>
-            
-            <div className={style.Image}>
-                <img src = { logo } alt = "logo" />
-            </div>
-        </div>
-
-        
-        <div className={style.UserSearch}>   
-      
-            <li className={style['Nav-UserSearch']}> 
-                <li className={style['Nav-S']}>
-                Search Panel
-                </li>
-
-                <li className={style['Nav-Li']}> 
-                                     
-                <button onClick={()=> this.onSort('asc')}className={style['Nav-Search']}>Sort Products by Asc Likes</button>
-                <button onClick={()=> this.onSort('desc')}className={style['Nav-Search']}>Sort Products by Desc Likes</button>
-                </li>          
-       
-            </li>
-        </div>
-            <div className={style.Products}>
-                    <p className={style.PCategory}>{currentCategory } Category Page</p> 
-                {(products.length > 0)?   
-                    (sortType === 'asc' )? this.state.products
-                    .sort((a, b) => a.like - b.like)
-                    .map(c => 
-                
-                            <ProductCard key={c.id} {...c} />   
+            return (
+                <body className={style.BackgroundHome}>
+                <Layout>
+                    <div className={style.Home} >
+                    <div className={style.Static}>
+                        <div className={style.Menu}>
+                        <Menu/>
+                        </div>
                         
-                        ) : this.state.products
-                        .sort((a, b) => b.like - a.like)
-                        .map(c => 
+                        <div className={style.Image}>
+                            <img src = { logo } alt = "logo" />
+                        </div>
+                    </div>
+
                     
-                                <ProductCard key={c.id} {...c} />   
+                    <div className={style.UserSearch}>   
+                
+                        <li className={style['Nav-UserSearch']}> 
+                            <li className={style['Nav-S']}>
+                            Search Panel
+                            </li>
+
+                            <li className={style['Nav-Li']}> 
+                                                
+                            <button onClick={()=> this.onSort('asc')}className={style['Nav-Search']}>Sort Products by Asc Likes</button>
+                            <button onClick={()=> this.onSort('desc')}className={style['Nav-Search']}>Sort Products by Desc Likes</button>
+                            </li> 
+                            <li className={style['Nav-Li2']}> 
+                                    <input className={style['Nav-Search']} type="text" name="searchProduct" placeholder="search..."/>
+                                    <button onClick={()=> this.filter('regex')}type="submit" className={style['Nav-Go']}>Go</button>
+                            </li>        
+                
+                        </li>
+                    </div>
+
+                    <div className={style.Products}>
+                                <p className={style.PCategory}>{currentCategory } Category Page</p> 
+                            {(products.length > 0)?   
+                                (sortType === 'asc' )? this.state.products
+                                .sort((a, b) => a.like - b.like)
+                                .map(c => 
                             
-                            ) 
-                
-                : 
-                <p>No New Jewelry!</p> 
-                }
-                
-                </div>
-                
-            
-
-        </div>
-        </Layout> 
-        </body>
-
-
+                                        <ProductCard key={c.id} {...c} />   
+                                    
+                                    ) : this.state.products
+                                    .sort((a, b) => b.like - a.like)
+                                    .map(c => 
+                                
+                                            <ProductCard key={c.id} {...c} />   
+                                        )               
+                            : 
+                            <p>No New Jewelry!</p> 
+                            }              
+                            </div>                           
+                    </div>
+                    
+                </Layout> 
+                </body>
 );
 }
-
 }
-
 export default Home;
