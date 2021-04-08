@@ -10,6 +10,22 @@ console.log(productsCategory);
     .catch(err => console.log(err));
 
 };
+// export const sortingData = (like = '') => {
+//     let link = homeurl + `/sortingData/${like}` ;
+//     console.log(like);
+//     console.log(link);
+//     // like = 'a-z' || 'z-a';
+//   return fetch(link)
+//     .then(res => {
+    
+//         res.json();
+  
+ 
+//     })
+//     .catch(err => console.log('error sort'));
+
+// };
+
 export const getAll = () => {
      return fetch(homeurl)
         .then(res => res.json())
@@ -21,15 +37,7 @@ export const getOffers = (productId) => {
     .catch(error => console.log(error));
 };
 
-export const getName = (nameProduct = '') => {
-    let productsName = homeurl + '/' + ((nameProduct && nameProduct !== 'All') ? `${nameProduct}` : '');
-    console.log(nameProduct);
-console.log(productsName);
-  return fetch(productsName)
-    .then(res => res.json())
-    .catch(err => console.log(err));
 
-};
 
 export const getOne = (productId) => {
     // console.log(`${homeurl}/edit/${productId}`);

@@ -32,8 +32,9 @@ return Product.find().populate('createdBy')
 function getCategory(currcategory) {
     return Product.find({category: currcategory})
 }
-function getName(curry) {
-    return Product.find({nameProduct: curry})
+function sortingData(sortCriteria) {
+  return sortCriteria === 'z-a' ? Product.find().sort({ like: -1 }) : Product.find().sort({ like: 1 })
+
 }
 
 function getId(id) {
@@ -93,7 +94,7 @@ function buyAll(userId) {
 
 module.exports = {
     getCategory,
-    getName,
+    sortingData,
     createProduct,
     getAll,
     getId,

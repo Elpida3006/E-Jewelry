@@ -92,3 +92,85 @@ img {
 /* p {
     display: block;
 } */
+
+.Li {
+    /* padding-left: 10px; */
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: flex;
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+}
+.UserSearch {
+    padding-left: 450px;
+    display: flex;
+    /* width: 30%; */
+    padding-bottom: 1px;
+    /* margin-left: 100px; */
+    /* color: aliceblue; */
+    display: flex;
+}
+
+.Nav-UserSearch {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    list-style: none;
+	padding: 10px 12px 10px 15px;
+    text-align: left;
+    background-image: linear-gradient( rgb(226, 116, 13), rgba(61, 22, 22, 0.226), rgba(61, 22, 22, 0.226));
+   margin: 8px;
+   width: 1100px;
+   /* position: relative; */
+}
+.Nav-Li {
+   
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    list-style: none;
+	padding: 5px 15px;
+    text-align: center;
+    background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
+   margin: 8px;
+   width: 53%;
+   position: relative;
+}
+.Nav-S {
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    /* border: 2px solid rgb(20, 20, 20); */
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    list-style: none;
+	padding: 5px 15px;
+    text-align: center;
+    /* background-image: linear-gradient(rgb(8, 8, 8), rgba(61, 22, 22, 0.226), black); */
+   margin: 8px;
+   width: 25%;
+   position: relative;
+}
+
+.Nav-Search {
+    height: 35px;
+    width: 250px;
+    margin-left: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}

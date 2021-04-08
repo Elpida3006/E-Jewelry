@@ -56,6 +56,8 @@ class Routes extends Component {
             <Route path="/admin/money"  component={Admin} />
             <Route path="/view"  exact component={View} />
             <Route path="/products/:category" exact component={Home} />
+            <Route path="/products/sortingData/:like" exact component={Home} />
+
             <Route path="/products/details/:id"  component={Details} />
             <Route path="/products/:nameProduct"  component={Home} />
 

@@ -1,37 +1,40 @@
 import React from 'react';
-//for class components
 import style from './UserSearch.module.css';
-import {Link} from 'react-router-dom';
+// import {Link, Redirect} from 'react-router-dom';
+// import * as service from '../../services/productService';
 
-function UserSearch() {
-    // const ([setState, useEffect]) / set nameProduct
+function UserSearch({history}) {
+
+
+
     return (
+   
+
         <div className={style.UserSearch}>   
       
             <li className={style['Nav-UserSearch']}> 
                 <li className={style['Nav-S']}>
                 Search Panel
                 </li>
+    
+                            {/* <select className={style['select']} type="text" name="like">
+                                
+                                                        <option value="a-z">like a-z</option>
+                                                        <option value="z-a">like z-a</option>
 
-                <li className={style['Nav-Li']}> 
-                                     
-                        <Link className={style['Nav-Product']} to={`/products/${'nameProduct'}`}> 
-                          
-                            
-                            <select className={style['select']} type="text" name="nameProduct">
-                                                        <option value="{nameProduct}">{'nameProduct'}</option>
-                                                    
-                                                
-                                </select>
-                        </Link>
-                </li>
+                  
+                                </select> */}
+                                {/* <button type="submit" className={style['Nav-Search']}>Go</button> */}
 
-                <li className={style['Nav-Li2']}> 
+                        {/* </Link> */}
+                {/* </li> */}
+
+                {/* <li className={style['Nav-Li2']}> 
                         <Link className={style['Nav-Product']} to={`/products/${'nameProduct'}`}> 
                         <input className={style['select']} type="text" name="searchProduct" placeholder="search..."/>
                         <button type="submit" className={style['Nav-Search']}>Go</button>
                      </Link>
-                </li>
+                </li> */}
             </li>
         </div>
     );

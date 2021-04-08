@@ -27,12 +27,13 @@ service.getCategory(curr)
 })
 .catch(err => console.error(`No articles yet`))
 })
-router.get('/:name', (req, res, err) => {
-    const curr = req.params.name
-service.getName(curr)
+router.get('/sortingData/:like', (req, res, err) => {
+   const sortCriteria = req.params.like
+   console.log(sortCriteria);
+service.sortingData(sortCriteria)
 .then(products => {
         
-       
+      console.log(products); 
     res.send(products)
 })
 .catch(err => console.error(`No articles yet`))
