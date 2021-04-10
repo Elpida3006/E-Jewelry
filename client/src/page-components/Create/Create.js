@@ -5,28 +5,82 @@ import style from './Create.module.css';
 import {Link, Redirect} from 'react-router-dom';
 import * as service from '../../services/productService';
 import Admin from '../../components/Admin-Panel/Admin';
-
+import {useEffect, useState} from 'react';
 //Forms
 function Create({history, match, location}) {
-    
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
 
-//uncontrolled Form
+ const  [errorMesage, seterrorMesage] =  useState('');
+const  [successMessage, setsuccessMessage] =  useState('');
+
+//         seterrorMesage(errorMesage);
+//         setsuccessMessage(successMessage);
+    
+
+
+const onSubmitHandler = (e) => {
+        e.preventDefault();
+       
+
     const {nameProduct, price, imageUrl, description, brand, category, like} = e.target;
     // console.log(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value);
+if (nameProduct.value.length < 1 || price.value.length < 1 ||  imageUrl.value.length < 1 || description.value.length < 1 || brand.value.length < 1 || category.value.length < 1 || like.value.length < 1) {
+    let  errorMesage = 'Please fill any inputs!';
+    seterrorMesage(errorMesage);
+} else {
+    let  successMessage = 'It is Right';
+    setsuccessMessage(successMessage);
+}
+ if(price.value){
+    const regEx = /^\d+$/;
+
+        if(!regEx.test(price.value)) {
+    let  errorMesage = 'Price have to digit number';
+    seterrorMesage(errorMesage);
+} else {
+    let  successMessage = 'It is Right';
+    setsuccessMessage(successMessage);
+}
+ }
+if(imageUrl.value) {
+    const regEx = /^https|http/;
+        if(!regEx.test(imageUrl.value)) {
+        let  errorMesage = 'Invalid Url';
+        seterrorMesage(errorMesage);
+    } else {
+        let successMessage = 'It is Correct!';
+        setsuccessMessage(successMessage);
+    }
+}
     service.createProduct(nameProduct.value, price.value, imageUrl.value, description.value, brand.value, category.value, like.value)
     .then(() =>   history.push('/view'))
-    .catch(() => Redirect('/'));
-        };
-      
+    .catch((err) => {
+        let  errorMesage = 'Somenting Went wrong! Check all values';
+        seterrorMesage(errorMesage);
+    });
+};
+
 
     return (
         <body className={style.BackgroundAdmin}>
         <Layout>
            <Admin/> 
            <br></br>
-           <br></br>
+             
+          <div className={style['Notification']}>
+              {  errorMesage ?
+              <>           
+              <div className={style['Isdanger']}> 
+          <p className={style['Isdanger']}>{errorMesage}</p>
+          </div> </> :<> </> }
+         { successMessage ? <> 
+         <div className={style['Issuccess']}>
+            <p className={style['Issuccess']}>{successMessage}</p>
+          </div></> :<></>
+         
+         } 
+              </div>
+              <br></br>
+              <br></br>
             <form onSubmit={onSubmitHandler}>
           
                 <div className={style.Create}>
@@ -74,6 +128,7 @@ function Create({history, match, location}) {
                 </div>   
            
             </form>
+
 
         </Layout>
      </body>

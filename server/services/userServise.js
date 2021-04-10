@@ -131,7 +131,8 @@ function checkToken(req, res, next) {
             // next();
             //here send information to client is Logged/do you have a token  or not
         })
-        .catch(e => res.send(false));
+        .catch(err => console.log('wrong data - token is not verify'));
+
 }
 module.exports = {
     getUser,

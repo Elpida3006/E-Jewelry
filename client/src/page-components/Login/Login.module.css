@@ -8,7 +8,9 @@ h1 {
     color: rgb(6, 52, 92);
     text-align: left;
     margin-left: -150px;   
+    font-size: 26px; 
 }
+
 .Info {
     color: white;
     text-align: left;
@@ -20,13 +22,13 @@ h1 {
    
     display: block;
     background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
-    padding-left: 350px;
+    padding-left: 250px;
   
     padding-bottom: 190px;
-    width: 35%;
+    width: 800px;
     margin-bottom: 9%;
     margin-left: 450px; 
- 
+    font-size: 30px; 
     text-align: left;
 }
 .LoginBtn  {
@@ -51,16 +53,17 @@ h1 {
     margin: 0 auto;
     color: var(--main-blue);
   text-align: left;
- 
+  font-size: 24px; 
 }
 
 /* label {
     font-weight: bold;
 }  */
 
-div input {
+.Input-Login{
     height: 10px;
-    display:flex;
+    /* height: 30px; */
+    display:block;
     padding: 1%;
     width: 350px;
     text-align: center;
@@ -85,3 +88,18 @@ div input {
     border-radius: 15px;
     text-align: center;
 } */
+.Isdanger {
+    width: 360px;
+    background-color: red;
+    color:white;
+    font-size: 14px;
+}
+.Issuccess {
+    width: 360px;
+    background-color: green;
+    color:white;
+    font-size: 14px;
+}
+.Notification {
+    width: 360px;  
+}

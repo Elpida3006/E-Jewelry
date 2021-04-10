@@ -138,3 +138,20 @@ div .inCreate {
     color: wheat;
     margin-left: 4%
 }
+.Isdanger {
+    width: 360px;
+    background-color: red;
+    color:white;
+    font-size: 18px;
+}
+.Issuccess {
+    width: 360px;
+    background-color: green;
+    color:white;
+    font-size: 18px;
+}
+.Notification {
+    width: 400px;  
+    display: block;
+    margin-left: 40%;
+}

@@ -7,7 +7,8 @@ h1 {
 .InfoP {
     color: rgb(6, 52, 92);
     text-align: left;
-    margin-left: -150px;   
+    margin-left: -150px;  
+    /* font-size: 26px;  */
 }
 .Info {
     color: white;
@@ -19,14 +20,14 @@ h1 {
     margin-bottom:5%;
     display: block;
     background-image: linear-gradient(white, rgba(61, 22, 22, 0.226), black);
-    padding-left: 350px;
-    /* padding-right: -350px; */
+    padding-left: 250px;
+    padding-bottom: 2%;
   
-    padding-bottom: 165px;
-    width: 35%;
-    margin-bottom: 3%;
+    padding-top: 1%;
+    width: 800px;
+    margin-top: 3%;
     margin-left: 450px; 
- 
+ font-size: 30px;
     text-align: left;
 }
 .RegisterBtn {
@@ -50,6 +51,7 @@ h1 {
     margin: 0 auto;
     color: var(--main-blue);
   text-align: left;
+  font-size: 24px; 
  
 }
 
@@ -57,11 +59,12 @@ h1 {
     font-weight: bold;
 }  */
 
-div input {
+.Input {
+    /* height: 30px; */
     height: 10px;
     display:flex;
     padding: 1%;
-    width: 350px;
+    width: 360px;
    
     font-size: 18px;
     border: 2px solid brown;
@@ -73,4 +76,18 @@ div input {
     display:flex; 
 } */
 
-
+.Isdanger {
+    width: 360px;
+    background-color: red;
+    color:white;
+    font-size: 14px;
+}
+.Issuccess {
+    width: 360px;
+    background-color: green;
+    color:white;
+    font-size: 14px;
+}
+.Notification {
+    width: 360px;  
+}

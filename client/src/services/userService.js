@@ -17,10 +17,10 @@ export const postRegister = (email, fullname, password, rePassword) => {
         credentials: 'include',
         body: JSON.stringify( sendData)
     })
-        .then(user => {
+    .then(user => {
             console.log('you are created');    
         })
-        .catch(error => console.log(error));
+    .catch(error => console.log(error));
 };
 export const postLogin = ( email, password) => {
     let user = {email, password};
@@ -42,7 +42,7 @@ export const postLogin = ( email, password) => {
     console.log('you are logged'); 
      return user.json();
     })
-       .then(user => {
+    .then(user => {
 
           console.log(user.email);
           console.log(user.fullname);
@@ -50,7 +50,8 @@ export const postLogin = ( email, password) => {
     console.log('your data is json'); 
     return user;
     })
-    .catch(error => console.log(error));
+    .catch(err => console.log('wrong data - user is not logged'));
+
 };
 export const checkToken = (token) => {
   console.log(`client token: ${token}`);
@@ -64,7 +65,7 @@ export const checkToken = (token) => {
     .then(token => {
         return token.json(); 
     })
-    .catch();
+    .catch(error => console.log(error));
 };
 export const getCookie = (name)=> {
 

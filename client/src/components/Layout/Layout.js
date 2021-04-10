@@ -76,6 +76,8 @@ class Layout extends Component {
                
             })
             .catch(e => {
+              
+
                 this.logOut();
             });
 

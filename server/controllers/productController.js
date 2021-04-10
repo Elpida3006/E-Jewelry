@@ -55,7 +55,7 @@ router.post('/create', (req, res, error) => {
             // console.log(article);
             res.status(200).send(article)
         })
-        .catch(err => console.log('error again'));
+        .catch(err => console.log('wrong data - product is not created'));
         // .catch(error => { res.render('create', { error }); })
 });
 router.put('/edit/:id', (req, res) => {

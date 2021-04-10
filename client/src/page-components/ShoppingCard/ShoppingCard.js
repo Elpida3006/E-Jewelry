@@ -68,7 +68,7 @@ console.log(arrOffers);
                     }
                     <div className={style['Wallet']}>
                             <h4 className={style['wallet-line']}></h4>   
-                            <h4 className={style['wallet-sum']}> Total Sum: {total} Euro</h4>   
+                            <h4 className={style['wallet-sum']}> Total Sum: {total.toFixed(2)} Euro</h4>   
                             <section className={style['ButtonShop']}>
                             <Link className={style['Btn-ShopAll']} to={'/products/finalizeCard'} onClick={finalizeCard}> 
                                             <button onClick={finalizeCard} className={style['Btn-ShopAll']}>Buy All</button>

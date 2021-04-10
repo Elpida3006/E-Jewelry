@@ -20,7 +20,7 @@ const  Profile = ({match, history} ) => {
 
 return(
    
-        <body style={{backgroundImage: `url(${background})` }} >
+        <body style={{backgroundImage: `url(${background})` , minHeight:'1000px'}} >
              <Layout>
         <div className={style['user-info']}>
           <p ><span className={style['user-general']}> Profile Card</span> </p>

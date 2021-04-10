@@ -5,7 +5,7 @@ const { jwtSecret } = require('../config/config')
     // const verifytoken = promisify(jwt.verify)
 
 function createToken(_id) {
-    return jwt.sign({ _id }, jwtSecret, { expiresIn: '100h' })
+    return jwt.sign({ _id }, jwtSecret)
 }
 
 function verifyToken(token) {
