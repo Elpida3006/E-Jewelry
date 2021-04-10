@@ -1,0 +1,32 @@
+.Money {
+    border: 2px solid white;
+    background-color:rgb(14, 13, 13);
+    padding: 20px 30px;
+    margin: 5px 50px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    width: 1700px;
+margin-right: 10%;
+margin-bottom: 80px;
+}
+.BackgroundAdmin {
+    min-height: 900px;
+  
+    background-image: url(https://image.freepik.com/free-vector/abstract-metallic-blue-background-texture_52683-20746.jpg);
+
+}
+.Save {
+    padding-top:50px;
+    margin-left:20%;
+    color: aliceblue;
+}
+.Euro {
+    border: 2px solid white;
+    padding:0.5%;
+
+    background-image: linear-gradient(rgb(13, 5, 119), #0f884f,  black);
+
+    height: 400px;
+    width: 600px;
+}

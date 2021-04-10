@@ -16,7 +16,7 @@ function Admin() {
          Admin Panel
          </li>
          <li className={style['Nav-Li']}>
-            <Link className={style['Li']} to="/products/create">Create</Link>
+            <Link className={style['Li']} to='/admin/create'>Create</Link>
 
         </li>
                 <li className={style['Nav-Li']}>

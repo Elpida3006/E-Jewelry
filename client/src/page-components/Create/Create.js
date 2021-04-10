@@ -2,20 +2,16 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import style from './Create.module.css';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import * as service from '../../services/productService';
 import Admin from '../../components/Admin-Panel/Admin';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 //Forms
 function Create({history, match, location}) {
 
  const  [errorMesage, seterrorMesage] =  useState('');
 const  [successMessage, setsuccessMessage] =  useState('');
-
-//         seterrorMesage(errorMesage);
-//         setsuccessMessage(successMessage);
-    
-
+ 
 
 const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -86,9 +82,7 @@ if(imageUrl.value) {
                 <div className={style.Create}>
 
                     <h1 className={style['createh1']}>Create New Offer</h1>
-                      {/* {{#if errorMesage}}
-                        <p class="message">{{errorMesage}}</p>
-                     {{/if}} */}
+                  
                     <div>
                         <input className={style['inCreate']} type="text" name="nameProduct" placeholder="Name..."/>
                     </div>
