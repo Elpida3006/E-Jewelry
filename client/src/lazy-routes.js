@@ -3,6 +3,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import { Switch, Route, Redirect} from 'react-router-dom';
 import {lazy} from 'react';
 import {UserContext} from './global-context/UserContexts';
+import isAuth from './autGuards';
+
 
 const App = lazy(() => import('./containers/App'));
 const Cover = lazy(() => import('./containers/Cover'));

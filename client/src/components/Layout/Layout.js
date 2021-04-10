@@ -31,6 +31,7 @@ import {AdminPass} from '../../credentials';
 import {logoutUser} from '../../services/userService';
 import { Redirect } from 'react-router-dom';
 
+
 class Layout extends Component {
     constructor(props){
         super(props);
@@ -97,9 +98,12 @@ class Layout extends Component {
            
             
               <div className={style.Layout}>
+         
               <Header/>
                 {this.props.children}
                <Footer/>
+            
+             
               </div> 
             
              
