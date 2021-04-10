@@ -20,7 +20,7 @@ _______________________________________________________________________________
     It uses techniques such as 
     ### JSX 
     ### Controlled / Uncontrolled forms 
-    ### React-router-Dom, lazy Routes 
+    ### React-router-Dom / Lazy Loading 
     ### Functional and Class components
     ### HOC
     ### Hooks.
