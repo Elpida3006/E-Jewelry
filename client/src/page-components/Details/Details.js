@@ -30,10 +30,14 @@ useEffect(() => {
 //     }, []);
 
 const buyClick = () => {
-    service.buyProduct(match.params.id);
+    service.buyProduct(match.params.id).then(() => {
+         history.push('/user/shoppingCard');
+    });
 };
 const likeClick = () => {
-    service.likeProduct(match.params.id);
+    service.likeProduct(match.params.id).then(() => {
+        history.push('/Home');
+   });
 };
 
 

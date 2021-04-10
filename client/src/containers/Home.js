@@ -12,7 +12,7 @@ class Home extends Component {
         console.log(props);
         this.state = {
             products: [],
-            sortType: 'asc',
+            sortType: 'desc',
             search: '',
             currentCategory: 'All',
             isLogged: '',

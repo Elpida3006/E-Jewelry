@@ -72,9 +72,10 @@ console.log(arrOffers);
                             <section className={style['ButtonShop']}>
                             <Link className={style['Btn-ShopAll']} to={'/products/finalizeCard'} onClick={finalizeCard}> 
                                             <button onClick={finalizeCard} className={style['Btn-ShopAll']}>Buy All</button>
-                                            </Link>  
+                            </Link>  
+                            <h4 className={style['wallet-line']}></h4>  
                             </section>  
-                            <h4 className={style['wallet-line']}></h4>   
+                          
                     </div>
                                                
             </div>
