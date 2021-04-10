@@ -29,16 +29,18 @@ const FinalizeMessage = lazy(() => import('./page-components/FinalizeMessage/Fin
 
 
 class Routes extends Component {
-    static contextType = UserContext;
+ static contextType = UserContext;
+
 
   render() {
     const {
-      isLogged,
+      isLogged,isAdmin
     
     } = this.context;
 
     return (
-        <Router>
+      <UserContext.Provider value={{ isLogged,isAdmin}}>
+     <Router>
         <Suspense fallback={<h2>Please wait.....</h2>}>
           <Switch>
             <Route path="/" exact component={Cover} />
@@ -65,6 +67,8 @@ class Routes extends Component {
             </Switch>
         </Suspense>
         </Router>
+      </UserContext.Provider>
+   
     );
         }
 }
