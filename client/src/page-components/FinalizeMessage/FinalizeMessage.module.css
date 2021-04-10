@@ -1,0 +1,19 @@
+.FinalizeMessage {
+    margin-left: 650px;
+    margin-bottom: 9%;
+    padding: 50px;
+    height: 400px;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 5%;
+    color: white;
+    background-color: rgb(14, 13, 13);
+    font-family: 'Courier New', Courier, monospace;
+}
+.Font {
+    font-size: 26px;
+}
+.Paragraph {
+    font-size: 22px;   
+    color: rgb(236, 222, 222);
+}

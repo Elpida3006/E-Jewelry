@@ -18,6 +18,7 @@ const Edit = lazy(() => import('./page-components/Edit/Edit'));
 const View = lazy(() => import('./page-components/View/View'));
 const Details = lazy(() => import('./page-components/Details/Details'));
 const ShoppingCard = lazy(() => import('./page-components/ShoppingCard/ShoppingCard'));
+const FinalizeMessage = lazy(() => import('./page-components/FinalizeMessage/FinalizeMessage'));
 // const Products = lazy(() => import('./containers/Products'));
 // const Gold = lazy(() => import('./components/Products/Gold/Gold'));
 // const Leather = lazy(() => import('./components/Products/Leather/Leather'));
@@ -31,7 +32,7 @@ class Routes extends Component {
   render() {
     const {
       isLogged,
-      isAdmin
+    
     } = this.context;
 
     return (
@@ -50,7 +51,8 @@ class Routes extends Component {
             <Route path="/user/logout"  render={() => isLogged ? null : <Redirect to="/" />}  />
             <Route path="/user/profile"  component={Profile} />
             <Route path="/user/shoppingCard"  component={ShoppingCard} />
-            
+            <Route path="/user/finalize-card"  component={FinalizeMessage} />
+
             <Route path="/products/edit/:id"  exact component={Edit}/>
             <Route path="/products/create" exact  component={Create}/>
             <Route path="/admin/money"  component={Admin} />

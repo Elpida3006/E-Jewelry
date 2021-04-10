@@ -21,9 +21,8 @@ const deleteShopProduct = (e) => {
 const buyOne = (e) => {
 
     e.preventDefault();
-    service.buyOne(id)
-    .then((res) =>   history.push('/Home'));
-  
+    service.buyOne(id) 
+    .then(res => history.push('/user/finalize-card'));
     
 };
 

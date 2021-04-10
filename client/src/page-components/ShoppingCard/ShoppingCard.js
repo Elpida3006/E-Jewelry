@@ -49,7 +49,7 @@ useEffect(() => {
 const finalizeCard = () => {
  
         productservice.buyAll()
-     .then(res => history.push('/'));
+     .then(res => history.push('/user/finalize-card'));
      //+ /user finalizeCard  //message - static
     
 };
