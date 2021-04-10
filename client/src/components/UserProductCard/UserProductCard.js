@@ -24,7 +24,7 @@ buyers
             
         <div className={style.Product}>
 
-                <h3 className={style['Product-Card']}  name="nameProduct">Name: {nameProduct}</h3>
+                <h3 className={style['Product-Card']}  name="brand">Brand: {brand}</h3>
             
                 <h4 className={style['Product-Card']} type="text" name="price" placeholder="Price...">Price: {price}</h4>
         

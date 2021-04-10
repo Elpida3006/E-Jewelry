@@ -148,7 +148,16 @@ img {
 }
 
 .Nav-Search {
+    color: antiquewhite;
     height: 35px;
+    width: 250px;
+    margin-left: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(12, 31, 31);
+}
+.Nav-Search-Input {
+    height: 30px;
     width: 250px;
     margin-left: 2%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -170,5 +179,6 @@ img {
     background-image: linear-gradient(black, rgba(61, 22, 22, 0.226), black);
    margin: 8px;
    width: 350px;
+   height: 35px;
    position: relative;
 }

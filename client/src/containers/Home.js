@@ -13,6 +13,7 @@ class Home extends Component {
         this.state = {
             products: [],
             sortType: 'asc',
+            search: '',
             currentCategory: 'All',
             isLogged: '',
             isAdmin: '',
@@ -45,13 +46,22 @@ class Home extends Component {
     }
         onSort = sortType => {
             this.setState({sortType});}
-        filter = regex => {
-                this.setState({regex});}  
+        filter = (e) => {
+       
+        this.setState({ search: e.target.value.substr(0,20) });
+
+        }
+  
     render(){
         const sortType = this.state.sortType;
         const currentCategory = this.state.currentCategory;
         const products = this.state.products;
-
+        const search = this.state.search;
+        
+        const filteredProducts = products.filter(product => {
+        return product.brand.indexOf(search) !== -1;
+   });
+  
             return (
                 <body className={style.BackgroundHome}>
                 <Layout>
@@ -68,8 +78,8 @@ class Home extends Component {
                                     <button onClick={()=> this.onSort('desc')}className={style['Nav-Search']}>Sort Products by Desc Likes</button>
                             </li> 
                             <li className={style['Nav-Li2']}> 
-                                    <input className={style['Nav-Search']} type="text" name="searchProduct" placeholder="search..."/>
-                                    <button onClick={()=> this.filter('regex')}type="submit" className={style['Nav-Go']}>Go</button>
+                                    <input icon="search"
+                             onChange={this.filter.bind(this)} value={search} className={style['Nav-Search-Input']} type="text" name="searchProduct" placeholder=" Search your product by Brand.."/>
                             </li>        
                         </li>
                     </div>
@@ -77,13 +87,13 @@ class Home extends Component {
                     <div className={style.Products}>
                                 <h4 className={style.PCategory}>{currentCategory } Category Page</h4> 
                             {(products.length > 0)?   
-                                (sortType === 'asc' )? this.state.products
+                                (sortType === 'asc' )? filteredProducts
                                 .sort((a, b) => a.like - b.like)
                                 .map(c => 
                             
                                         <UserProductCard key={c.id} {...c} />   
                                     
-                                    ) : this.state.products
+                                    ) : filteredProducts
                                     .sort((a, b) => b.like - a.like)
                                     .map(c => 
                                 
