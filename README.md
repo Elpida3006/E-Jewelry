@@ -21,14 +21,20 @@ React-App
 _______________________________________________________________________________
 ### Technical part:
     The application is based on REST API back-end with Node.js and client part: React Framework.
+    Design is Custom with ouner .css.
     It uses techniques such as :
     ______
     ### JSX 
     ### Controlled / Uncontrolled forms 
+    ### Custom Form validations
     ### React-router-Dom / Lazy Loading 
+    ### Module.Css
     ### Functional and Class components
+    ### Props & State
     ### HOC
     ### Hooks.
+    ### Fetch Api
+    ### Context API
 _______________________________________________________________________________
 ### Instalation:
     Step 1: Start Api: 
