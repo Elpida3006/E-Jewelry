@@ -21,7 +21,7 @@ React-App
 _______________________________________________________________________________
 ### Technical part:
     The application is based on REST API back-end with Node.js and client part: React Framework.
-    Design is Custom with ouner .css.
+    Design is Custom with own CSS.
     It uses techniques such as :
     ______
     ### JSX 
