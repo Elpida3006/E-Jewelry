@@ -5,14 +5,19 @@ import {Link} from 'react-router-dom';
 import {UserContext} from '../../global-context/UserContexts';
 import {logoutUser} from '../../services/userService';
 import {FaShoppingCart} from 'react-icons/fa';
+import { Redirect } from 'react-router-dom';
 
 class Header extends Component {
         static contextType = UserContext;
 
         logOut = () => {
        
-             logoutUser();
-             return this.context.logOut({ });
+             logoutUser().then(() => {
+                return this.context.logOut({ });
+             })
+             .catch(() =>  { return  <Redirect to={'./Error'}/> ;});
+             
+            
 
         
     };

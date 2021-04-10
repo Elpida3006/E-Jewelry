@@ -29,6 +29,7 @@ import {UserContext} from '../../global-context/UserContexts';
 import {checkToken, getCookie} from '../../services/userService';
 import {AdminPass} from '../../credentials';
 import {logoutUser} from '../../services/userService';
+import { Redirect } from 'react-router-dom';
 
 class Layout extends Component {
     constructor(props){
@@ -57,6 +58,8 @@ class Layout extends Component {
 
                            this.context = this.state;
                            console.log(this.context);
+                           return  <Redirect to={'./Error'}/> ;
+
                     }
     componentDidMount() {
         const token = getCookie('auth_cookie');
@@ -69,6 +72,7 @@ class Layout extends Component {
         checkToken(token)
         .then(user => 
             {
+                if(user === 'undefined') {  return  <Redirect to={'./Error'}/> ;};
               console.log(user);
                 this.logIn(
                   user

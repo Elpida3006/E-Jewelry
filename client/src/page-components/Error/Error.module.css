@@ -1,0 +1,17 @@
+.Error {
+    margin-left: 350px;
+    margin-bottom: 9%;
+    padding: 50px;
+    padding-left: 350px;
+    height: 600px;
+    width: 800px;
+    border: 2px solid white;
+    border-radius: 5%;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Courier New', Courier, monospace;
+}
+.ErrorImg {
+    height: 400px;
+    width: 400px;
+}

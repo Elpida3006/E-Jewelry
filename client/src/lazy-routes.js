@@ -13,6 +13,7 @@ const Login = lazy(() => import('./page-components/Login/Login'));
 const Profile = lazy(() => import('./page-components/Profile/Profile'));
 const About = lazy(() => import('./page-components/About/About'));
 const Contact = lazy(() => import('./page-components/Contact/Contact'));
+const Error = lazy(() => import('./page-components/Error/Error'));
 const Create = lazy(() => import('./page-components/Create/Create'));
 const Edit = lazy(() => import('./page-components/Edit/Edit'));
 const View = lazy(() => import('./page-components/View/View'));
@@ -45,7 +46,9 @@ class Routes extends Component {
             <Route path="/Home"  component={Home} />
             <Route path="/About"  component={About} />
             <Route path="/Contact"  component={Contact} />
-            
+            <Route path="/Error"  component={Error} />
+
+
             <Route path="/user/register"  component={Register} />
             <Route path="/user/login"  component={Login} />
             <Route path="/user/logout"  render={() => isLogged ? null : <Redirect to="/" />}  />
