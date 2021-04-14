@@ -30,21 +30,7 @@ class View extends Component {
 
     }
 
-    // componentDidUpdate(prevProps) {
-        
-    //     const category = this.props.match.params.category;
 
-    //     if (prevProps.match.params.category === category) {
-    //         return;
-    //     }
-
-    //    getProducts(this.props.match.params.category)
-    //         .then(res => {
-
-    //             this.setState({ products: res, currentCategory: category });
-    //         })
-    //         .catch(error => console.log(error));
-    // }
     render(){
      
 
