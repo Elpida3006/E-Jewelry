@@ -16,7 +16,7 @@ React-App
     Have Profile card access.
     ______
     ### The administrator has access to all files and functionalities, 
-    as well as create, edit and delete already created products..
+    as well as create, edit and delete already created products.
     ______
 _______________________________________________________________________________
 ### Technical part:
