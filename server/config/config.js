@@ -13,7 +13,7 @@ const config = {
     },
     production: {
         port: 80,
-        // dbConnectionString: 'mongo "mongodb+srv://cluster0.rrksq.mongodb.net/MyBB" --username nadq'
+        dbConnectionString: 'mongo "mongodb+srv://cluster0.rrksq.mongodb.net/MyBB" --username nadq'
     }
 }
 

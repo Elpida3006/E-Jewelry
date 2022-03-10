@@ -48,7 +48,7 @@ function getProfile(req, res, next) {
 
 function postRegister(req, res, err) {
     const { email, fullname, password, rePassword } = req.body;
-    // console.log(`it is a body: ${req.body}`);
+    console.log(`it is a body: ${req.body}`);
     // console.log(fullname);
     // console.log(password);
     // console.log(rePassword);
